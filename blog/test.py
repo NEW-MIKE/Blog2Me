@@ -17,6 +17,7 @@ from git.repo import Repo
 srcdir = "/tmp/update/book"
 dstdir = "/tmp/blog"
 
+
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
 APP_VERIFICATION_TOKEN = "hxaTTQZc9re73RE4bsKaEcCvLxLr1NIY"
