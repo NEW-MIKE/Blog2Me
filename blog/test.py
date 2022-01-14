@@ -61,7 +61,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         os.chdir("/tmp/blog/blog")
         print("启动新的进程")
         return
-    
+
 
     def handle_request_url_verify(self, post_obj):
         # 原样返回 challenge 字段内容
@@ -69,7 +69,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         rsp = {'challenge': challenge}
         self.response(json.dumps(rsp))
         return
-
 
     def handle_message(self, event):
         # 此处只处理 text 类型消息，其他类型消息忽略
