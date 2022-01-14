@@ -13,8 +13,8 @@ import time
 import subprocess
 import shutil
 from git.repo import Repo
-srcdir = "/var/tmp/blog/book"
-dstdir = "/var/tmp/blog"
+srcdir = "/tmp/blog/book"
+dstdir = "/tmp/blog"
 
 
 APP_ID = "cli_a15bebebc5b8d00b"
@@ -83,7 +83,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         rsp = {'challenge': challenge}
         self.response(json.dumps(rsp))
         return
-    
+
 
     def handle_message(self, event):
         # 此处只处理 text 类型消息，其他类型消息忽略
