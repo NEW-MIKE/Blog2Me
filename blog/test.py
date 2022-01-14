@@ -48,7 +48,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("download successfully")
             killport(4456)
             print("ok")
-        try:
+        try: 
             shutil.rmtree(dstdir)
         except OSError as e:
             print(e)
