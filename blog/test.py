@@ -49,7 +49,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("The directory is deleted successfully")
 
         shutil.move(srcdir, dstdir)
-        subprocess.Popen( ['python3', 'dev.py'] ).communicate()
+        subprocess.Popen( ['python3', '/tmp/blog/blog/dev.py'] ).communicate()
         print("启动新的进程")
         return
     #ok10
