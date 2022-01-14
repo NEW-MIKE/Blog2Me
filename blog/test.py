@@ -61,7 +61,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         os.chdir("/tmp/blog/blog")
         print("启动新的进程")
         return
-    #100100
+    
 
     def handle_request_url_verify(self, post_obj):
         # 原样返回 challenge 字段内容
