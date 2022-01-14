@@ -40,6 +40,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
         self.wfile.write("ok".encode())
+
         try:
             Repo.clone_from(url='https://github.com/NEW-MIKE/Blog2Me.git', to_path='./book')
         except OSError as e:
@@ -57,7 +58,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("The directory is deleted successfully")
 
         shutil.move(srcdir, dstdir)
-        os.chdir("/tmp/blog/blog")  
+        os.chdir("/tmp/blog/blog")
         subprocess.Popen(['python3', '/tmp/blog/blog/dev.py'])
         print("启动新的进程")
         return
