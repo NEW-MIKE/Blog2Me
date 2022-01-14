@@ -39,7 +39,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
-        self.wfile.write("ok".encode())
+        self.wfile.write("ok".encode()  
         try:
             Repo.clone_from(url='https://github.com/NEW-MIKE/Blog2Me.git', to_path='./book')
         except OSError as e:
