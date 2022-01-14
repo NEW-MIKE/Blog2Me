@@ -1,20 +1,11 @@
 #!/usr/bin/env python
 # --coding:utf-8--
-import sys
-#reload(sys)
-#sys.setdefaultencoding('utf-8')
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from os import path
 import json
 from urllib import request, parse
-import os
-import re
-import time
-import subprocess
-import shutil
-from git.repo import Repo
-srcdir = "/tmp/update/book"
-dstdir = "/tmp/blog"
+import requests
 
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
@@ -26,70 +17,52 @@ ret_card = {
         "text": "Select"
     }]
 }
-
-def killport(port):
-	command='''kill -9 $(netstat -nlp | grep :'''+str(port)+''' | awk '{print $7}' | awk -F"/" '{ print $1 }')'''
-	os.system(command)
-
-def kill_port_process(port):
-    # 根据端口号杀死进程
-    
-    ret = os.popen("netstat -nao|findstr " + str(port))
-    str_list = ret.read()
-
-    if not str_list:
-        print('端口未使用')
-        return
-    # 只关闭处于LISTENING的端口
-    if 'TCP' in str_list:
-        ret_list = str_list.replace(' ', '')
-        ret_list = re.split('\n', ret_list)
-        listening_list = [rl.split('LISTENING') for rl in ret_list]
-        process_pids = [ll[1] for ll in listening_list if len(ll) >= 2]
-        process_pid_set = set(process_pids)
-        for process_pid in process_pid_set:
-            os.popen('taskkill /pid ' + str(process_pid) + ' /F')
-            print(port, '端口已被释放')
-            time.sleep(1)
-        
-    elif 'UDP' in str_list:
-        ret_list = re.split(' ', str_list)
-        process_pid = ret_list[-1].strip()
-        if process_pid:
-            os.popen('taskkill /pid ' + str(process_pid) + ' /F')
-            print('端口已被释放')
-        else:
-            print("端口未被使用")
-
-
 class RequestHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
         self.wfile.write("ok".encode())
-        killport(4456)
-        print("ok")
-        Repo.clone_from(url='https://github.com/NEW-MIKE/Blog2Me.git', to_path='./book')
-        try:
-            shutil.rmtree(dstdir)
-        except OSError as e:
-            print(e)
-        else:
-            print("The directory is deleted successfully")
-
-        shutil.move(srcdir, dstdir)
-        subprocess.Popen( ['python3', 'dev.py'], shell = True ).communicate()
-        print("启动新的进程")
+        
+        url = 'http://127.0.0.1:4457'
+        myobj = {'somekey': 'somevalue'}
+        x = requests.post(url, data = myobj)
         return
-
+  
+    def do_GET(self):
+        filepath = self.path
+        if( self.path.endswith(".html")):
+            f = open(filepath[1:],"r",encoding='utf-8')
+            html = f.read()
+            
+            self.send_response(200)
+            self.send_header('Content-type', 'text/html')
+            self.send_header('Set-Cookie', 'monster=1')
+            self.end_headers()
+            self.wfile.write(html.encode())
+            f.close()
+        elif self.path.endswith(".css"):
+            print("enter css")
+            f = open(filepath[1:],"rb")
+            self.send_response(200)
+            self.send_header('Content-type', 'text/css')
+            self.end_headers()
+            self.wfile.write(f.read())
+            print("css")
+            f.close()
+        else:
+            f = open(filepath[1:],"rb")
+            html = f.read()
+            self.wfile.write(html)
+            f.close()
+        #self.wfile.write(html.encode())
+        return
     def handle_request_url_verify(self, post_obj):
         # 原样返回 challenge 字段内容
         challenge = post_obj.get("challenge", "")
         rsp = {'challenge': challenge}
         self.response(json.dumps(rsp))
         return
-
 
     def handle_message(self, event):
         # 此处只处理 text 类型消息，其他类型消息忽略
@@ -209,10 +182,10 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("send message error, code = ", code, ", msg =", rsp_dict.get("msg", ""))
 
 def run():
-    port = 4457
+    port = 4456
     server_address = ('', port)
     httpd = HTTPServer(server_address, RequestHandler)
-    print("test start.....")
+    print("dev start.....")
     httpd.serve_forever()
 
 if __name__ == '__main__':

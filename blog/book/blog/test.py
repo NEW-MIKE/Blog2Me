@@ -13,7 +13,7 @@ import time
 import subprocess
 import shutil
 from git.repo import Repo
-srcdir = "/tmp/update/book"
+srcdir = "/tmp/blog/book"
 dstdir = "/tmp/blog"
 
 APP_ID = "cli_a15bebebc5b8d00b"
@@ -71,13 +71,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         killport(4456)
         print("ok")
         Repo.clone_from(url='https://github.com/NEW-MIKE/Blog2Me.git', to_path='./book')
-        try:
-            shutil.rmtree(dstdir)
-        except OSError as e:
-            print(e)
-        else:
-            print("The directory is deleted successfully")
-
         shutil.move(srcdir, dstdir)
         subprocess.Popen( ['python3', 'dev.py'], shell = True ).communicate()
         print("启动新的进程")
