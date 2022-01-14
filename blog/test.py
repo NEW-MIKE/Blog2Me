@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # --coding:utf-8--
-
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from os import path
 import json
@@ -20,6 +22,10 @@ ret_card = {
         "text": "Select"
     }]
 }
+
+def killport(port):
+	command='''kill -9 $(netstat -nlp | grep :'''+str(port)+''' | awk '{print $7}' | awk -F"/" '{ print $1 }')'''
+	os.system(command)
 
 def kill_port_process(port):
     # 根据端口号杀死进程
@@ -58,10 +64,10 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
         self.wfile.write("ok".encode())
-        kill_port_process(4567)
+        killport(4456)
         print("ok")
-        Repo.clone_from(url='https://github.com/NEW-MIKE/BlockReader.git', to_path='./book')
-        subprocess.Popen( ['F:\\InstallSoftwareDevelopment\\PythonIDE\\Anaconda3\\python.exe', 'dev.py'])
+        Repo.clone_from(url='git@github.com:NEW-MIKE/Blog2Me.git', to_path='./book')
+        subprocess.Popen( ['python3', 'dev.py'], shell = True ).communicate()
         print("启动新的进程")
         return
 
@@ -190,7 +196,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("send message error, code = ", code, ", msg =", rsp_dict.get("msg", ""))
 
 def run():
-    port = 70
+    port = 4457
     server_address = ('', port)
     httpd = HTTPServer(server_address, RequestHandler)
     print("test start.....")

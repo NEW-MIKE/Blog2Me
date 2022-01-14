@@ -24,7 +24,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write("ok".encode())
         
-        url = 'http://127.0.0.1:5000'
+        url = 'http://127.0.0.1:4457'
         myobj = {'somekey': 'somevalue'}
         x = requests.post(url, data = myobj)
         return
@@ -182,7 +182,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("send message error, code = ", code, ", msg =", rsp_dict.get("msg", ""))
 
 def run():
-    port = 70
+    port = 4456
     server_address = ('', port)
     httpd = HTTPServer(server_address, RequestHandler)
     print("dev start.....")
