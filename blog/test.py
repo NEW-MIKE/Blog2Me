@@ -40,7 +40,14 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.wfile.write("ok".encode())
         killport(4456)
         print("ok")
-        Repo.clone_from(url='https://github.com/NEW-MIKE/Blog2Me.git', to_path='./book')
+        try:
+            Repo.clone_from(url='https://github.com/NEW-MIKE/Blog2Me.git', to_path='./book')
+        except OSError as e:
+            print(e)
+        else:
+            print("download successfully")
+
+
         try:
             shutil.rmtree(dstdir)
         except OSError as e:
