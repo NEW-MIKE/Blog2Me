@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # --coding:utf-8--
 import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
+#reload(sys)
+#sys.setdefaultencoding('utf-8')
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from os import path
 import json
