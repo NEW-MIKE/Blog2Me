@@ -52,7 +52,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         subprocess.Popen( ['python3', '/tmp/blog/blog/dev.py'] ).communicate()
         print("启动新的进程")
         return
-    #ok10
+    #1
 
     def handle_request_url_verify(self, post_obj):
         # 原样返回 challenge 字段内容
