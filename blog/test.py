@@ -71,7 +71,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.wfile.write("ok".encode())
         killport(4456)
         print("ok")
-        Repo.clone_from(url='git@github.com:NEW-MIKE/Blog2Me.git', to_path='./book')
+        Repo.clone_from(url='https://github.com/NEW-MIKE/Blog2Me.git', to_path='./book')
         shutil.move(srcdir, dstdir)
         subprocess.Popen( ['python3', 'dev.py'], shell = True ).communicate()
         print("启动新的进程")
