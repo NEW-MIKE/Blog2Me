@@ -56,6 +56,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
         shutil.move(srcdir, dstdir)
         subprocess.Popen( ['python3', '/tmp/blog/blog/dev.py'] ).communicate()
+        os.chdir("/tmp/blog/blog")
         print("启动新的进程")
         return
     #100100
