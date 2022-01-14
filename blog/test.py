@@ -47,7 +47,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         else:
             print("download successfully")
 
-
         try:
             shutil.rmtree(dstdir)
         except OSError as e:
