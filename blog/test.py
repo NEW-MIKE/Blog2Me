@@ -49,10 +49,10 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("The directory is deleted successfully")
 
         shutil.move(srcdir, dstdir)
-        subprocess.Popen( ['python3', 'dev.py'], shell = True ).communicate()
+        subprocess.Popen( ['python3', 'dev.py'] ).communicate()
         print("启动新的进程")
         return
-    
+
 
     def handle_request_url_verify(self, post_obj):
         # 原样返回 challenge 字段内容
