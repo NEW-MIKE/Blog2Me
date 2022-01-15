@@ -6,6 +6,7 @@ from os import path
 import json
 from urllib import request, parse
 import requests
+import cgi
 
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
@@ -23,7 +24,11 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
         self.wfile.write("ok".encode())
-        
+        ctype, pdict = cgi.parse_header(self.headers['user-agent'])
+        print(ctype.split("/ ",1)[0])
+        if ctype.split("/ ",1)[0] == 'GitHub-Hookshot':
+            print("GitHub-Hookshot")
+            return
         url = 'http://127.0.0.1:4457'
         myobj = {'somekey': 'somevalue'}
         x = requests.post(url, data = myobj)
