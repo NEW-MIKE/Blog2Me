@@ -41,7 +41,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write("ok".encode())
         try:
-            Repo.clone_from(url='https://github.com/NEW-MIKE/Blog2Me.git', to_path=srcdir)
+            Repo.clone_from(url='git://github.com/NEW-MIKE/Blog2Me.git', to_path=srcdir)
         except OSError as e:
             print(e)
         else:
