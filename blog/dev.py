@@ -24,10 +24,10 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
         self.wfile.write("ok".encode())
-        ctype, pdict = cgi.parse_header(self.headers['user-agent'])
-        print(ctype.split("/ ",1)[0])
-        if ctype.split("/ ",1)[0] == 'GitHub-Hookshot':
-            print("GitHub-Hookshot")
+        ctype, pdict = cgi.parse_header(self.headers['x-github-event'])
+        print(ctype.split("/")[0])
+        if ctype.split("/")[0] == 'ping':
+            print("ping")
             return
         url = 'http://127.0.0.1:4457'
         myobj = {'somekey': 'somevalue'}
