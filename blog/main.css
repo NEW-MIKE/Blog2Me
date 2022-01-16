@@ -20,9 +20,9 @@ nav{
 	background: transparent;
 	height: 50px;
 }
-banner{
+#banner{
 	background: transparent;
-	height: 20px;
+	height: 700px;
 }
 
 nav ul{
@@ -132,9 +132,9 @@ p
 	font-size: 18px;
 }
 
-.main-btn
+#main-btn
 {
-	padding: 7px 28px;
+	padding: 14px 28px;
 	font-size: 20px;
 	letter-spacing: 4px;
 	border-collapse: 6px;
@@ -220,7 +220,7 @@ p
 {
 	position: relative;
 	top: 68px;
-	left: 50px;
+	left: 10px;
 }
 
 .text-section h2
@@ -335,9 +335,10 @@ ul.share-group
 
 .main-wrapper
 {
-	background: #444 url(img/icon4.jpg);
+	background: rgb(218, 19, 19) url(https://i.ibb.co/tstFyRF/icon2.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 }
+
