@@ -53,7 +53,7 @@ nav ul li.logo{
 
 #banner .inner
 {
-	max-width: 300px;
+	max-width: 800px;
 	text-align: center;
 	margin: 0 auto;
 	position: relative;
@@ -132,13 +132,14 @@ p
 	font-size: 18px;
 }
 
-#main-btn
+.main-btn
 {
 	padding: 14px 28px;
 	font-size: 20px;
 	letter-spacing: 4px;
 	border-collapse: 6px;
 	background: #18a;
+	border-radius: 5px;
 }
 
 .green-section
@@ -333,6 +334,11 @@ ul.share-group
 	padding-bottom: 30px;
 }
 
+
+.main-btn:active{
+    background: #000000;   /* 黑色 */
+    opacity: 0.5;    /* 设置不透明度（可以不设置） */
+}
 .main-wrapper
 {
 	background: rgb(11, 109, 139) url(https://i.ibb.co/3kJYGVt/bg-one.gif);
