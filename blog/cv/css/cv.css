@@ -1,0 +1,255 @@
+*{
+    /*border: solid 1px black;*/
+  }
+  
+  body{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    background-color:#0F2540;
+    color: rgba(255,255,255,0.95);
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-family: arial;
+  }
+  
+  ::selection {
+    background-color: #bbb;
+  }
+  
+  /* 複寫 */
+  
+  ul{
+    padding: 0;
+    list-style: none;
+  }
+  
+  h2{
+    margin: 0;
+    margin-bottom: 25px;
+  }
+  
+  h2::after{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 8px;
+    background-color: #77969A;
+    margin-left: 10px;
+  }
+  
+  h4{
+    margin: 0;
+    margin-top: 40px;
+    opacity: 0.8;
+    font-weight: 400;
+  }
+  
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  hr{
+    border: 0;
+    border-bottom: solid 4px #D05A6E;
+    width: 40%;
+    margin-left: 0;
+  }
+  
+  .resume{
+    display: flex;
+    max-width: 950px;
+    border: solid 8px white;
+    padding: 50px;
+    position: relative;
+  }
+  .left{
+    flex: 7;
+  }
+  .right{
+    flex: 5;
+  }
+  
+  .left, .right{
+    padding: 15px;
+  }
+  
+  .left{
+    padding-right: 50px;
+    border-right: solid 1px #D05A6E;
+  }
+  .right{
+    padding-left: 50px;
+    padding-top: 150px;
+  }
+  
+  .decoration{
+    width: 300px;
+    height: 140px;
+    background: linear-gradient(135deg,#77969A,#D05A6E);
+    border-radius: 70px 0 0 70px;
+    right: 0px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+  }
+  
+  .listExp>li{
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .listExp>li:nth-child(1)  ul{
+    border-color: #D05A6E;
+  }
+  
+  .listExp>li:nth-child(2)  ul{
+    border-color: #cc9ba3;
+  }
+  
+  .listExp>li:nth-child(3)  ul{
+    border-color: #a4a4a2;
+  }
+  
+  .listExp>li:nth-child(4)  ul{
+    border-color: #77969A;
+  }
+  
+  .listExp li ul{
+    padding-left: 10px;
+    border-left: solid 4px white;
+    margin-left: 10px;
+  }
+  
+  .listSkill{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  .listSkill li{
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .circle{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(208, 90, 110, 0.4);
+    background: linear-gradient(135deg,#77969A,#cc9ba3);
+    margin-bottom: 5px;
+  }
+  
+  .circle::after{
+    content:"";
+    display: block;
+    background-color: #0F2540;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+  }
+  
+  .circle:hover{
+    background-color: rgba(119, 150, 154, 1);
+    transform: scale(1.2);
+    transition: 0.2s;
+  }
+  
+  .p90,.p180,.p270,.p360{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    background-color: #c63951;
+  }
+  .p180{
+    top: 50%;
+  }
+  .p270{
+    left: 0;
+    top: 50%;
+  }
+  .p360{
+    left: 0;
+    top: 0;
+  }
+  
+  .p90:hover, .p180:hover, .p270:hover, .p360:hover{
+    background-color: rgba(119, 150, 154, 0.4);
+    transform: scale(1.2);
+  }
+  
+  .listProgram li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+  }
+  
+  .listProgram .bar{
+    width: 200px;
+    height: 10px;
+    border: solid 2px #cc9ba3;
+    border-radius: 5px;
+  }
+  
+  .value{
+    height: 100%;
+    width: 60%;
+    background-color: #D05A6E;
+    background: linear-gradient(135deg,#a4a4a2,#77969a);
+  }
+  
+  .value.P10{
+    width: 10%;
+  }
+  
+  .value.P30{
+    width: 30%;
+    
+  }
+  
+  .value:hover{
+    width: 100%;
+    transition: 0.3s;
+    background-color: #cc9ba3;
+  }
+  .btn{
+    border: solid 3px #D05A6E;
+    padding: 5px 12px;
+    margin-right: 8px;
+  }
+  
+  .fill{
+    background-color: #D05A6E;
+  }
+  
+  .line{
+    border-color: #a4a4a2;
+  }
+  
+  .btn:hover{
+    border: solid 3px #cc9ba3;
+    transition: 0.3s;
+  }
+  
+  .fill:hover{
+    background-color: #cc9ba3;
+    transition: 0.3s;
+  }
