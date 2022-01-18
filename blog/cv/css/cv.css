@@ -13,7 +13,7 @@
     letter-spacing: 1px;
     font-family: arial;
   }
-  
+  .p{margin:0 auto} 
   ::selection {
     background-color: #bbb;
   }
@@ -66,10 +66,10 @@
     position: relative;
   }
   .left{
-    flex: 7;
+    flex: 5;
   }
   .right{
-    flex: 5;
+    flex: 6;
   }
   
   .left, .right{
@@ -199,7 +199,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 20px;
   }
   
   .listProgram .bar{
@@ -220,11 +220,21 @@
     width: 10%;
   }
   
+  .value.P20{
+    width: 20%;
+  }
   .value.P30{
     width: 30%;
-    
   }
-  
+  .value.P50{
+    width: 50%;
+  }
+  .value.P60{
+    width: 60%;
+  }
+  .value.P40{
+    width: 40%;
+  }
   .value:hover{
     width: 100%;
     transition: 0.3s;
