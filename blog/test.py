@@ -59,7 +59,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 
         # shutil.move(srcdir, dstdir)
         os.chdir("/tmp/blog")
-        subprocess.Popen(['python3', '/tmp/blog/dev.py'])
+        subprocess.Popen(['python3', '/tmp/blog/blog/dev.py'])
         print("启动新的进程")
         return
 
