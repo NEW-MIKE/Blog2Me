@@ -14,9 +14,9 @@ import time
 import subprocess
 import shutil
 from git.repo import Repo
-srcdir = "/tmp/update/book"
-dstdir = "/tmp/blog"
-
+#srcdir = "/tmp/update/book"
+#dstdir = "/tmp/blog"
+pulldir = "/tmp/blog"
 
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
@@ -41,23 +41,25 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write("ok".encode())
         try:
-            Repo.clone_from(url='git://github.com/NEW-MIKE/Blog2Me.git', to_path=srcdir)
+            repo = Repo(pulldir)
+            repo.git.pull()
+            #Repo.clone_from(url='git://github.com/NEW-MIKE/Blog2Me.git', to_path=srcdir)
         except OSError as e:
             print(e)
         else:
-            print("download successfully")
+            print("pull successfully")
             killport(4456)
             print("ok")
-        try:
-            shutil.rmtree(dstdir)
-        except OSError as e:
-            print(e)
-        else:
-            print("The directory is deleted successfully")
+        # try:
+        #     shutil.rmtree(dstdir)
+        # except OSError as e:
+        #     print(e)
+        # else:
+        #     print("The directory is deleted successfully")
 
-        shutil.move(srcdir, dstdir)
-        os.chdir("/tmp/blog/blog")
-        subprocess.Popen(['python3', '/tmp/blog/blog/dev.py'])
+        # shutil.move(srcdir, dstdir)
+        os.chdir("/tmp/blog")
+        subprocess.Popen(['python3', '/tmp/blog/dev.py'])
         print("启动新的进程")
         return
 
