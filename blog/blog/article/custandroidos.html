@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,12 +11,14 @@
 
 	<title>定制Android操作系统</title>
 
-	<link media="all" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link media="all" type="text/css"
+		href="http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 	<link media="all" type="text/css" href="../css/font-awesome.min.css" rel="stylesheet">
 	<link media="all" type="text/css" href="../css/core.css" rel="stylesheet">
 	<link media="all" type="text/css" href="../css/skins/orange.css" rel="stylesheet">
 	<link media="all" type="text/css" href="../css/custom.css" rel="stylesheet">
 </head>
+
 <body class="article" itemscope itemtype="http://schema.org/Blog">
 
 	<div id="masthead">
@@ -24,10 +27,12 @@
 				<div class="row">
 					<nav id="main-menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<ul class="horizontal-navigation">
-							<li class="menu-home" itemprop="url"><a href="../../index.html" title="Home" itemprop="name">Home</a></li>
+							<li class="menu-home" itemprop="url"><a href="../../index.html" title="Home"
+									itemprop="name">Home</a></li>
 							<!-- <li class="menu-about" itemprop="url"><a href="about.html" title="About" itemprop="name">About</a></li>
 							<li class="menu-portfolio" itemprop="url"><a href="portfolio.html" title="Portfolio" itemprop="name">Portfolio</a></li> -->
-							<li class="menu-blog active" itemprop="url"><a href="../blog.html" title="Blog" itemprop="name">Blog</a></li>
+							<li class="menu-blog active" itemprop="url"><a href="../blog.html" title="Blog"
+									itemprop="name">Blog</a></li>
 							<!-- <li class="menu-contact" itemprop="url"><a href="contact.html" title="Contact" itemprop="name">Contact</a></li> -->
 						</ul>
 					</nav> <!-- #main-menu -->
@@ -55,40 +60,34 @@
 					<div class="three-quarters-block">
 						<div class="content">
 
-							<article class="post hentry" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+							<article class="post hentry" itemscope itemprop="blogPost"
+								itemtype="http://schema.org/BlogPosting">
 
 								<header class="entry-header">
 
 									<h2 class="entry-title" itemprop="headline">定制Android操作系统</h2>
 
-								
+
 								</header> <!-- .entry-header -->
-<!-- 
+								<!-- 
 								<div class="entry-image">
 									<img src="http://dummyimage.com/800x250/f3f3f3/d1d1d1.jpg&text=Featured+Image" alt="Blog Post" itemprop="image">
 								</div> .entry-image -->
 
 								<div class="entry-content" itemprop="articleBody">
 
-									<p>嵌入式开发，第一步是完成硬件的开发，围绕满足需求的芯片和对应功能的外围硬件，实现具体功能的基架。在此基架上，
-										确定选择什么样的操作系统，并完成基本操作系统与硬件的衔接。我们的任务，一般是以task的方式存在的，目前市面上的
-										实时操作系统有很多家，华为的LiteOS.</p>
-									<p>我们的开发任务，基本面上来说，就是完成对于自身硬件的控制和信号的采集，信号的采集，可以是传感器，或者蓝牙模块，wifi
-										模块。从这个层面上来说，此处的任务，就是协调自身的所带的硬件之间的同步工作，此处是作为一个数据处理的中心和控制中心。
-
+									<p> 对于Android操作系统的定制，全世界各大移动厂商都在使用Google公司提供的Android源码，由于每一个厂商所设计的硬件千差万别，
+										并且客户需求也有所不同，这就要求每一个厂商都要根据自己的硬件设备和相关要求去重新定制符合自己的Android操作系统，
+										虽然Google公司提供的Android源码一般来说都可以直接使用，因为它是跨平台的，但是该源码几乎包含了各个移动设备的所
+										有能实现的公共的东西，使得它占用内存资源特别的大，一般都在30G左右，所以不能直接使用它而是要重新定制，最终使得
+										它符合自己需求并且极大的减少内存资源，一般经过定制之后最终生成的镜像文件只占用手机的700M左右的内存.</p>
+									<p>
 									</p>
-									<p>关于操作系统的选择，一般来说，是基于需求本身和硬件本身来约束的，为了更好的实现实时性操作，还有对于内存的管理，除了自己
-										开发一套流程来实现这样的功能，一般来说，我们都是用市面上的稳定的操作系统；理想层次来说，可以通过创建和管理task，达到
-										快速的响应和内存的可靠的管理。在一定程度上，我们自身参与了操作系统的任务的协调工作的编程任务。
+									<p>
 									</p>
-									<p>嵌入式的应用场景多种多样，基本上可以覆盖目前软件所能达到的所有的领域。典型的说一下目前的汽车领域，对于自动驾驶这样的应用
-										场景来说，快速的识别外部的环境和产生快速的反应。当危险来临的时候，以一个什么样的反应速度来最有可能的保障乘客的安全是一个
-										必须去考虑的问题。
+									<p>
 									</p>
-									<p>如果从任务的复杂度来说，在选择一个Android还是实时操作系统，还是一个Linux系统，这个主要依据应用需求的复杂度来说.基本上的
-										任务就是实现驱动的开发，并在系统里面添加自己的东西。实时操作系统，流程主要是完成硬件和系统的衔接，编写驱动。Linux一般是
-										作为服务器使用的。Android的定制也基本上是在Linux层完成驱动的开发，并在中间层修改代码，调动驱动，最后可以在应用层编写应用
-										完成开发。
+									<p>
 									</p>
 								</div> <!-- .entry-content -->
 
@@ -96,7 +95,7 @@
 
 						</div> <!-- .content -->
 					</div> <!-- .three-quarters-block -->
-					
+
 					<div class="one-quarter-block" role="complementary">
 						<div class="sidebar">
 
@@ -104,7 +103,8 @@
 								<form class="widget-form" action="#" method="get" role="search">
 									<label>
 										<span class="screen-reader-text">Search this website:</span>
-										<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="search" title="Search" />
+										<input type="search" class="search-field" placeholder="Search &hellip;" value=""
+											name="search" title="Search" />
 									</label>
 									<button><i class="fa fa-search"></i></button>
 								</form>
@@ -149,4 +149,5 @@
 	<script type="text/javascript" src="../js/custom.js"></script>
 
 </body>
+
 </html>
