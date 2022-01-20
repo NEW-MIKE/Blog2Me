@@ -43,7 +43,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.wfile.write("ok".encode())
         eventlet.monkey_patch()#必须加这条代码
         with eventlet.Timeout(3,False):#设置超时时间为2秒
-          try:
+          try: 
               repo = Repo(pulldir)
               repo.git.pull()
               #Repo.clone_from(url='git://github.com/NEW-MIKE/Blog2Me.git', to_path=srcdir)
