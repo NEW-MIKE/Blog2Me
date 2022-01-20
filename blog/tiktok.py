@@ -1,27 +1,10 @@
-#!/usr/bin/env python
-# --coding:utf-8--
-import requests
-import time,datetime
+from selenium import webdriver
 
-def run():
-    while True:
-        url1 = 'http://itknow.tk'
-        url2 = 'http://esabeila.gq'
-        try:
-            x = requests.get(url1)
-            print(x.url)
-        except Exception as e:
-            print(e)
-            
-        time.sleep(1)
-        try:
-            x = requests.get(url2)
-        except Exception as e:
-            print(e)
-        print(x.url)
-        time2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        print(time2+"   正常请求")
-        time.sleep(600)
+# 路径是自己解压安装 Chromedriver 的路径
+driver = webdriver.Chrome()
 
-if __name__ == '__main__':
-    run()
+url = "http://itknow.tk"
+url1 = "http://esabeila.gq"
+
+driver.get(url)
+driver.get(url1)

@@ -14,6 +14,7 @@ import time
 import subprocess
 import shutil
 from git.repo import Repo
+import eventlet
 #srcdir = "/tmp/update/book"
 #dstdir = "/tmp/blog"
 pulldir = "/tmp/blog"
@@ -40,27 +41,31 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
         self.wfile.write("ok".encode())
-        try:
-            repo = Repo(pulldir)
-            repo.git.pull()
-            #Repo.clone_from(url='git://github.com/NEW-MIKE/Blog2Me.git', to_path=srcdir)
-        except OSError as e:
-            print(e)
-        else:
-            print("pull successfully")
-            killport(4456)
-            print("ok")
-        # try:
-        #     shutil.rmtree(dstdir)
-        # except OSError as e:
-        #     print(e)
-        # else:
-        #     print("The directory is deleted successfully")
+        eventlet.monkey_patch()#必须加这条代码
+        with eventlet.Timeout(3,False):#设置超时时间为2秒
+          try:
+              repo = Repo(pulldir)
+              repo.git.pull()
+              #Repo.clone_from(url='git://github.com/NEW-MIKE/Blog2Me.git', to_path=srcdir)
+          except OSError as e:
+              print(e)
+          else:
+              print("pull successfully")
+              killport(4456)
+              print("ok")
+          # try:
+          #     shutil.rmtree(dstdir)
+          # except OSError as e:
+          #     print(e)
+          # else:
+          #     print("The directory is deleted successfully")
 
-        # shutil.move(srcdir, dstdir)
-        os.chdir("/tmp/blog/blog")
-        subprocess.Popen(['python3', '/tmp/blog/blog/dev.py'])
-        print("启动新的进程")
+          # shutil.move(srcdir, dstdir)
+          os.chdir("/tmp/blog/blog")
+          subprocess.Popen(['python3', '/tmp/blog/blog/dev.py'])
+          print("启动新的进程")
+          print('没有跳过这条输出')
+        print('跳过了输出')
         return
 
 
