@@ -21,7 +21,7 @@ def run():
         print(x.status_code)
         time2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(time2+"   正常请求")
-        time.sleep(3600)
+        time.sleep(600)
 
 if __name__ == '__main__':
     run()
