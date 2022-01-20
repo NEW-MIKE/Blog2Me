@@ -9,7 +9,7 @@ def run():
         url2 = 'http://esabeila.gq'
         try:
             x = requests.get(url1)
-            print(x.status_code)
+            print(x.url)
         except Exception as e:
             print(e)
             
@@ -18,7 +18,7 @@ def run():
             x = requests.get(url2)
         except Exception as e:
             print(e)
-        print(x.status_code)
+        print(x.url)
         time2 = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         print(time2+"   正常请求")
         time.sleep(600)
