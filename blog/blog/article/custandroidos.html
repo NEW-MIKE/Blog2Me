@@ -82,6 +82,277 @@
 										虽然Google公司提供的Android源码一般来说都可以直接使用，因为它是跨平台的，但是该源码几乎包含了各个移动设备的所
 										有能实现的公共的东西，使得它占用内存资源特别的大，一般都在30G左右，所以不能直接使用它而是要重新定制，最终使得
 										它符合自己需求并且极大的减少内存资源，一般经过定制之后最终生成的镜像文件只占用手机的700M左右的内存.</p>
+										<P>基于Android分层的一个架构结构，以及依据编译文件来进行编译特性，可以方便的进行定制化的操作，进行模块的修改，增加，删除工作。
+											只需要依据不同的分层部分，针对性的去修改逻辑，并进行文件配置，执行编译命令。我们就来认知一下整个系统的结构。
+										</P>
+										<p>Android系统总框架图包括Android--应用层、Android--应用程序框架、Android---库(系统运行库)、Android--硬件抽象层、
+											Android-Linux内核层，共5层。应用层包含所有的用JAVA语言编写的应用程序。应用程序框架是核心应用程序所使用的API
+											（应用程序编程接口）框架，包含隐藏在每个应用后面的一系列的服务和系统。系统运行库是一些核心库，该核心库提供了
+											JAVA编程语言核心库的大多数功能，包含一些C/C++库，这些库能被Android系统中不同的组件使用。它们通过 Android 
+											应用程序框架为开发者提供服务。硬件抽象层作为硬件和软件栈之间的抽象层，起着承上启下的作用。内核层是Android 
+											的核心系统服务所必需依赖的，如安全性，内存管理，进程管理，网络协议栈和驱动模型。</p>
+											<p>一般的，一个系统软件都会进行分层设计。对于linux系统又包含大的三部分：bootloader、linux内核、根文件系统。
+												其中bootloader又由应用层、逻辑层、驱动层组成；linux内核又由系统调用接口层、逻辑层、驱动层组成。
+												虽然整个linux系统的代码很庞大，但我们也会仅仅因为功能需求而进行选配，对编译系统而言，所谓的选配就是哪些要编译，
+												哪些不编译。在这里主要工作就是熟悉bootloader和linux内核的目录结构，进行Makefile的编写，修改源代码，代码大部分可用，
+												但是有一部分因为硬件变化或逻辑功能变化，需要进行代码修改，对于那些设备驱动不全的，也需要添加驱动代码。
+												该过程所需要的工具有交叉编译工具链、tftp服务、NFS服务等，搭建好linux平台，实现linux系统移植。
+
+												编写一个led驱动程序，中间件共享库代码，上层APP应用程序，实现led点亮。首先要熟悉模块化驱动的编写，
+												再熟悉平台驱动的编写，对于led驱动属于字符设备驱动，要按照字符设备的驱动程序去编写。
+											   
+											   裁剪定制出一个精简的Android操作系统，首先要到官网上下载Android源码，其次，要熟悉Android源码目录结构，
+											   在编译Android源码之前先进行厂商定制，添加好自己的代码，对于不需要的进行行裁剪，保留其精华即可，
+											   使得系统不过于太庞大。该过程所需要的工具有，linux系统、java SDK、相关的动态库、JNI共享库等。</p>
+											   <p>在Android 系统源码目录结构中，abi定义了函数参数的执行顺序相关代码。art是第三方的工具，支持应用层的一些工具。
+												   bionic里面是一些基础的库的源代码 ，即它把标准C库重新写了一遍。bootloader/legacy是启动引导相关代码，
+												   这个我们基本上不用，嵌入式设备有自己专门的启动代码。build目录中存放的是编译系统mk文件，
+												   包含编译规则和generic通用类产品基础配置文件。cts是Android兼容性测试套件标准 。dalvik是JAVA虚拟机相关代码，
+												   不存在跨平台，只与使用的类相关。development包含程序开发所需要的模板和工具 ，如AVD，示例源码 。
+												   device是设备相关代码（最重要的目录），与定制厂商有关的，内部包括厂商目录和产品目录。frameworks
+												   是核心Android应用框架库，核心框架——java及C++语言。Hardware主要是硬件适配层HAL代码 ，硬件抽象层代码。
+												   ndk是Android本地开发包相关代码 ，一个JNI接口，具体是java如何调C的代码。Out目录是编译后生成的目录，
+												   编译完成后的代码输出到这个目录，它不会产生中间代码。Prebuilt：支持Linux and Mac OS builds x86和arm架构下预编译
+												   （预先提供的）的一些资源 ，如图片等等。packages包含Android的各种系统级应用程序 ，Android原生的应用层程序，
+												   如计算机源码。sdk 包含工具源码及qemu相关源码（与ndk区别：只能运行纯java程序）。system是Android根文件系统相关源码，
+												   如：init、adb、toolbox及一些库，库代码。Docs是介绍开源的相关文档。external是允许第三方开源的，Android使用的一些开源的模块代码,
+												   通用的东西，如waifi。libcore是与核心库相关的代码。</p>
+												   <p>在认知到了整个系统的一个结构之后，我们开始来认识，如何搭建一个移植的环境，以及该如何组织该移植的过程。</p>
+												   <p>1.编译的硬件环境
+
+													由于下载源码约10GB，编译源码约30GB，至少拥有1.5GB的物理内存 ，内存要尽可能的大，不然再编译过程中会死掉，内存不够时它会杀掉部分编译进程，这样就出问题了。
+													
+													2.编译的软件环境：
+													
+													 （1）.使用Ubuntu (10.04) LTS（长期支持版）以上版本，JDK5 以上的java运行环境（本设计安装的是jdk6）, 对于Android5.0（2.3及以上版本）需要使用64位系统编译，
+													 使用gcc 4.4 编译器,必须确认编译器版本是否匹配。
+													
+													 （2）.配置软件环境具体命令
+													
+													1>.安装JDK
+													
+													$ sudo apt-get install sun-java6-jdk //安装并设置环境变量
+													
+													2>. 安装一系列必要工具
+													
+													$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev libc6-dev 
+													lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev lib32readline5-dev lib32z-dev libgl1-mesa-dev
+													 g++-multilib mingw32 tofrodos python-markdown libxml2-utils xsltproc （例如：bison是进行语法分析的，
+													 g++-multilib是32位、64位库相互转换等等）。</p>
+													 <p>编译的大概流程为： 编译生成bootloader
+ 
+														获得支持Android的Android Linux Kernel
+														
+														基于Android Kernel移植设备驱动
+														
+														下载与Android Kernel匹配的Android Source
+														
+														编译Android Source生成并定制Android文件系统</p>
+														<p>Android Kernel移植过程
+															1.修改kernel .config(基于Android的一些驱动),即选配Android原生的一些驱动。
+															参考目录为kernel-3.18/Documentation/android.txt（具体目录会随具体公司的项目而有所变动）。
+															2.编译针对Android的linux内核
+															
+															进入linux源码目录“lichee”下，第一次编译需要执行：
+															
+															$ ./build.sh config
+															
+															执行上面命令后会出现一系列菜单选项，按提示选择相应的选项,选配符合自己的环境，配置完成后自动进入uboot和内核的编译，
+															第一次完成配置编译后，若以后再执行，只需执行以下命令：
+															
+															$ ./build.sh
+															
+															每次执行这条命令后，都会按照第一次的配置来编译uboot和内核。
+															
+															4.2.3 Android编译系统配置
+															1.修改几个重要的makefile。
+															
+															Android.mk：编译源码mk文件，每个module和package目录下有这么一个文件,很多地方都有这个东西，
+															它的内容就是告诉编译器本层的哪些需要编译哪些不需要编译。
+															
+															main.mk：定义了编译全部代码的依赖关系。
+															
+															config.mk：用于配置编译系统，决定如何编译。
+															
+															envsetup.mk：定义了编译环境配置。
+															
+															product_config.mk：读取AndrodProducts.mk生成TARGET_DEVICE目标设备变量。
+															
+															AndroidProducts.mk：定义某厂商所有产品文件列表
+															
+															BoardConfig.mk：定义开发板软件相关配置项，对具体硬件的说明。
+															
+															2.编译修改后的Android 5.0源码并生成最终镜像。
+															
+															进入androidL目录，执行命令$source build/envsetup.sh导出环境变量，加载编译用到的环境变量，添加产品相应配置，
+															然后执行命令$lunch选择相应的产品，列出所有系统编译项，让用户选择编译平台 ，之后再执行命令$extract-bsp，
+															拷贝内核和模块到Android 中，最后执行编译Android系统de命令$make -j2，在当前目录执行编译，–j2表示2个线程同时编译
+															（仅多核CPU），它会执行一系列.mk，会生成很多镜像文件，如boot.img、ramdisk.img、system.img、system.img、
+															recovery.img。执行命令$pack -d 打包生成最终可烧写镜像文件,会把/system/vendor/modules/下的.ko打包成一个总的img的镜像。
+															
+															4.5添加Android新平台
+															4.5.1梳理框架
+															Android源码可以被编译成不同的平台系统，为了方便对源码分类管理，所有平台相关代码放到device目录下，
+															不同的厂商在device下对应不同目录，同一厂商可能有多个产品（TARGET_PRODUCT），
+															这些产品都通过产品配置文件来描述其产品细节（<PRODUCT_NAME>.mk），同一厂商的多个产品由产品列表文件
+																AndroidProducts.mk说明，同一厂商的产品可能使用相同的主板设备 （TARGET_DEVICE）
+																
+															
+															注：在Android5.0中AndroidProducts.mk也放到了产品目录下面了，在5.0之前是放在厂商目录下的。
+															
+															4.5.3具体修改过程
+															 1.在 device/目录下创建公司目录。
+															
+															 2.创建一个产品名目录，用来存放产品相关文件。
+															
+															 3.创建设备相关目录 【这一步省略】注：通常device_name和product_name一样 。
+															
+															 4.在具体的产品目录下所要修改的内容有
+															
+															 (1).创建一个product_name.mk文件。
+															
+															 (2).创建AndroidProducts.mk文件。
+															
+															 (3).创建 BoardConfig.mk文件，用来配置硬件设备相关信息。
+															
+															 (4).添加AndroidBoard.mk文件。
+															
+															 5.如果需要修改系统属性,要在board目录下添加system.prop 文件。
+															
+															 6.最后，将新的平台的编译选项添加到lunch菜单中，创建vendorsetup.sh 。
+															
+															 7.在产品目录下新建一个具体的<产品.mk>文件，定义具体的软件相关的东西。
+															
+															4.6定制Android系统图标
+															在平板开机过程中，屏幕上可能会显示4种形式内容：
+															
+															（1）在硬件Boot时出现Boot Logo画面
+															
+															（2）Linux启动时画面，可能会显示Linux Logo
+															
+															（3）Android系统本地启动阶段画面，可能显示定制画面
+															
+															（4）Android系统显示系统启动阶段，可以显示滚动字体或逐帧动画
+															
+															 图4-8 Boot Logo画面 图4-9 Android系统本地启动阶段画面
+															
+															4.7 Android系统启动过程
+															1.Android系统启动过程（几乎和linux系统启动过程一样）：
+															
+															 Android系统启动有4个阶段；
+															
+															1.硬件BOOT、加载Linux内核并挂载Rootfs
+															
+															2.init进程启动及Native服务启动
+															
+															3.System Server及Android服务启动
+															
+															4.Home桌面启动
+															
+															3.总体启动流程图
+															
+															图4-11 总体启动流程图</p>
+															<p>控制方案
+																方案一:在早期的Android系统软件架构中，还没有HAL层，在这种情况下，上层APP通过JNI（java本地接口）
+																调用在LIBRARIES层用C代码写好的.SO的共享库，之后，动态库会通过系统调用接口到内核层调用一个写的比较简单的驱动代码，
+																进而到硬件层。
+																
+																注：.SO的共享库会通过makefile（modules.mk）被拷贝到根文件系统当中，最终被打包到Android镜像中。
+																
+																
+																 方案二：在后期的Android系统软件架构中，有了HAL层，在HAL层包括两部分代码，首先是谷歌写好的通用代码为上层提供一个通用接口，
+																 另外是自己写的驱动代码，这部分是为了与硬件紧密相关。上层APP应用程序通过调用HAL层谷歌的通用代码然后去调用在HAL层的
+																 自己写好的相对复杂的驱动代码，进而去调用kernel层相对简单的驱动代码。
+																
+																
+																 方案三：在后期的Android系统软件架构中，不仅有了HAL层，还包含了应用框架层代码，该层的代码是为了单独实现应用层具体的类以
+																 及运行一个对应的服务管理器供应用层代码调用，从而使得应用层代码实现完全的与底层独立，上层APP应用程序通过调用应用框架层服务，
+																 再让应用框架层代码去调用HAL层谷歌的通用代码然后去调用在HAL层的自己写好的相对复杂的驱动代码，
+																 进而去调用kernel层相对简单的驱动代码。</p>
+																 <p>利用方案一实现
+
+																	利用方案一，首先在linux内核层（linux源码目录中）写一个比较简单的驱动代码，这个驱动代码被编译成.ko文件，
+																	之后在Android源码中执行extract-bsp命令就会把这个.ko文件拷贝到Androidde 源码中，再通过makefile（modules.mk）
+																	拷贝到根文件系统当中，最终被打包到Android镜像中，在.rc文件（init.sun8.rc）中来指定加载的驱动，并改变其权限；
+																	其次，在LIBRARIES层写C代码，把它最终编译成一个.so共享库，它是用来调用底层驱动程序并对上层提供一个接口，
+																	起到承上启下的作用。最后写一个APP应用程序。
+																	
+																	1.程序流程框图
+																	
+																	图 5-6 程序流程框图
+																	
+																	2.编写厂商自定义的初始化脚本文件
+																	
+																	如果我们想让自己添加的设备即定制的东西在Android启动时就加载进来，则必须在初始化脚本文件中对它进行声明并改变它的所有者、
+																	权限等信息。本人让硬件定制了一个LED灯，在lichee目录下添加了具体的驱动代码，编译出来后拷贝到device目录下，
+																	又经过makefile中的命令把它放到/system/vendor/mudules/中，值得注意的是这个驱动是一定能自动创建设备节点的。
+																	
+																	具体修改目录，androidL/device/softwinner/fspad-733/init.sun8i.rc
+																	
+																	3.linux底层驱动代码
+																	
+																	编写驱动代码是软件环节的重中之重，它是硬件的灵魂，没有它一切操作都是无用。本人在此只添加了led驱动代码，
+																	如果要添加其它的设备相关驱动，方法一样，在这里只需达到举一反三的效果即可。
+																	
+																	具体修改目录，lichee/linux-3.4/drivers/char/fspad723_led.c(fspad723_led.h)
+																	
+																	4.编写底层驱动代码对应目录的kconfig和makefile文件
+																	
+																	 要想让编写的驱动代码在内核编译后生成.ko文件，则必须添加此代码,在该文件中本人只加了一条指令，
+																	 obj-m += fspad723_led.o,表示直接指定把它编译成模块。
+																	
+																	具体修改目录，lichee/linux-3.4/drivers/char/makefile
+																	
+																	具体修改目录，lichee/linux-3.4/drivers/char/kconfig
+																	
+																	5.编写APP应用程序
+																	
+																	 要想实现手机启动之后用界面图标去控制底层驱动代码进而控制硬件LED的亮灭就必须添加此代码。
+																	 改APP代码可以在PC机上deeclipse软件里编写，之后生成APK文件即可。
+																	
+																	具体修改目录，androidL/hardware/farsight/LedDemo/led_java
+																	
+																	6.编写中间件的共享库代码
+																	
+																	 要想把上层应用程序与底层驱动联系起来必须添加此代码，它起着承上启下的作用。对于Android系统来说，
+																	 把中间件的实现放在库libraries当中，要么放在HAL层当中。对于中间件的代码存放位置Android中比较随意，
+																	 没有具体的位置，可以放在任何目录下面，至于它会把它排在哪个层次这个是由makefile决定，
+																	 在这里把中间库代码实现在具体设备目录fspad-733下面，在这个目录下自己创建了一个目录hardware.
+																	
+																	具体修改目录，androidL/device/softwinner/fspad-733/harware/legacy
+																	
+																	在legacy目录下面有一个com_farsight_ledlegacy_legacy.h文件该头文件使用javah工具生成的，
+																	由于上层是用java语言而下层使用c语言写的，对于两种不同的语言要建立通信，则必须要有一中翻译机制，
+																	即javah（jdk开发包中提供的一个工具）。要生成com_farsight_ledlegacy_legacy.h文件，
+																	在PC机运行里打开DOS窗口，进入工程源码目录E\androidL/Eclipse/ledlegacy工程目录执行命令，
+																	javah -classpath bin/class -d jni -jni com.farsight.ledlegacy.legacy,执行之后会在android/Eclipse/ledlegacy/
+																	
+																	Jni目录生成一个.h头文件，把它复制到androidL/device/softwinner/
+																	
+																	fspad-733/harware/legacy目录即可。
+																	
+																	7.编写底层驱动代码对应目录的Android.mk文件
+																	
+																	该文件用来指定代码如何编译的。
+																	
+																	8.总述运行流程
+																	
+																	 应用程序运行的时候，先去创建类的对象，在创建该对象的时候就加载了“legacy”共享库，
+																	 然后就可以在java主运行界面mainActivity.java中调用这个类，最终来打开设备，执行关灯和灭灯操作。
+																	
+																	9.用串口调试去测试驱动代码
+																	
+																	 在平台驱动时，有一个sysfs目录，在sys/class/farsight_led/led/下面会生成一个属性为enable的文件。
+																	
+																	在终端下执行：
+																	
+																	1.获取权限：$chmod 777 /sys/class/farsight_led/led/enable
+																	
+																	2.若第一步不行，则执行：$su root
+																	
+																	3.执行“亮灯”命令：$echo“1” > /sys/class/farsight_led/led/enable 
+																	
+																	4.执行“灭灯”命令：$echo “0” > /sys/class/farsight_led/led/enable</p>
 										<p>
 											基于操作系统的应用开发，就是提供我们自己的代码给已经在运行了的系统来调用和管理，我们的应用过程将会接受整个系统的管理
 											和调度。操作系统需要协调硬件条件和我们的应用过程，管理并控制我们的应用。整个系统的软件进程，除了是在管理硬件资源，也具备
