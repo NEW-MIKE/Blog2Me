@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>步行者</title>
   <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
  </head>
  <body>
  	<div class="main-wrapper">
@@ -30,7 +31,7 @@
 				<p>Basically there are not many philosophical questions to ask. We have already asked some 
 					of the most important ones. But history presents us with many different answers to each 
 					question. So it is easier to ask philosophical questions than to answer them.</p>
-				 <button class="main-btn"  onclick="" >打卡</button>
+				 <button class="main-btn"  onclick="DaKaBox()" >打卡</button>
 				 <!-- <div class="more">
 				 	更多
 				 </div> -->
@@ -153,7 +154,7 @@
 				<div class="card">
 					<h3>Flutter</h3>
 					<p>
-						Flutter通过独立的绘制体系，具备跨端的能力。
+						Flutter通过独立的绘制体系，具备跨端的能力，使用dart语言来编写。
 					</p>
 				</div>
 			</div>
@@ -190,6 +191,28 @@
 		</div>
 	</footer><!--页脚结束-->
 	</div>
+	<script language="JavaScript">
+		function DaKaBox1()
+		{
+			alert("this is good");
+		}
+		function DaKaBox(){
+			let date = new Date();
+			Swal.fire({
+			position: 'top-center',
+			background:'#0dbb72',
+			type: 'success',
+			title: date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日",
+  			footer: '<p>talk is cheap，show me the code.</p>',
+			html:
+			'签到成功 ' +
+			'<p>sleep well，you will do more </p>' +
+			'the Future Does not Need Us',
+			showConfirmButton: false,
+			timer: 3000
+			})
+		}
+	</script>
 	</body>
 </html>
 
