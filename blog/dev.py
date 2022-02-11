@@ -70,7 +70,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             (name, suffix) = filename.split('.')
             print(suffix)
             imgMime = ""
-            if(suffix == "jpg" | suffix == "jpeg"):
+            if(suffix == "jpg" or suffix == "jpeg"):
                 imgMime = 'image/jpeg'
             elif(suffix == "png"):
                 imgMime = 'image/png'
