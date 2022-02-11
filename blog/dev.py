@@ -39,7 +39,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         if( self.path.endswith(".html")):
             f = open(filepath[1:],"r",encoding='utf-8')
             html = f.read()
-            
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.send_header('Set-Cookie', 'monster=1')
