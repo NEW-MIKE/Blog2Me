@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>步行者</title>
+  <link rel="stylesheet" href="../main.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+ </head>
+ <body>
+ 	<div class="main-wrapper">
+	<header>
+		<div id="banner">  
+			<div class="inner"> 
+				 <button class="main-btn"  onclick="window.location.href='/001_PeopleStatus/index.html'" >总体预览</button>
+				 <button class="main-btn"  onclick="window.location.href='/006_BadStatus/index.html'" >疫情预览</button>
+				 <button class="main-btn"  onclick="window.location.href='/page2'" >打卡</button>
+			</div>
+		</div>
+	</header>
+	</div>
+	<script language="JavaScript">
+		function DaKaBox1()
+		{
+			alert("this is good");
+		}
+		function DaKaBox(){
+			let date = new Date();
+			Swal.fire({
+			position: 'top-center',
+			background:'#0dbb72',
+			type: 'success',
+			title: date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日",
+  			footer: '<p>talk is cheap，show me the code.</p>',
+			html:
+			'签到成功 ' +
+			'<p><b>sleep well，you will do more</b> </p>',
+			showConfirmButton: false,
+			timer: 10000
+			})
+		}
+	</script>
+	</body>
+</html>
+
