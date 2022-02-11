@@ -64,11 +64,27 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.wfile.write(f.read())
             print("javascript")
             f.close()
-        else:
+        else :
+            print("enter picture")
+            filename = self.path.split('/')[-1]
+            (name, suffix) = filename.split('.')
+            imgMime = ""
+            if(suffix == "jpg" | suffix == "jpeg"):
+                imgMime = 'image/jpeg'
+            elif(suffix == "png"):
+                imgMime = 'image/png'
             f = open(filepath[1:],"rb")
-            html = f.read()
-            self.wfile.write(html)
+            self.send_response(200)
+            self.send_header('Content-type', imgMime)
+            self.end_headers()
+            self.wfile.write(f.read())
+            print("picture")
             f.close()
+        # else:
+        #     f = open(filepath[1:],"rb")
+        #     html = f.read()
+        #     self.wfile.write(html)
+        #     f.close()
         #self.wfile.write(html.encode())
         return
 def run():
