@@ -68,6 +68,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             print("enter picture")
             filename = self.path.split('/')[-1]
             (name, suffix) = filename.split('.')
+            print(suffix)
             imgMime = ""
             if(suffix == "jpg" | suffix == "jpeg"):
                 imgMime = 'image/jpeg'
