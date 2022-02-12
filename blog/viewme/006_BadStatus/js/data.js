@@ -2,16 +2,16 @@
 var data = {
     "lastUpdateTime": "2020-04-04 17:05:52",
     "chinaTotal": {
-        "confirm": 82892,
+        "confirm": 1000,
         /*累计确诊确诊*/
-        "heal": 76992,
+        "heal": 500,
         /*累计治愈*/
-        "dead": 3335,
-        "nowConfirm": 2565,
-        "suspect": 114,
-        "nowSevere": 331,
-        "importedCase": 890,
-        "noInfect": 1030
+        "dead": 500,
+        "nowConfirm": 500,
+        "suspect": 500,
+        "nowSevere": 500,
+        "importedCase": 500,
+        "noInfect": 500
     },
     "chinaAdd": {
         "confirm": 90,
