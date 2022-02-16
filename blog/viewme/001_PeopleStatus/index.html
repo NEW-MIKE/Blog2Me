@@ -22,16 +22,36 @@
                     <div class="main_top_left_top_title">个人管理数据展示</div>
                     <div class="main_top_left_top_con">
                         <div class="main_top_left_top_con_list">
-                            <span class="main_top_left_c_l_n main_top_left_c_l_n33">1</span>
-                            <p>已经完成</p>
+                            <span class="main_top_left_c_l_n main_top_left_c_l_n33">10</span>
+                            <p>代码行数</p>
                         </div>
                         <div class="main_top_left_top_con_list">
                             <span class="main_top_left_c_l_n main_top_left_c_l_n1">0</span>
                             <p>负债管理</p>
                         </div>
                         <div class="main_top_left_top_con_list">
-                            <span class="main_top_left_c_l_n main_top_left_c_l_n22">100</span>
-                            <p>尚未完成</p>
+                            <span class="main_top_left_c_l_n main_top_left_c_l_n22">1</span>
+                            <p>代码时间(h)</p>
+                        </div>
+                        <div class="main_top_left_top_con_left">
+                            <div class="main_top_left_t_c_l_left">
+                                <span class="main_top_left_c_l_n main_top_left_c_l_n*">0</span>
+                                <p>规律天数</p>
+                            </div>
+                            <div class="main_top_left_t_c_l_right">
+                                <span class="main_top_left_c_l_n main_top_left_c_l_n*">0</span>
+                                <p>异常天数</p>
+                            </div>
+                        </div>
+                        <div class="main_top_left_top_con_right main_top_left_top_con_right2">
+                            <div class="main_top_left_t_c_r_left">
+                                <span class="main_top_left_c_l_n">0</span>
+                                <p>一天合h</p>
+                            </div>
+                            <div class="main_top_left_t_c_r_right">
+                                <span class="main_top_left_c_l_n">0</span>
+                                <p>实力合h</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,9 +142,9 @@
         </div>
         <div class="main_middle">
             <div class="main_middle_list">
-                <img src="./images/main_middle.png">
-                <div class="main_list_title main_list_title1">XXX镇</div>
-                <span class="main_list_title_num main_list_title_num1">0</span>
+                <!-- <img src="./images/main_middle.png"> -->
+                <div class="main_list_title main_list_title1"></div>
+                <span class="main_list_title_num main_list_title_num1"></span>
             </div>
             <div class="main_middle_list">
                 <img src="./images/main_middle.png">
@@ -650,10 +670,10 @@
                     {name: '测试55', value: 363},
                 ]
                     // 中间滚动数据展示
-                    for(var j = 0; j < dataArr.length; j++) {
-                        $(".main_list_title_num"+(j+1)).addClass("counter-value").text(dataArr[j].value)
-                        $(".main_list_title"+(j+1)).text(dataArr[j].name)
-                    }
+                    // for(var j = 0; j < dataArr.length; j++) {
+                    //     $(".main_list_title_num"+(j+1)).addClass("counter-value").text(dataArr[j].value)
+                    //     $(".main_list_title"+(j+1)).text(dataArr[j].name)
+                    // }
                 var departmentChart = echarts.init(document.getElementById('departmentId'));
                 var data = dataArr
                 var option = {
