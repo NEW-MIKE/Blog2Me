@@ -26,7 +26,7 @@
 		<div id="banner">  
 			<div class="inner"> 
 				<h1>毋退步，毋中立，毋徘徊</h1>
-				<h1>山河有情，天地有义</h1>
+				<h1>山河有<a onclick="music()">情</a>，天地有<a onclick="stop()">义</a></h1>
 				<p class="sub-heading">你太习惯这个世界了，才会对任何事情都不感到惊奇，生命本来就是悲伤而严肃的。
 					我们来到这个美好的世界里，彼此相逢，彼此问候，并结伴同游一段短暂的时间。然后我们就失去了对方，
 					并且莫名其妙就消失了，就像我们突然莫名其妙地来到世上一般
@@ -203,9 +203,22 @@
 	</div>
 	<script language="JavaScript">
 		const sound = new Audio ('https://s1.aigei.com/pvaud/aud/mp3/c6/c6c62687d8164c8d8f88e4ea5411c64c.mp3?e=1645108620&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:OTyz8mOCE8l0PMy20yr5_KwLICo=');
+		const bgsound = new Audio('https://s1.aigei.com/pvaud/aud/mp3/8d/8d3b0e37c590464a9a01afaf03555a38.mp3?e=1645111020&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:ACvZA4Wujhj8H6fDxqlwShJQGx0=');
 		function DaKaBox1()
 		{
 			alert("this is good");
+		}
+		window.onload = function(){
+			// sound.play();
+			// sound.loop = true;
+		}
+		function music(){
+			bgsound.play();
+			bgsound.loop = true;
+		}
+
+		function stop(){
+			bgsound.pause();
 		}
 		function DaKaBox(){
 			let date = new Date();
