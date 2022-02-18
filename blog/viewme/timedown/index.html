@@ -50,6 +50,9 @@ window.onload=function starttime(){
         time("h2",'2024/01/01');     // 2022年春节时间
         time("h3",'2025/01/01');     // 2022年春节时间
         time("h4",'2093/01/01');     // 2022年春节时间
+        const sound1 = new Audio("https://s1.aigei.com/pvaud/aud/mp3/9a/9a4acc340e244c4aa7f031c1c0afa4bf.mp3?e=1645201020&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:8eysf7LAWVLYj8V-U5QxPAAn5dc=");
+        sound1.loop = true;
+        sound1.play();
         ptimer = setTimeout(starttime,1000); // 添加计时器
 }
     function time(obj,futimg){
