@@ -328,6 +328,37 @@ ul.share-group
 	display: inline-block;
 	padding: 10px;
 }
+button.example {
+	-webkit-transition: all 0s ease-out;
+	-moz-transition: all 0s ease-out;
+	-o-transition: all 0s ease-out;
+	-ms-transition: all 0s ease-out;
+	transition: all 0s ease-out;
+	height: 55px;
+	display: block;
+	font-family: Arial, "Helvetica", sans-serif;
+	font-size: 24px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+	padding: 4px 20px 0;
+	margin: 10px auto;
+	left: 30px;
+	position: relative;
+	cursor: pointer;
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+button.facebook {
+	border-left: solid 1px #2E4476;
+	background: #3B5999;
+
+	-webkit-box-shadow: 0px 5px 0px 0px #2E4476;
+	box-shadow: 0px 5px 0px 0px #2E4476;
+}
 
 .copy
 {
