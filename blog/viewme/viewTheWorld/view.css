@@ -336,18 +336,11 @@ ul.share-group
 .copy
 {
 	padding-bottom: 30px;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 }
 
-
-.main-btn:active{
-    background: #000000;   /* 黑色 */
-    opacity: 0.5;    /* 设置不透明度（可以不设置） */
-}
-.main-wrapper
+summary
 {
-	background: rgb(11, 109, 139) url(../mainsource/bg3.jpg);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 }
+
