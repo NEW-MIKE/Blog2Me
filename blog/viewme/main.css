@@ -24,8 +24,8 @@ nav{
 	background: transparent;
 	height: 700px;
 }
-#banner1{
-	top: 0px;
+.banner1{
+	top: 160px;
 	background: transparent;
 	height: 100px;
 }
