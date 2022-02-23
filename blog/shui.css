@@ -73,3 +73,11 @@
         top:190px;
     }
 }
+
+#mybutton{
+	background:transparent;	
+	border-width:0px;	
+	outline:none;	
+    width: 200px;
+    height: 40px;
+}
