@@ -7,6 +7,8 @@ import json
 from urllib import request, parse
 import requests
 import cgi
+import os
+import subprocess
 
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
@@ -19,11 +21,23 @@ ret_card = {
     }]
 }
 class RequestHandler(BaseHTTPRequestHandler):
+
     def do_POST(self):
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
         self.wfile.write("ok".encode())
+        ctype, pdict = cgi.parse_header(self.headers['update'])
+        if ctype == 'cv':
+            req_body = self.rfile.read(int(self.headers['content-length']))
+            obj = req_body.decode("utf-8")
+            print(obj)
+            create__file('cv.md',obj)
+            create__file('cv.txt',obj)
+            #print(os.getcwd()+'\blog\cv.md')
+            #subprocess.Popen(['F:\InstallSoftwareDevelopment\PythonIDE\Anaconda3\Scripts\md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
+            #md2pdf(cv.md)
+            return
         ctype, pdict = cgi.parse_header(self.headers['x-github-event'])
         print(ctype.split("/")[0])
         if ctype.split("/")[0] == 'ping':
@@ -93,6 +107,12 @@ def run():
     httpd = HTTPServer(server_address, RequestHandler)
     print("dev start.....")
     httpd.serve_forever()
-
+#创建文件
+#file_path：文件路径
+#msg：即要写入的内容
+def create__file(file_path,msg):
+    f=open(file_path,"w",encoding='utf-8')
+    f.write(msg)
+    f.close
 if __name__ == '__main__':
     run()
