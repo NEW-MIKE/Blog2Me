@@ -15,7 +15,7 @@ window.onload = function () {
 
 function uploaddata(){
     console.log("ok")
-    var url = "http://itknow.tk";
+    var url = "https://9f01-115-192-20-43.ngrok.io";
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
