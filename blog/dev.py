@@ -95,7 +95,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             f.close()
         elif self.path.endswith(".txt"):
             print("enter txt")
-            f = open(filepath[1:],"rb")
+            f = open(filepath[1:],"rb",encoding='utf-8')
             self.send_response(200)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
