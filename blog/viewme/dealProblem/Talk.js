@@ -66,6 +66,24 @@ Date.prototype.Format = function (fmt) {
 
 function downloaddata(){
     console.log("ok")
+    var url = "https://9f01-115-192-20-43.ngrok.io";
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("update", "gettalk");
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var r = xhr.responseText;      
+            document.querySelector('.info').innerHTML = r; //显示
+        }
+    };
+    xhr.send(null);  
+}
+function downloaddataget(){
+    console.log("ok")
     var url = "https://9f01-115-192-20-43.ngrok.io/talk.txt";
     var xhr = new XMLHttpRequest();
 

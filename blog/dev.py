@@ -26,18 +26,19 @@ class RequestHandler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         self.send_response(200)
-        self.send_header('Content-Type', 'application/json')
+        self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write("ok".encode())
         try:
             ctype, pdict = cgi.parse_header(self.headers['update'])
             print("ddd ")
             if ctype == 'cv':
+                self.wfile.write("ok".encode())
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
                 print(obj)
                 return
             if ctype == 'cache':
+                self.wfile.write("ok".encode())
                 print("ok")
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
@@ -51,6 +52,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 #print(os.getcwd()+'\blog\cv.md')
                 return
             elif ctype == 'talk':
+                self.wfile.write("ok".encode())
                 print("ok")
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
@@ -63,7 +65,15 @@ class RequestHandler(BaseHTTPRequestHandler):
                 #create__filea("/tmp/blog/blog/cv.txt",obj)
                 #print(os.getcwd()+'\blog\cv.md')
                 return
+            elif ctype == 'gettalk':
+                print("gettalk")
+                f = open("/tmp/blog/blog/talk.txt","rb")
+                self.wfile.write(f.read())
+                print("javascript")
+                f.close()
+                return
             elif ctype.split("/")[0] == 'update':
+                self.wfile.write("ok".encode())
                 print(ctype.split("/")[1])
                 main(['install', ctype.split("/")[1]])
                 return
@@ -72,11 +82,15 @@ class RequestHandler(BaseHTTPRequestHandler):
         try:
             ctype, pdict = cgi.parse_header(self.headers['x-github-event'])
             print(ctype.split("/")[0])
+            
+            self.wfile.write("ok".encode())
             if ctype.split("/")[0] == 'ping':
                 print("ping")
                 return
         except:
             print("ok")
+        
+        self.wfile.write("ok".encode())
         url = 'http://127.0.0.1:4457'
         myobj = {'somekey': 'somevalue'}
         x = requests.post(url, data = myobj)
