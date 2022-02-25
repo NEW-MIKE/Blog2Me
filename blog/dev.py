@@ -38,6 +38,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 print(obj)
                 return
             if ctype == 'cache':
+                print("ok")
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
                 print(obj)
