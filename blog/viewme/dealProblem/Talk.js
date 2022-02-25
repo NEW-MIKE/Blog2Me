@@ -39,7 +39,7 @@ function uploaddata(){
     var data = time2+"  "+text+":"+data;
     xhr.send(data);  
     setTimeout(function() { downloaddata(); }, 500);
-    setInterval("downloaddata()","2000"); 
+    setInterval("downloaddata()","10000"); 
       
 }
 
