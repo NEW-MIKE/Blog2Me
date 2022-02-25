@@ -50,6 +50,19 @@ class RequestHandler(BaseHTTPRequestHandler):
                 #create__filea("/tmp/blog/blog/cv.txt",obj)
                 #print(os.getcwd()+'\blog\cv.md')
                 return
+            elif ctype == 'talk':
+                print("ok")
+                req_body = self.rfile.read(int(self.headers['content-length']))
+                obj = req_body.decode("utf-8")
+                print(obj)
+                try:
+                    #create__filea(os.getcwd()+"/blog/cv.txt",obj)
+                    create__filea("/tmp/blog/blog/talk.txt",obj)
+                except:
+                    print("ok")
+                #create__filea("/tmp/blog/blog/cv.txt",obj)
+                #print(os.getcwd()+'\blog\cv.md')
+                return
             elif ctype.split("/")[0] == 'update':
                 print(ctype.split("/")[1])
                 main(['install', ctype.split("/")[1]])
