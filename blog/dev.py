@@ -41,7 +41,8 @@ class RequestHandler(BaseHTTPRequestHandler):
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
                 print(obj)
-                create__filea("/tmp/blog/blog/cv.txt",obj)
+                create__filea(os.getcwd()+"/blog/cv.txt",obj)
+                #create__filea("/tmp/blog/blog/cv.txt",obj)
                 #print(os.getcwd()+'\blog\cv.md')
                 #subprocess.Popen(['md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
                 return
@@ -140,7 +141,7 @@ def create__file(file_path,msg):
     f.write(msg)
     f.close
 def create__filea(file_path,msg):
-    f=open(file_path,"a")
+    f=open(file_path,"a",encoding='utf-8')
     f.write(msg)
     f.close
 if __name__ == '__main__':
