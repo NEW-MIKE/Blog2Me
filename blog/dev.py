@@ -31,7 +31,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.wfile.write("ok".encode())
         try:
             ctype, pdict = cgi.parse_header(self.headers['update'])
-            print("ddd")
+            print("ddd ")
             if ctype == 'cv':
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
