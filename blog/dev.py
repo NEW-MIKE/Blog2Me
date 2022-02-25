@@ -147,7 +147,7 @@ def create__file(file_path,msg):
     f.write(msg)
     f.close()
 def create__filea(file_path,msg):
-    time = datetime.datetime.strptime(string,'%Y-%m-%d %H:%M:%S')
+    #time = datetime.datetime.strptime(string,'%Y-%m-%d %H:%M:%S')
     f=open(file_path,"a",encoding='utf-8')
     f.write('<br>')
     f.write(msg)
