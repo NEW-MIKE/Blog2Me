@@ -21,7 +21,7 @@ function uploaddata(){
     xhr.open("POST", url);
     
     xhr.setRequestHeader("Accept", "application/json");
-    xhr.setRequestHeader("Content-Type", "text/plain");
+    xhr.setRequestHeader("Content-Type", "text/plain",);
     xhr.setRequestHeader("update", "cache");
     
     xhr.onreadystatechange = function () {
@@ -29,7 +29,7 @@ function uploaddata(){
           console.log(xhr.responseText);
        }};
     console.log(document.getElementById("jilu").value)
-    var data = `我是测试数据`+document.getElementById("jilu").value;
+    var data = encodeURI(encodeURI("中国"))+document.getElementById("jilu").value;
     
     xhr.send(data);    
 }
