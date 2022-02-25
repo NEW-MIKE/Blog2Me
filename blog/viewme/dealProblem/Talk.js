@@ -64,7 +64,7 @@ Date.prototype.Format = function (fmt) {
     return fmt;
 }
 
-
+var cache = "";
 function downloaddata(){
     console.log("ok")
     var url = "https://9f01-115-192-20-43.ngrok.io";
@@ -78,7 +78,11 @@ function downloaddata(){
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var r = xhr.responseText;      
-            document.querySelector('.info').innerHTML = r; //显示
+            if(cache == r){}
+            else{
+                cache = r;
+                document.querySelector('.info').innerHTML = r; //显示
+            }
         }
     };
     xhr.send(null);  
