@@ -63,7 +63,7 @@ function uploaddatabeifen(){
     console.log(time2)
     var data = time2+"  "+":"+data;
     console.log(data)
-    xhr.send(data1);  
+    xhr.send(data);  
     setTimeout(function() { downloaddatabeifen(); }, 500);
     setInterval("downloaddatabeifen()","2000"); 
       
