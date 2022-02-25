@@ -43,7 +43,8 @@ class RequestHandler(BaseHTTPRequestHandler):
                 obj = req_body.decode("utf-8")
                 print(obj)
                 try:
-                    create__filea(os.getcwd()+"/blog/cv.txt",obj)
+                    #create__filea(os.getcwd()+"/blog/cv.txt",obj)
+                    create__filea("/tmp/blog/blog/cv.txt",obj)
                 except:
                     print("ok")
                 #create__filea("/tmp/blog/blog/cv.txt",obj)
