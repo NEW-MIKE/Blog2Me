@@ -37,7 +37,9 @@ function uploaddata(){
     console.log(time2)
     console.log(document.getElementById("jilu").value)
     var data = time2+"  "+text+":"+data;
-    xhr.send(data);    
+    xhr.send(data);  
+    setTimeout(function() { downloaddata(); }, 2000);
+      
 }
 Date.prototype.Format = function (fmt) {
     var o = {
