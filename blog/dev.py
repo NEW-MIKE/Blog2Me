@@ -80,7 +80,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 print(obj)
                 try:
                     #create__filea(os.getcwd()+"/blog/cv.txt",obj)
-                    create__filea("/tmp/blog/blog/backup.txt",obj)
+                    create__filea("/tmp/blog/blog/save.txt",obj)
                 except:
                     print("ok")
                 #create__filea("/tmp/blog/blog/cv.txt",obj)
@@ -88,7 +88,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 return
             elif ctype == 'getbeifen':
                 print("getbeifen")
-                f = open("/tmp/blog/blog/backup.txt","rb")
+                f = open("/tmp/blog/blog/save.txt","rb")
                 self.wfile.write(f.read())
                 print("javascript")
                 f.close()
