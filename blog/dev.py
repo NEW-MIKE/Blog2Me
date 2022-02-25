@@ -79,12 +79,9 @@ class RequestHandler(BaseHTTPRequestHandler):
                 obj = req_body.decode("utf-8")
                 print(obj)
                 try:
-                    #create__filea(os.getcwd()+"/blog/cv.txt",obj)
                     create__filea("/tmp/blog/blog/save.txt",obj)
                 except:
                     print("ok")
-                #create__filea("/tmp/blog/blog/cv.txt",obj)
-                #print(os.getcwd()+'\blog\cv.md')
                 return
             elif ctype == 'getbeifen':
                 print("getbeifen")
