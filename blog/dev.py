@@ -49,7 +49,6 @@ class RequestHandler(BaseHTTPRequestHandler):
                     print("ok")
                 #create__filea("/tmp/blog/blog/cv.txt",obj)
                 #print(os.getcwd()+'\blog\cv.md')
-                #subprocess.Popen(['md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
                 return
             elif ctype.split("/")[0] == 'update':
                 print(ctype.split("/")[1])
@@ -154,5 +153,4 @@ def create__filea(file_path,msg):
     f.close()
     print("save ok")
 if __name__ == '__main__':
-    
     run()
