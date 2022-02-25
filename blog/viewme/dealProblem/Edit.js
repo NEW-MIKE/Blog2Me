@@ -21,7 +21,7 @@ function uploaddata(){
     xhr.open("POST", url);
     
     xhr.setRequestHeader("Accept", "application/json");
-    xhr.setRequestHeader("Content-Type", "text/plain",);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.setRequestHeader("update", "cache");
     
     xhr.onreadystatechange = function () {
