@@ -74,20 +74,21 @@ class RequestHandler(BaseHTTPRequestHandler):
                 return
             elif ctype == 'beifen':
                 self.wfile.write("ok".encode())
-                print("ok")
+                print("beifen")
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
                 print(obj)
                 try:
+                    #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt",obj)
                     create__filea("/tmp/blog/blog/save.txt",obj)
-                except:
-                    print("ok")
+                except Exception as e:
+                    print(str(e))
                 return
             elif ctype == 'getbeifen':
                 print("getbeifen")
+                #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt","rb")
                 f = open("/tmp/blog/blog/save.txt","rb")
                 self.wfile.write(f.read())
-                print("javascript")
                 f.close()
                 return
             elif ctype.split("/")[0] == 'update':
@@ -191,7 +192,7 @@ def create__file(file_path,msg):
     f.write(msg)
     f.close()
 def create__filea(file_path,msg):
-    f=open(file_path,"r+",encoding='utf-8')
+    f=open(file_path,"a+",encoding='utf-8')
     content = f.read()
     f.seek(0,0)
     f.write('<br>')

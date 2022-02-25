@@ -48,7 +48,7 @@ function uploaddata(){
     }
       
 }
-
+var myVarb ="001";
 function uploaddatabeifen(){
     console.log("ok")
     var url = "https://9f01-115-192-20-43.ngrok.io";
@@ -71,7 +71,12 @@ function uploaddatabeifen(){
     console.log(data)
     xhr.send(data);  
     setTimeout(function() { downloaddatabeifen(); }, 500);
-    setInterval("downloaddatabeifen()","2000"); 
+    
+    if(myVarb == "001"){
+        myVarb ="002";
+        console.log(myVarb);
+        setInterval("downloaddatabeifen()","4000"); 
+    }
       
 }
 
