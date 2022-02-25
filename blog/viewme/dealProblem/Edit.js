@@ -50,8 +50,9 @@ function downloaddata(){
     //3-监听服务器响应
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            var r = xhr.responseText;          
-            document.querySelector('.info').innerHTML = r; //显示
+            var r = xhr.responseText;      
+            str = r.replaceAll(/\r\n/g,'<br/>');    
+            document.querySelector('.info').innerHTML = str; //显示
         }
     }
 }
