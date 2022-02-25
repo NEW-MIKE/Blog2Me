@@ -155,10 +155,12 @@ def run():
 #msg：即要写入的内容
 def create__file(file_path,msg):
     f=open(file_path,"w",encoding='utf-8')
+    f.seek(0,0)
     f.write(msg)
     f.close()
 def create__filea(file_path,msg):
     f=open(file_path,"a",encoding='utf-8')
+    f.seek(0,0)
     f.write('<br>')
     f.write(msg)
     f.close()
