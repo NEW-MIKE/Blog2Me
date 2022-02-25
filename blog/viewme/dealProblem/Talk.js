@@ -41,6 +41,12 @@ function uploaddata(){
     setTimeout(function() { downloaddata(); }, 100);
       
 }
+function keydown(){
+    if(event.keyCode == 13){ //按下回车键
+        //do something
+        uploaddata();
+     }
+}
 Date.prototype.Format = function (fmt) {
     var o = {
         "M+": this.getMonth() + 1, //月份 
