@@ -51,8 +51,7 @@ function downloaddata(){
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             var r = xhr.responseText;      
-            str = r.replaceAll(/\r\n/g,'<br/>');    
-            document.querySelector('.info').innerHTML = str; //显示
+            document.querySelector('.info').innerHTML = r; //显示
         }
     }
 }
