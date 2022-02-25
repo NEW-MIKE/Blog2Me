@@ -16,7 +16,8 @@ window.onload = function () {
 function uploaddata(){
     console.log("ok")
     var url = "https://9f01-115-192-20-43.ngrok.io";
-
+    var data = document.getElementById("jilu").value;
+    document.getElementById("jilu").value= '';
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
@@ -31,7 +32,7 @@ function uploaddata(){
     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");  
     console.log(time2)
     console.log(document.getElementById("jilu").value)
-    var data = time2+":"+document.getElementById("jilu").value;
+    var data = time2+":"+data;
     xhr.send(data);    
 }
 Date.prototype.Format = function (fmt) {
