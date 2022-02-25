@@ -46,7 +46,6 @@ class RequestHandler(BaseHTTPRequestHandler):
           try: 
               repo = Repo(pulldir)
               repo.git.pull()
-              #Repo.clone_from(url='git://github.com/NEW-MIKE/Blog2Me.git', to_path=srcdir)
           except OSError as e:
               print(e)
           else:
