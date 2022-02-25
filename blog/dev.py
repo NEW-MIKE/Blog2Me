@@ -152,6 +152,7 @@ def create__filea(file_path,msg):
     f.write('<br>')
     f.write(msg)
     f.close()
+    print("save ok")
 if __name__ == '__main__':
     
     run()
