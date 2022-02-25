@@ -14,6 +14,10 @@ window.onload = function () {
 }
 
 function uploaddata(){
+    var obj = document.getElementByIdx_x("name"); //定位id
+    var index = obj.selectedIndex; // 选中索引
+    var text = obj.options[index].text; // 选中文本
+    var value = obj.options[index].value; // 选中值
     console.log("ok")
     var url = "https://9f01-115-192-20-43.ngrok.io";
     var data = document.getElementById("jilu").value;
@@ -32,7 +36,7 @@ function uploaddata(){
     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");  
     console.log(time2)
     console.log(document.getElementById("jilu").value)
-    var data = time2+":"+data;
+    var data = time2+"  "+text+":"+data;
     xhr.send(data);    
 }
 Date.prototype.Format = function (fmt) {
