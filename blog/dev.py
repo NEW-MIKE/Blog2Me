@@ -29,33 +29,38 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
         self.wfile.write("ok".encode())
-        ctype, pdict = cgi.parse_header(self.headers['update'])
-        if ctype == 'cv':
-            req_body = self.rfile.read(int(self.headers['content-length']))
-            obj = req_body.decode("utf-8")
-            print(obj)
-            create__file(os.getcwd()+"\\blog\cv.md",obj)
-            create__file(os.getcwd()+"\\"+"blog\cv.txt",obj)
-            #print(os.getcwd()+'\blog\cv.md')
-            #subprocess.Popen(['md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
-            return
-        if ctype == 'cache':
-            req_body = self.rfile.read(int(self.headers['content-length']))
-            obj = req_body.decode("utf-8")
-            print(obj)
-            create__filea(os.getcwd()+"\\"+"blog\cv.txt",obj)
-            #print(os.getcwd()+'\blog\cv.md')
-            #subprocess.Popen(['md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
-            return
-        elif ctype.split("/")[0] == 'update':
-            print(ctype.split("/")[1])
-            main(['install', ctype.split("/")[1]])
-            return
-        ctype, pdict = cgi.parse_header(self.headers['x-github-event'])
-        print(ctype.split("/")[0])
-        if ctype.split("/")[0] == 'ping':
-            print("ping")
-            return
+        try:
+            ctype, pdict = cgi.parse_header(self.headers['update'])
+            print("ddd")
+            if ctype == 'cv':
+                req_body = self.rfile.read(int(self.headers['content-length']))
+                obj = req_body.decode("utf-8")
+                print(obj)
+                create__file(os.getcwd()+"\\blog\cv.md",obj)
+                create__file(os.getcwd()+"\\"+"blog\cv.txt",obj)
+                return
+            if ctype == 'cache':
+                req_body = self.rfile.read(int(self.headers['content-length']))
+                obj = req_body.decode("utf-8")
+                print(obj)
+                create__filea(os.getcwd()+"\\"+"blog\cv.txt",obj)
+                #print(os.getcwd()+'\blog\cv.md')
+                #subprocess.Popen(['md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
+                return
+            elif ctype.split("/")[0] == 'update':
+                print(ctype.split("/")[1])
+                main(['install', ctype.split("/")[1]])
+                return
+        except:
+            print("update ok")
+        try:
+            ctype, pdict = cgi.parse_header(self.headers['x-github-event'])
+            print(ctype.split("/")[0])
+            if ctype.split("/")[0] == 'ping':
+                print("ping")
+                return
+        except:
+            print("ok")
         url = 'http://127.0.0.1:4457'
         myobj = {'somekey': 'somevalue'}
         x = requests.post(url, data = myobj)
