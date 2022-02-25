@@ -36,14 +36,12 @@ class RequestHandler(BaseHTTPRequestHandler):
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
                 print(obj)
-                create__file(os.getcwd()+"\\blog\cv.md",obj)
-                create__file(os.getcwd()+"\\"+"blog\cv.txt",obj)
                 return
             if ctype == 'cache':
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
                 print(obj)
-                create__filea(os.getcwd()+"\\"+"blog\cv.txt",obj)
+                create__filea("/tmp/blog/blog/cv.txt",obj)
                 #print(os.getcwd()+'\blog\cv.md')
                 #subprocess.Popen(['md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
                 return
