@@ -12,6 +12,7 @@ import re
 import time
 import subprocess
 import shutil
+import datetime
 srcdir = ".\\book\\blog"
 tempdst = "..\\temp"
 pathTest = r"E:\AmesomeCloud\Blog2Me\blog\book"
@@ -19,13 +20,17 @@ pathTest = r"E:\AmesomeCloud\Blog2Me\blog\book"
 
 #dstdir = ".\\yy"
 if __name__ == '__main__':
-    shutil.move(srcdir, tempdst)
-    try:
-        shutil.rmtree(pathTest)
-    except OSError as e:
-        print(e)
-    else:
-        print("The directory is deleted successfully")
+    
 
-    shutil.move(tempdst, srcdir)
+    time = datetime.datetime.strftime(datetime.datetime.now(),'%Y-%m-%d %H:%M:%S')
+    print(time)
+    # shutil.move(srcdir, tempdst)
+    # try:
+    #     shutil.rmtree(pathTest)
+    # except OSError as e:
+    #     print(e)
+    # else:
+    #     print("The directory is deleted successfully")
+
+    # shutil.move(tempdst, srcdir)
     #shutil.copytree(tempdst, dstdir)
