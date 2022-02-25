@@ -9,6 +9,7 @@ import requests
 import cgi
 import os
 import subprocess
+from pip._internal import main
 
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
@@ -23,6 +24,7 @@ ret_card = {
 class RequestHandler(BaseHTTPRequestHandler):
 
     def do_POST(self):
+        
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
@@ -32,11 +34,22 @@ class RequestHandler(BaseHTTPRequestHandler):
             req_body = self.rfile.read(int(self.headers['content-length']))
             obj = req_body.decode("utf-8")
             print(obj)
-            create__file('cv.md',obj)
-            create__file('cv.txt',obj)
+            create__file(os.getcwd()+"\\blog\cv.md",obj)
+            create__file(os.getcwd()+"\\"+"blog\cv.txt",obj)
             #print(os.getcwd()+'\blog\cv.md')
-            #subprocess.Popen(['F:\InstallSoftwareDevelopment\PythonIDE\Anaconda3\Scripts\md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
-            #md2pdf(cv.md)
+            #subprocess.Popen(['md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
+            return
+        if ctype == 'cache':
+            req_body = self.rfile.read(int(self.headers['content-length']))
+            obj = req_body.decode("utf-8")
+            print(obj)
+            create__filea(os.getcwd()+"\\"+"blog\cv.txt",obj)
+            #print(os.getcwd()+'\blog\cv.md')
+            #subprocess.Popen(['md2pdf', 'E:\AmesomeCloud\Blog2Me\cv.md'])
+            return
+        elif ctype.split("/")[0] == 'update':
+            print(ctype.split("/")[1])
+            main(['install', ctype.split("/")[1]])
             return
         ctype, pdict = cgi.parse_header(self.headers['x-github-event'])
         print(ctype.split("/")[0])
@@ -114,5 +127,10 @@ def create__file(file_path,msg):
     f=open(file_path,"w",encoding='utf-8')
     f.write(msg)
     f.close
+def create__filea(file_path,msg):
+    f=open(file_path,"a",encoding='utf-8')
+    f.write(msg)
+    f.close
 if __name__ == '__main__':
+    
     run()
