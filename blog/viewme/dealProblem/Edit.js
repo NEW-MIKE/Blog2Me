@@ -29,7 +29,7 @@ function uploaddata(){
           console.log(xhr.responseText);
        }};
     console.log(document.getElementById("jilu").value)
-    var data = encodeURI(encodeURI("中国"))+document.getElementById("jilu").value;
-    
+    var data = "中国"+document.getElementById("jilu").value;
+    console.log(data)
     xhr.send(data);    
 }
