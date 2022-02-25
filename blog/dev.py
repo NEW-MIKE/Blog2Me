@@ -192,7 +192,11 @@ def create__file(file_path,msg):
     f.write(msg)
     f.close()
 def create__filea(file_path,msg):
-    f=open(file_path,"a+",encoding='utf-8')
+    try:
+        f=open(file_path,"r+",encoding='utf-8')
+    except  Exception as e:
+        print(str(e))
+        f=open(file_path,"a+",encoding='utf-8')
     content = f.read()
     f.seek(0,0)
     f.write('<br>')
