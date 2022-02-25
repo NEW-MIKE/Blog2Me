@@ -42,6 +42,39 @@ function uploaddata(){
     setInterval("downloaddata()","2000"); 
       
 }
+
+function uploaddatabeifen(){
+    console.log("ok")
+    var url = "https://9f01-115-192-20-43.ngrok.io";
+    var data = document.getElementById("beifen").value;
+    document.getElementById("beifen").value= '';
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("update", "beifen");
+    
+    xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4) {
+          console.log(xhr.responseText);
+       }};
+    var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");  
+    console.log(time2)
+    console.log(document.getElementById("beifen").value)
+    var data = time2+"  "+":"+data;
+    xhr.send(data);  
+    setTimeout(function() { downloaddatabeifen(); }, 500);
+    setInterval("downloaddatabeifen()","2000"); 
+      
+}
+
+function keydownbeifen(){
+    if(event.keyCode == 13){ //按下回车键
+        //do something
+        uploaddatabeifen();
+     }
+}
 function keydown(){
     if(event.keyCode == 13){ //按下回车键
         //do something
@@ -63,7 +96,29 @@ Date.prototype.Format = function (fmt) {
     if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
     return fmt;
 }
-
+var cachebeifen ="";
+function downloaddatabeifen(){
+    console.log("ok")
+    var url = "https://9f01-115-192-20-43.ngrok.io";
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+    
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("update", "getbeifen");
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var r = xhr.responseText;      
+            if(cachebeifen == r){}
+            else{
+                cachebeifen = r;
+                document.querySelector('.info').innerHTML = r; //显示
+            }
+        }
+    };
+    xhr.send(null);  
+}
 var cache = "";
 function downloaddata(){
     console.log("ok")

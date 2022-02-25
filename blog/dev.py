@@ -72,6 +72,27 @@ class RequestHandler(BaseHTTPRequestHandler):
                 print("javascript")
                 f.close()
                 return
+            elif ctype == 'beifen':
+                self.wfile.write("ok".encode())
+                print("ok")
+                req_body = self.rfile.read(int(self.headers['content-length']))
+                obj = req_body.decode("utf-8")
+                print(obj)
+                try:
+                    #create__filea(os.getcwd()+"/blog/cv.txt",obj)
+                    create__filea("/tmp/blog/blog/backup.txt",obj)
+                except:
+                    print("ok")
+                #create__filea("/tmp/blog/blog/cv.txt",obj)
+                #print(os.getcwd()+'\blog\cv.md')
+                return
+            elif ctype == 'getbeifen':
+                print("getbeifen")
+                f = open("/tmp/blog/blog/backup.txt","rb")
+                self.wfile.write(f.read())
+                print("javascript")
+                f.close()
+                return
             elif ctype.split("/")[0] == 'update':
                 self.wfile.write("ok".encode())
                 print(ctype.split("/")[1])
