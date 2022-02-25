@@ -95,6 +95,15 @@ class RequestHandler(BaseHTTPRequestHandler):
             self.wfile.write(f.read())
             print("javascript")
             f.close()
+        elif self.path.endswith(".txt"):
+            print("enter txt")
+            f = open(filepath[1:],"rb")
+            self.send_response(200)
+            self.send_header('Content-type', 'text/plain')
+            self.end_headers()
+            self.wfile.write(f.read())
+            print("javascript")
+            f.close()
         else :
             print("enter picture")
             filename = self.path.split('/')[-1]
