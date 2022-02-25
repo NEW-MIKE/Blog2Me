@@ -39,6 +39,7 @@ function uploaddata(){
     var data = time2+"  "+text+":"+data;
     xhr.send(data);  
     setTimeout(function() { downloaddata(); }, 500);
+    console.log("myVar");
     console.log(myVar);
     if(myVar == "001"){
         myVar ="002";
