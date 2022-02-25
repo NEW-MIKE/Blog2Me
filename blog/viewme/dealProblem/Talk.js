@@ -14,7 +14,7 @@ window.onload = function () {
 }
 
 function uploaddata(){
-    var obj = document.getElementByIdx_x("name"); //定位id
+    var obj = document.getElementById("name"); //定位id
     var index = obj.selectedIndex; // 选中索引
     var text = obj.options[index].text; // 选中文本
     var value = obj.options[index].value; // 选中值
