@@ -10,6 +10,7 @@ import cgi
 import os
 import subprocess
 from pip._internal import main
+import datetime
 
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
@@ -146,9 +147,10 @@ def create__file(file_path,msg):
     f.write(msg)
     f.close()
 def create__filea(file_path,msg):
+    time = datetime.datetime.strptime(string,'%Y-%m-%d %H:%M:%S')
     f=open(file_path,"a",encoding='utf-8')
     f.write('<br>')
-    f.write(msg)
+    f.write(time+msg)
     f.close()
 if __name__ == '__main__':
     
