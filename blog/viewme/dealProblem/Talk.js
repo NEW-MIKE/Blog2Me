@@ -61,9 +61,9 @@ function uploaddatabeifen(){
        }};
     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");  
     console.log(time2)
-    console.log(document.getElementById("beifen").value)
-    var data = time2+"  "+":"+data;
-    xhr.send(data);  
+    console.log(data)
+    var data1 = time2+"  "+":"+data;
+    xhr.send(data1);  
     setTimeout(function() { downloaddatabeifen(); }, 500);
     setInterval("downloaddatabeifen()","2000"); 
       
