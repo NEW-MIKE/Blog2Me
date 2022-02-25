@@ -25,7 +25,8 @@ ret_card = {
 class RequestHandler(BaseHTTPRequestHandler):
 
     def do_POST(self):
-        
+        time = datetime.datetime.strptime(string,'%Y-%m-%d %H:%M:%S')
+        print(time)
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
         self.end_headers()
@@ -147,7 +148,6 @@ def create__file(file_path,msg):
     f.write(msg)
     f.close()
 def create__filea(file_path,msg):
-    #time = datetime.datetime.strptime(string,'%Y-%m-%d %H:%M:%S')
     f=open(file_path,"a",encoding='utf-8')
     f.write('<br>')
     f.write(msg)
