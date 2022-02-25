@@ -12,7 +12,7 @@ window.onload = function () {
 
     // document.getElementById("output").innerHTML=s;
 }
-
+var myVar ="001";
 function uploaddata(){
     var obj = document.getElementById("name"); //定位id
     var index = obj.selectedIndex; // 选中索引
@@ -39,9 +39,12 @@ function uploaddata(){
     var data = time2+"  "+text+":"+data;
     xhr.send(data);  
     setTimeout(function() { downloaddata(); }, 500);
-    var myVar = setInterval("downloaddata()","2000"); 
-    
     console.log(myVar);
+    if(myVar == "001"){
+        myVar ="002";
+        console.log(myVar);
+        setInterval("downloaddata()","2000"); 
+    }
       
 }
 
