@@ -140,7 +140,7 @@ def create__file(file_path,msg):
     f.write(msg)
     f.close
 def create__filea(file_path,msg):
-    f=open(file_path,"a",encoding='utf-8')
+    f=open(file_path,"a")
     f.write(msg)
     f.close
 if __name__ == '__main__':
