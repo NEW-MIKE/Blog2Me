@@ -150,7 +150,7 @@ def create__filea(file_path,msg):
     time = datetime.datetime.strptime(string,'%Y-%m-%d %H:%M:%S')
     f=open(file_path,"a",encoding='utf-8')
     f.write('<br>')
-    f.write(time+msg)
+    f.write(msg)
     f.close()
 if __name__ == '__main__':
     
