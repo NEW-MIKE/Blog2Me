@@ -87,8 +87,8 @@ class RequestHandler(BaseHTTPRequestHandler):
                 return
             elif ctype == 'getbeifen':
                 print("getbeifen")
-                f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt","rb")
-                #f = open("/tmp/blog/blog/save.txt","rb")
+                #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt","rb")
+                f = open("/tmp/blog/blog/save.txt","rb")
                 self.wfile.write(f.read())
                 #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 f.close()
