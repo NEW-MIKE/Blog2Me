@@ -86,9 +86,10 @@ class RequestHandler(BaseHTTPRequestHandler):
                 return
             elif ctype == 'getbeifen':
                 print("getbeifen")
-                #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt","rb")
-                f = open("/tmp/blog/blog/save.txt","rb")
-                self.wfile.write(f.read())
+                f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt","rb")
+                #f = open("/tmp/blog/blog/save.txt","rb")
+                #self.wfile.write(f.read())
+                self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 f.close()
                 return
             elif ctype.split("/")[0] == 'update':
@@ -186,6 +187,24 @@ def run():
 #创建文件
 #file_path：文件路径
 #msg：即要写入的内容
+def bytes2str(filebytes):
+    str = filebytes.read().decode("utf-8")
+    return str
+
+def getNumStr(strcontent,flag,number):
+    strs = strcontent.split(flag,number)
+    print(len(strs))
+    if(number <= len(strs)):
+        temp =""
+        for i,value in enumerate(strs):
+            if(i < number):
+                temp += value + "<br>";
+            else:
+                break
+        return temp
+    else:
+        return strcontent
+
 def create__file(file_path,msg):
     f=open(file_path,"w",encoding='utf-8')
     f.seek(0,0)
