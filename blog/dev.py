@@ -68,7 +68,8 @@ class RequestHandler(BaseHTTPRequestHandler):
             elif ctype == 'gettalk':
                 print("gettalk")
                 f = open("/tmp/blog/blog/talk.txt","rb")
-                self.wfile.write(f.read())
+                #self.wfile.write(f.read())
+                self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 print("javascript")
                 f.close()
                 return
@@ -88,8 +89,8 @@ class RequestHandler(BaseHTTPRequestHandler):
                 print("getbeifen")
                 f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt","rb")
                 #f = open("/tmp/blog/blog/save.txt","rb")
-                #self.wfile.write(f.read())
-                self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
+                self.wfile.write(f.read())
+                #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 f.close()
                 return
             elif ctype.split("/")[0] == 'update':
