@@ -100,14 +100,14 @@ class RequestHandler(BaseHTTPRequestHandler):
                 obj = req_body.decode("utf-8")
                 print(obj)
                 try:
-                    #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt",obj)
+                    #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt",obj)
                     create__filea("/tmp/blog/blog/buildme.txt",obj)
                 except Exception as e:
                     print(str(e))
                 return
             elif ctype == 'getbuildme':
                 print("getbuildme")
-                #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt","rb")
+                #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
                 f = open("/tmp/blog/blog/buidme.txt","rb")
                 self.wfile.write(f.read())
                 #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
@@ -236,7 +236,6 @@ def create__filea(file_path,msg):
         f=open(file_path,"r+",encoding='utf-8')
     except  Exception as e:
         print(str(e))
-        os.mknod(file_path)
         f=open(file_path,"a+",encoding='utf-8')
     content = f.read()
     f.seek(0,0)
