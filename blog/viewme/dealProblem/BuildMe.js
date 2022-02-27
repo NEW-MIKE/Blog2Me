@@ -63,7 +63,7 @@ var cachebeifen ="123";
 function downloaddata(topicname){
     console.log("ok")
     
-    if(dwcnt < 3){
+    if(dwcnt < 9){
         dwcnt++;
         return;
     }
