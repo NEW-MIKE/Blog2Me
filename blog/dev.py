@@ -108,7 +108,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             elif ctype == 'getbuildme':
                 print("getbuildme")
                 #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
-                f = open("/tmp/blog/blog/buidme.txt","rb")
+                f = open("/tmp/blog/blog/buildme.txt","rb")
                 self.wfile.write(f.read())
                 #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 f.close()
