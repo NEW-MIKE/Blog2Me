@@ -131,7 +131,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         except:
             print("ok")
         
-        self.wfile.write("ok".encode())
+        self.wfile.write("somekey".encode())
         url = 'http://127.0.0.1:4457'
         myobj = {'somekey': 'somevalue'}
         x = requests.post(url, data = myobj)
