@@ -1,2 +1,0 @@
-<br>
-6、定义BaseActivity收敛公共部分；
