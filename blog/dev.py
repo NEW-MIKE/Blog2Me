@@ -32,13 +32,13 @@ class RequestHandler(BaseHTTPRequestHandler):
             ctype, pdict = cgi.parse_header(self.headers['update'])
             print("ddd ")
             if ctype == 'cv':
-                self.wfile.write("ok".encode())
+                self.wfile.write("cv".encode())
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
                 print(obj)
                 return
             if ctype == 'cache':
-                self.wfile.write("ok".encode())
+                self.wfile.write("cache".encode())
                 print("ok")
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
@@ -52,7 +52,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 #print(os.getcwd()+'\blog\cv.md')
                 return
             elif ctype == 'talk':
-                self.wfile.write("ok".encode())
+                self.wfile.write("talk".encode())
                 print("ok")
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
@@ -74,7 +74,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 f.close()
                 return
             elif ctype == 'beifen':
-                self.wfile.write("ok".encode())
+                self.wfile.write("beifen".encode())
                 print("beifen")
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
@@ -94,7 +94,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 f.close()
                 return
             elif ctype == 'buildme':
-                self.wfile.write("ok".encode())
+                self.wfile.write("buildme".encode())
                 print("buildme")
                 req_body = self.rfile.read(int(self.headers['content-length']))
                 obj = req_body.decode("utf-8")
