@@ -13,9 +13,9 @@ window.onload = function () {
     // document.getElementById("output").innerHTML=s;
 }
 
+var url = "https://9f01-115-192-20-43.ngrok.io";
 function uploaddata(){
     console.log("ok")
-    var url = "https://9f01-115-192-20-43.ngrok.io";
     var data = document.getElementById("jilu").value;
     document.getElementById("jilu").value= '';
     var xhr = new XMLHttpRequest();
@@ -54,7 +54,6 @@ Date.prototype.Format = function (fmt) {
 var cachebeifen ="123";
 function downloaddata(){
     console.log("ok")
-    var url = "https://9f01-115-192-20-43.ngrok.io";
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
