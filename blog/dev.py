@@ -124,7 +124,7 @@ class RequestHandler(BaseHTTPRequestHandler):
             ctype, pdict = cgi.parse_header(self.headers['x-github-event'])
             print(ctype.split("/")[0])
             
-            self.wfile.write("ok".encode())
+            self.wfile.write("x-github-event".encode())
             if ctype.split("/")[0] == 'ping':
                 print("ping")
                 return
