@@ -101,14 +101,14 @@ class RequestHandler(BaseHTTPRequestHandler):
                 print(obj)
                 try:
                     #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt",obj)
-                    create__filea("/tmp/blog/blog/buildme.txt",obj)
+                    create__filea("/tmp/blog/blog/buildthisman.txt",obj)
                 except Exception as e:
                     print(str(e))
                 return
             elif ctype == 'getbuildme':
                 print("getbuildme")
                 #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
-                f = open("/tmp/blog/blog/buildme.txt","rb")
+                f = open("/tmp/blog/blog/buildthisman.txt","rb")
                 self.wfile.write(f.read())
                 #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 f.close()
