@@ -113,6 +113,26 @@ class RequestHandler(BaseHTTPRequestHandler):
                 #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 f.close()
                 return
+            elif ctype == 'buildthisworld':
+                self.wfile.write("buildthisworld".encode())
+                print("buildthisworld")
+                req_body = self.rfile.read(int(self.headers['content-length']))
+                obj = req_body.decode("utf-8")
+                print(obj)
+                try:
+                    #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt",obj)
+                    create__filea("/tmp/blog/blog/buildthisworld.txt",obj)
+                except Exception as e:
+                    print(str(e))
+                return
+            elif ctype == 'get'+'buildthisworld':
+                print("getbuildthisworld")
+                #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
+                f = open("/tmp/blog/blog/buildthisworld.txt","rb")
+                self.wfile.write(f.read())
+                #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
+                f.close()
+                return
             elif ctype.split("/")[0] == 'update':
                 self.wfile.write("update".encode())
                 print(ctype.split("/")[1])

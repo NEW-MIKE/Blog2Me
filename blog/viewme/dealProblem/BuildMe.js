@@ -14,16 +14,16 @@ window.onload = function () {
 }
 
 var url = "https://9f01-115-192-20-43.ngrok.io";
-function uploaddata(){
+function uploaddata(id,topicname){
     console.log("ok")
-    var data = document.getElementById("jilu").value;
-    document.getElementById("jilu").value= '';
+    var data = document.getElementById(id).value;
+    document.getElementById(id).value= '';
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
     xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.setRequestHeader("update", "buildme");
+    xhr.setRequestHeader("update", topicname);
     
     xhr.onreadystatechange = function () {
        if (xhr.readyState === 4) {
@@ -31,7 +31,7 @@ function uploaddata(){
        }};
     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");  
     console.log(time2)
-    console.log(document.getElementById("jilu").value)
+    console.log(document.getElementById(id).value)
     var data = time2+":"+data;
     xhr.send(data);    
 }
@@ -52,14 +52,14 @@ Date.prototype.Format = function (fmt) {
 }
 
 var cachebeifen ="123";
-function downloaddata(){
+function downloaddata(topicname){
     console.log("ok")
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
     xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.setRequestHeader("update", "getbuildme");
+    xhr.setRequestHeader("update", "get"+topicname);
     
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
