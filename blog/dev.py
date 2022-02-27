@@ -233,7 +233,7 @@ def create__file(file_path,msg):
     f.close()
 def create__filea(file_path,msg):
     try:
-        f=open(file_path,"r+",encoding='utf-8')
+        f=open(file_path,"a+",encoding='utf-8')
     except  Exception as e:
         print(str(e))
         os.mknod(file_path)
