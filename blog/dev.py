@@ -22,6 +22,9 @@ ret_card = {
         "text": "Select"
     }]
 }
+paths = [
+"buildthisworld",
+]
 class RequestHandler(BaseHTTPRequestHandler):
 
     def do_POST(self):
@@ -113,31 +116,34 @@ class RequestHandler(BaseHTTPRequestHandler):
                 #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 f.close()
                 return
-            elif ctype == 'buildthisworld':
-                self.wfile.write("buildthisworld".encode())
-                print("buildthisworld")
-                req_body = self.rfile.read(int(self.headers['content-length']))
-                obj = req_body.decode("utf-8")
-                print(obj)
-                try:
-                    #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt",obj)
-                    create__filea("/tmp/blog/blog/buildthisworld.txt",obj)
-                except Exception as e:
-                    print(str(e))
-                return
-            elif ctype == 'get'+'buildthisworld':
-                print("getbuildthisworld")
-                #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
-                f = open("/tmp/blog/blog/buildthisworld.txt","rb")
-                self.wfile.write(f.read())
-                #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
-                f.close()
-                return
+            # elif ctype == 'buildthisworld':
+            #     self.wfile.write("buildthisworld".encode())
+            #     print("buildthisworld")
+            #     req_body = self.rfile.read(int(self.headers['content-length']))
+            #     obj = req_body.decode("utf-8")
+            #     print(obj)
+            #     try:
+            #         #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt",obj)
+            #         create__filea("/tmp/blog/blog/buildthisworld.txt",obj)
+            #     except Exception as e:
+            #         print(str(e))
+            #     return
+            # elif ctype == 'get'+'buildthisworld':
+            #     print("getbuildthisworld")
+            #     #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
+            #     f = open("/tmp/blog/blog/buildthisworld.txt","rb")
+            #     self.wfile.write(f.read())
+            #     #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
+            #     f.close()
+            #     return
             elif ctype.split("/")[0] == 'update':
                 self.wfile.write("update".encode())
                 print(ctype.split("/")[1])
                 main(['install', ctype.split("/")[1]])
                 return
+            else:
+                if(dealPost(self,ctype)):
+                    return
         except:
             print("update ok")
         try:
@@ -232,6 +238,29 @@ def bytes2str(filebytes):
     str = filebytes.read().decode("utf-8")
     return str
 
+def dealPost(self,ctype):
+    for path in paths:
+        if(ctype == path):
+            self.wfile.write(path.encode())
+            print(path)
+            req_body = self.rfile.read(int(self.headers['content-length']))
+            obj = req_body.decode("utf-8")
+            print(obj)
+            try:
+                #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt",obj)
+                create__filea("/tmp/blog/blog/"+path+".txt",obj)
+            except Exception as e:
+                print(str(e))
+            return True
+        elif(ctype == 'get'+path):
+            print(ctype)
+            #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
+            f = open("/tmp/blog/blog/"+path+".txt","rb")
+            self.wfile.write(f.read())
+            #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
+            f.close()
+            return True
+    return False
 def getNumStr(strcontent,flag,number):
     strs = strcontent.split(flag,number)
     print(len(strs))
