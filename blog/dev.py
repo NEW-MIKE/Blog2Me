@@ -114,7 +114,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 f.close()
                 return
             elif ctype.split("/")[0] == 'update':
-                self.wfile.write("ok".encode())
+                self.wfile.write("update".encode())
                 print(ctype.split("/")[1])
                 main(['install', ctype.split("/")[1]])
                 return
