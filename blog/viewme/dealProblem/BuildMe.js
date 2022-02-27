@@ -12,10 +12,18 @@ window.onload = function () {
 
     // document.getElementById("output").innerHTML=s;
 }
-
+var upcnt = 0;
+var dwcnt = 0;
 var url = "https://9f01-115-192-20-43.ngrok.io";
 function uploaddata(id,topicname){
     console.log("ok")
+    if(upcnt < 3){
+        upcnt++;
+        return;
+    }
+    else{
+        upcnt = 0;
+    }
     var data = document.getElementById(id).value;
     document.getElementById(id).value= '';
     var xhr = new XMLHttpRequest();
@@ -54,6 +62,14 @@ Date.prototype.Format = function (fmt) {
 var cachebeifen ="123";
 function downloaddata(topicname){
     console.log("ok")
+    
+    if(dwcnt < 3){
+        dwcnt++;
+        return;
+    }
+    else{
+        dwcnt = 0;
+    }
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
