@@ -24,6 +24,7 @@ ret_card = {
 }
 paths = [
 "buildthisworld",
+"contact",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
