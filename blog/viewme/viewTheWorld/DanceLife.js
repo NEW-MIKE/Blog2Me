@@ -2,7 +2,7 @@
 window.onload = function(){
     var insertDiv = document.getElementById("water_id")
     insertDiv.innerHTML = generateHtml();
-    console.log(getYear()-2019);
+    console.log(Number(getYear())-2019);
     setInterval("click()","1000"); 
 }
 var clickType = 0;
@@ -18,7 +18,7 @@ function click(){
 }
 var water = "<div class='cirline'></div>";
 function generateHtml(){
-    var currentYear = getYear();
+    var currentYear = Number(getYear());
     var futureYear=1+Number(currentYear);
     water+="<li><span class='spcircle circlegreen' ></span>"+ 
             "<label>"+futureYear+"</label></li>";
