@@ -18,7 +18,7 @@ function click(){
 }
 var water = "<div class='cirline'></div>";
 function generateHtml(){
-    var currentYear = Number(getYear());
+    var currentYear = getYear();
     var futureYear=1+Number(currentYear);
     water+="<li><span class='spcircle circlegreen' ></span>"+ 
             "<label>"+futureYear+"</label></li>";
@@ -39,7 +39,7 @@ function getYear(){
     return year;
 }
 function getNowFormatDate() {
-    var currentdate="";
+    var currentdate;
     $.ajax({
         type: 'GET',
         dataType: 'json',
@@ -53,6 +53,6 @@ function getNowFormatDate() {
         }
     })
     console.log(currentdate);
-    return String(currentdate)
+    return currentdate
 }
  
