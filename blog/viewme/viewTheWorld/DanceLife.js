@@ -33,13 +33,13 @@ function generateHtml(){
 }
 
 function getYear(){
-    var time=getNowFormatDate();
+    var time = getNowFormatDate();
     var year = time.split('-')[0];
     console.log(year);
     return year;
 }
 function getNowFormatDate() {
-    var currentdate;
+    var currentdate="";
     $.ajax({
         type: 'GET',
         dataType: 'json',
