@@ -53,7 +53,6 @@ class RequestHandler(BaseHTTPRequestHandler):
                 except:
                     print("ok")
                 #create__filea("/tmp/blog/blog/cv.txt",obj)
-                #print(os.getcwd()+'\blog\cv.md')
                 return
             elif ctype == 'talk':
                 self.wfile.write("talk".encode())
@@ -146,7 +145,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 if(dealPost(self,ctype)):
                     return
         except:
-            print("update ok")
+            print("update notok")
         try:
             ctype, pdict = cgi.parse_header(self.headers['x-github-event'])
             print(ctype.split("/")[0])
