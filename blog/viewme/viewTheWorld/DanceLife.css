@@ -1,0 +1,66 @@
+
+.modalTitle {
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    padding-top: 14px;
+    border-bottom: 1px solid #eee;
+    background-color: #f6fbfc;
+    font-size: 22px;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.spul {
+    margin-left: 15px;
+    font-size: 16px;
+    color: #333333;
+}
+.center {
+    position: absolute;     /* 相对定位或绝对定位均可 */
+    width:500px;
+    height:300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spul li {
+    margin-bottom: 15px;
+}
+
+.spul li label {
+    margin-right: 15px;
+}
+
+.cirline{
+    border-right: 2px solid #4fd166;
+    height: 1108px;
+    float: left;
+    left: 13.6px;
+    top: 10px;
+    position: relative;
+}
+.spcircle {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    margin-right: 10px;
+}
+.circlegreen {
+    background-color: #4fd166;
+}
+
+.circleyello {
+    background-color: #fad520;
+}
+.circlegrey {
+    background-color: #535350;
+}
+
+.circlered {
+    background-color: #f13a30;
+}
