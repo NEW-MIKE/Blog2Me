@@ -52,6 +52,6 @@ function getNowFormatDate() {
         }
     })
     console.log(currentdate);
-    return currentdate
+    return String(currentdate)
 }
  
