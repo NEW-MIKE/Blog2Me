@@ -49,6 +49,7 @@ function getNowFormatDate() {
             var data = data.sysTime2;
             currentdate = data.slice(0, 10);
             console.log(data);
+            console.log("data");
         }
     })
     console.log(currentdate);
