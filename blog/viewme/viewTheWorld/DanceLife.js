@@ -19,7 +19,7 @@ function click(){
 var water = "<div class='cirline'></div>";
 function generateHtml(){
     var currentYear = getYear();
-    var futureYear=1+Number(currentYear);
+    var futureYear=1+Number(currentYear); 
     water+="<li><span class='spcircle circlegreen' ></span>"+ 
             "<label>"+futureYear+"</label><label>未来值得一窥</label></li>";
     water+="<li><span class='spcircle circlegreen' id='currentYearId'></span>"+ 
