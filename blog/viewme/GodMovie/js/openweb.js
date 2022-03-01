@@ -16,6 +16,9 @@ const sourceProjects = [
     ["Awesome Android Apps", "https://github.com/LinuxCafeFederation/awesome-android"],
     ["Awesome Android Kotlin Apps", "https://github.com/androiddevnotes/awesome-android-kotlin-apps"],
     ["Eyepetizer", "https://github.com/VIPyinzhiwei/Eyepetizer/tree/master/app/src/main/java/com/eyepetizer/android"],
+    ["JetUML", "https://github.com/prmr/JetUML/tree/master/src"],
+    ["Solitaire", "https://github.com/prmr/Solitaire/tree/master/src"],
+    ["Minesweeper", "https://github.com/prmr/Solitaire/tree/master/src"],
 ];
 function openwebclick(url){
     for(var i=0;i<sourceProjects.length;i++)
