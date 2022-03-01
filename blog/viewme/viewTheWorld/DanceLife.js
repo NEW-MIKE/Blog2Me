@@ -39,12 +39,17 @@ function getYear(){
     return year;
 }
 function getNowFormatDate() {
-    var currentdate;
+    var d = new Date();
+    var year = d.getFullYear();
+    var month = d.getMonth()<10?"0"+(Number(d.getMonth())+1):d.getMonth()+1;
+    var day = d.getDate() <10?"0"+d.getDate():d.getDate();
+    var currentdate = year+"-"+month+"-"+day;
+    console.log(currentdate);
     $.ajax({
         type: 'GET',
         dataType: 'json',
         async: false,
-        url: 'http://quan.suning.com/getSysTime.do',
+        url: 'https://quan.suning.com/getSysTime.do',
         success: function (data) {
             var data = data.sysTime2;
             currentdate = data.slice(0, 10);
