@@ -21,7 +21,7 @@ function generateHtml(){
     var currentYear = getYear();
     var futureYear=1+Number(currentYear);
     water+="<li><span class='spcircle circlegreen' ></span>"+ 
-            "<label>"+futureYear+"</label><label>让未来可期</label></li>";
+            "<label>"+futureYear+"</label><label>未来值得一窥</label></li>";
     water+="<li><span class='spcircle circlegreen' id='currentYearId'></span>"+ 
             "<label>"+getNowFormatDate()+"</label><label>年轻人的时间是很宝贵的</label></li>";
     for(var i = currentYear-1;i>1991;i--){
