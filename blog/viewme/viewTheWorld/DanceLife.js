@@ -23,7 +23,7 @@ function generateHtml(){
     water+="<li><span class='spcircle circlegreen' ></span>"+ 
             "<label>"+futureYear+"</label></li>";
     water+="<li><span class='spcircle circlegreen' id='currentYearId'></span>"+ 
-            "<label>"+getNowFormatDate()+"</label></li>";
+            "<label>"+getNowFormatDate()+"</label><label>年轻人的时间是很宝贵的</label></li>";
     for(var i = currentYear-1;i>1991;i--){
         water+="<li><span class='spcircle circlegrey'></span>"+ 
             "<label>"+i+"</label></li>";

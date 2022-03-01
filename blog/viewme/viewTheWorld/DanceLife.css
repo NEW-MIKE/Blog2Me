@@ -1,16 +1,21 @@
 
 .modalTitle {
     width: 200px;
-    height: 60px;
+    height: 40px;
     text-align: center;
-    padding-top: 14px;
+    padding-top: 10px;
     border-bottom: 1px solid #eee;
     background-color: #f6fbfc;
     font-size: 22px;
-    color: #333333;
+    color: #a82e71;
     margin-bottom: 30px;
+    border-radius: 40px;
+    background-color: rgb(30, 197, 209);
 }
 
+body{
+    background-color: blanchedalmond;
+}
 .spul {
     margin-left: 15px;
     font-size: 16px;
