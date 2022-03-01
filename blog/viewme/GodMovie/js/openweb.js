@@ -15,6 +15,7 @@ const sourceProjects = [
     ["Awesome Android Open-Source Projects", "https://github.com/binaryshrey/Awesome-Android-Open-Source-Projects"],
     ["Awesome Android Apps", "https://github.com/LinuxCafeFederation/awesome-android"],
     ["Awesome Android Kotlin Apps", "https://github.com/androiddevnotes/awesome-android-kotlin-apps"],
+    ["Eyepetizer", "https://github.com/VIPyinzhiwei/Eyepetizer/tree/master/app/src/main/java/com/eyepetizer/android"],
 ];
 function openwebclick(url){
     for(var i=0;i<sourceProjects.length;i++)
