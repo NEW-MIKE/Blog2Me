@@ -19,6 +19,7 @@ const sourceProjects = [
     ["JetUML", "https://github.com/prmr/JetUML/tree/master/src"],
     ["Solitaire", "https://github.com/prmr/Solitaire/tree/master/src"],
     ["Minesweeper", "https://github.com/prmr/Solitaire/tree/master/src"],
+    ["designmodel", "https://refactoringguru.cn/design-patterns"],
 ];
 function openwebclick(url){
     for(var i=0;i<sourceProjects.length;i++)
