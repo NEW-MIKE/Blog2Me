@@ -27,6 +27,7 @@ paths = [
 "contact",
 "zouze",
 "piyue",
+"onehour",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
