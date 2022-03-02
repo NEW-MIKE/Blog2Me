@@ -20,6 +20,7 @@ const sourceProjects = [
     ["Solitaire", "https://github.com/prmr/Solitaire/tree/master/src"],
     ["Minesweeper", "https://github.com/prmr/Solitaire/tree/master/src"],
     ["designmodel", "https://refactoringguru.cn/design-patterns"],
+    ["Wandroid", "https://github.com/iamyours/Wandroid/tree/master/app/src/main/java/io/github/iamyours/wandroid"],
 ];
 function openwebclick(url){
     for(var i=0;i<sourceProjects.length;i++)
