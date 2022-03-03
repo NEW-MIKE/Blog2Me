@@ -88,3 +88,7 @@ function copycontent(id){
     copyelement.select();
     document.execCommand("Copy");
 }
+function pastcontentddd(id){
+    var content = window.event.clipboardData.getData("Text");
+    console.log(content)
+}
