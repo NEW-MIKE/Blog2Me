@@ -1,6 +1,6 @@
 const sourceProjects = [
     ["任阅", "https://github.com/smuyyh/BookReader/tree/master/app/src/main/java/com/justwayward/reader"],
-    ["csAndroid", "https://cs.android.com/android/platform/superproject?hl=zh-cn"],
+    ["csAndroid", "https://cs.android.com/androidx?hl=zh-cn"],
     ["AndroidCS", "https://cs.android.com/?hl=zh-cn"],
     ["AndroidGit", "https://github.com/aosp-mirror?q=apps&type=all"],
     ["Linux", "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers?h=v5.17-rc5"],

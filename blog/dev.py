@@ -29,6 +29,7 @@ paths = [
 "piyue",
 "onehour",
 "feilong",
+"outputk",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
