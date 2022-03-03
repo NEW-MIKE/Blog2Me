@@ -42,11 +42,32 @@ const sourceProjects = [
     ["flutter", "https://github.com/flutter/flutter/tree/master/packages/flutter/lib/src"],
     ["Kotlin", "https://github.com/JetBrains/kotlin"],
 ];
+
+const techsources = [
+    ["suanfaxiaochao", "https://github.com/labuladong/fucking-algorithm"],
+    ["niukewang", "https://www.nowcoder.com/exam/oj"],
+    ["leetcode", "https://leetcode-cn.com/problemset/all/"],
+    ["euler", "https://pe-cn.github.io/problems/"],
+    ["xxxx", "xxxx"],
+    ["xxxx", "xxxx"],
+    ["xxxx", "xxxx"],
+];
 function openwebclick(url){
     for(var i=0;i<sourceProjects.length;i++)
     {
         if(url == sourceProjects[i][0]){
             window.open(sourceProjects[i][1]);
+            return;  
+        }
+    }
+}
+
+function opentechclick(url){
+    var list = techsources;
+    for(var i=0;i<list.length;i++)
+    {
+        if(url == list[i][0]){
+            window.open(list[i][1]);
             return;  
         }
     }
