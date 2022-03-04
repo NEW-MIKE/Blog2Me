@@ -25,7 +25,6 @@ function uploaddata(id,topicname){
         upcnt = 0;
     }
     var data = document.getElementById(id).value;
-    document.getElementById(id).value= '';
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
@@ -36,6 +35,7 @@ function uploaddata(id,topicname){
     xhr.onreadystatechange = function () {
        if (xhr.readyState === 4) {
           console.log(xhr.responseText);
+          document.getElementById(id).value= '';
        }};
     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");  
     console.log(time2)
