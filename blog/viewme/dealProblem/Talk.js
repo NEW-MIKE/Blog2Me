@@ -21,7 +21,7 @@ function uploaddata(){
     console.log("ok")
     var url = "https://9f01-115-192-20-43.ngrok.io";
     var data = document.getElementById("jilu").value;
-    document.getElementById("jilu").value= '';
+    
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
@@ -32,6 +32,7 @@ function uploaddata(){
     xhr.onreadystatechange = function () {
        if (xhr.readyState === 4) {
           console.log(xhr.responseText);
+          document.getElementById("jilu").value= '';
        }};
     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");  
     console.log(time2)
@@ -53,7 +54,7 @@ function uploaddatabeifen(){
     console.log("ok")
     var url = "https://9f01-115-192-20-43.ngrok.io";
     var data = document.getElementById("beifen").value;
-    document.getElementById("beifen").value= '';
+    
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
@@ -64,6 +65,7 @@ function uploaddatabeifen(){
     xhr.onreadystatechange = function () {
        if (xhr.readyState === 4) {
           console.log(xhr.responseText);
+          document.getElementById("beifen").value= '';
        }};
     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");  
     console.log(time2)
