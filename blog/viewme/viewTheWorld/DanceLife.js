@@ -23,7 +23,7 @@ function generateHtml(){
     water+="<li><span class='spcircle circlegreen' ></span>"+ 
             "<label>"+futureYear+"</label><label>未来值得一窥</label></li>";
     water+="<li><span class='spcircle circlegreen' id='currentYearId'></span>"+ 
-            "<label>"+getNowFormatDate()+"</label><label>明天和停止跳动，哪一个会先到来</label></li>";
+            "<label>Today is "+getNowFormatDate()+"</label><label>明天和停止跳动，哪一个会先到来</label></li>";
     for(var i = currentYear-1;i>1991;i--){
         water+="<li><span class='spcircle circlegrey'></span>"+ 
             "<label>"+i+"</label></li>";
