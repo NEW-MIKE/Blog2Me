@@ -30,6 +30,10 @@ paths = [
 "onehour",
 "feilong",
 "outputk",
+"topic_1",
+"topic_2",
+"topic_3",
+"topic_4",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
