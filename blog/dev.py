@@ -34,6 +34,14 @@ paths = [
 "topic_2",
 "topic_3",
 "topic_4",
+"topic_5",
+"topic_6",
+"topic_7",
+"topic_8",
+"topic_9",
+"topic_10",
+"topic_11",
+"topic_12",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
