@@ -1,6 +1,5 @@
 function keydown(topic){
-    if(event.keyCode == 13){ //按下回车键
-        //do something
+    if(event.keyCode == 13){ 
         uploaddata(topic);
      }
 }
