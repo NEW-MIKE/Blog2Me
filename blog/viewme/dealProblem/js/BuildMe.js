@@ -14,7 +14,7 @@ window.onload = function () {
 }
 var upcnt = 0;
 var dwcnt = 0;
-var url = "https://9f01-115-192-20-43.ngrok.io";
+var url =  getUrl();
 function uploaddata(id,topicname){
     console.log("ok")
     if(upcnt < 3){

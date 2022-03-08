@@ -12,10 +12,9 @@ window.onload = function () {
 
     // document.getElementById("output").innerHTML=s;
 }
-
+var url =  getUrl();
 function uploaddata(){
     console.log("ok")
-    var url = "https://9f01-115-192-20-43.ngrok.io";
     var data = document.getElementById("jilu").value;
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
@@ -54,7 +53,7 @@ Date.prototype.Format = function (fmt) {
 
 function downloaddata(){
     console.log("ok")
-    var url = "https://9f01-115-192-20-43.ngrok.io/cv.txt";
+    var url =  getUrl()+"/cv.txt";
     var xhr = new XMLHttpRequest();
 
     //2-设置请求报文

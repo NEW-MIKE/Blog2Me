@@ -1,17 +1,4 @@
 
-window.onload = function () {
-    // var fso, ts, s ;
-
-    // var ForReading = 1;
-
-    // fso = new ActiveXObject("Scripting.FileSystemObject");
-
-    // ts = fso.OpenTextFile("../../cv.txt", ForReading);
-
-    // s = ts.ReadLine();
-
-    // document.getElementById("output").innerHTML=s;
-}
 var myVar ="001";
 function uploaddata(){
     var obj = document.getElementById("name"); //定位id
@@ -19,7 +6,7 @@ function uploaddata(){
     var text = obj.options[index].text; // 选中文本
     var value = obj.options[index].value; // 选中值
     console.log("ok")
-    var url = "https://9f01-115-192-20-43.ngrok.io";
+    var url =  getUrl();
     var data = document.getElementById("jilu").value;
     
     var xhr = new XMLHttpRequest();
@@ -52,7 +39,7 @@ function uploaddata(){
 var myVarb ="001";
 function uploaddatabeifen(){
     console.log("ok")
-    var url = "https://9f01-115-192-20-43.ngrok.io";
+    var url =  getUrl();
     var data = document.getElementById("beifen").value;
     
     var xhr = new XMLHttpRequest();
@@ -112,7 +99,7 @@ Date.prototype.Format = function (fmt) {
 var cachebeifen ="123";
 function downloaddatabeifen(){
     console.log("ok")
-    var url = "https://9f01-115-192-20-43.ngrok.io";
+    var url =  getUrl();
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
@@ -135,7 +122,7 @@ function downloaddatabeifen(){
 var cache = "";
 function downloaddata(){
     console.log("ok")
-    var url = "https://9f01-115-192-20-43.ngrok.io";
+    var url =  getUrl();
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
@@ -157,7 +144,7 @@ function downloaddata(){
 }
 function downloaddataget(){
     console.log("ok")
-    var url = "https://9f01-115-192-20-43.ngrok.io/talk.txt";
+    var url =  getUrl()+"/talk.txt";
     var xhr = new XMLHttpRequest();
 
     //2-设置请求报文
