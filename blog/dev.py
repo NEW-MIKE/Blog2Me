@@ -83,6 +83,15 @@ paths = [
 "people_07",
 "people_08",
 "thing_01",
+"thing_02",
+"thing_03",
+"thing_04",
+"thing_05",
+"thing_06",
+"thing_07",
+"thing_08",
+"thing_09",
+"thing_10",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
