@@ -92,6 +92,15 @@ paths = [
 "thing_08",
 "thing_09",
 "thing_10",
+"factory_01",
+"factory_02",
+"factory_03",
+"factory_04",
+"factory_05",
+"factory_06",
+"factory_07",
+"factory_08",
+"factory_09",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
