@@ -102,6 +102,17 @@ paths = [
 "factory_08",
 "factory_09",
 "lifekiller_01",
+"direction_01",
+"direction_02",
+"direction_03",
+"direction_04",
+"direction_05",
+"direction_06",
+"direction_07",
+"direction_08",
+"direction_09",
+"direction_10",
+"direction_11",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
