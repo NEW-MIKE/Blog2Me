@@ -127,6 +127,14 @@ paths = [
 "developanel_12",
 "developanel_13",
 "developanel_14",
+"daoyichun_01",
+"daoyichun_02",
+"daoyichun_03",
+"daoyichun_04",
+"daoyichun_05",
+"daoyichun_06",
+"daoyichun_07",
+"daoyichun_08",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
