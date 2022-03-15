@@ -113,6 +113,20 @@ paths = [
 "direction_09",
 "direction_10",
 "direction_11",
+"developanel_01",
+"developanel_02",
+"developanel_03",
+"developanel_04",
+"developanel_05",
+"developanel_06",
+"developanel_07",
+"developanel_08",
+"developanel_09",
+"developanel_10",
+"developanel_11",
+"developanel_12",
+"developanel_13",
+"developanel_14",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
