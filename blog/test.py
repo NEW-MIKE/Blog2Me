@@ -16,7 +16,7 @@ import shutil
 from git.repo import Repo
 import eventlet
 import datetime
-
+import logging
 #srcdir = "/tmp/update/book"
 #dstdir = "/tmp/blog"
 pulldir = "/tmp/blog"
@@ -48,7 +48,7 @@ class RequestHandler(BaseHTTPRequestHandler):
           try: 
               repo = Repo(pulldir)  
               repo.git.pull()
-          except OSError as e: 
+          except: 
               create__filea("/tmp/blog/blog/log.txt",e)
               print(e) 
           else:

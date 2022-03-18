@@ -21,7 +21,8 @@ function thingdeal_id(topic){
     getFontSizeBefore()+'六，请回答关于<  '+data+'  >这件事，关于这件事，你目前还需要准备什么？'+getFontSizeAfter()+getNextLine()+
     getFontSizeBefore()+'七，请回答关于<  '+data+'  >这件事，关于这件事，你是否询问了智者了，智者怎么说？'+getFontSizeAfter()+getNextLine()+
     getFontSizeBefore()+'八，请回答关于<  '+data+'  >这件事，关于这件事，你目前做到了什么？'+getFontSizeAfter()+getNextLine()+
-    getFontSizeBefore()+'八，请回答关于<  '+data+'  >这件事，是否可以通过钱解决？'+getFontSizeAfter()+getNextLine()
+    getFontSizeBefore()+'八，请回答关于<  '+data+'  >这件事，是否可以通过钱解决？'+getFontSizeAfter()+getNextLine()+
+    getFontSizeBefore()+'八，请回答关于<  '+data+'  >这件事，世界是一个机缘巧合的大机器，在这个大机器之中'+getFontSizeAfter()+getNextLine()
     return showContent
 }
 function judgething_id(topic){
