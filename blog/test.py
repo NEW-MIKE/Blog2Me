@@ -50,7 +50,7 @@ class RequestHandler(BaseHTTPRequestHandler):
               repo.git.pull()
           except OSError as e: 
               create__filea("/tmp/blog/blog/log.txt",e)
-              print(e)
+              print(e) 
           else:
               create__filea("/tmp/blog/blog/log.txt","pull successfully")
               print("pull successfully") 
