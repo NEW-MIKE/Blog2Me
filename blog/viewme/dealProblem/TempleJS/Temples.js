@@ -23,6 +23,102 @@ function thingdeal_id(topic){
     '<h1>八，请回答关于<  '+data+'  >这件事，关于这件事，你目前做到了什么？</h1><br><br><br>'
     return showContent
 }
+function judgething_id(topic){
+    var data = getValueById(topic.name);
+    var showContent = '<h2>如何审视<--'+data+'-->这件事</h2><br><br><br>'+
+    '<h1>一，<  '+data+'  >影响力有多大？</h1><br><br><br>'+
+    '<h1>二，于<  '+data+'  >对于以后会产生什么样的影响？</h1><br><br><br>'+
+    '<h1>三，于<  '+data+'  >得与失之间是如何的？</h1><br><br><br>'+
+    '<h1>四，于<  '+data+'  >会对什么人产生什么影响？</h1><br><br><br>'+
+    '<h1>五，于<  '+data+'  >博弈的是什么？</h1><br><br><br>'+
+    '<h1>六，于<  '+data+'  >这件事主导的关键是什么？</h1><br><br><br>'+
+    '<h1>七，于<  '+data+'  >是否会更优？</h1><br><br><br>'+
+    '<h1>于<  '+data+'  >这件事，原理是什么？</h1><br><br><br>'
+    return showContent
+}
+
+function gtd_id(topic){
+    var data = getValueById(topic.name);
+    var showContent = '<h2>关于<--'+data+'-->的GTD审视</h2><br><br><br>'+
+    '<h1><  '+data+'  >是什么样的事（人生意义/目标/愿景/各方面的责任）</h1><br><br><br>'+
+    '<h1><  '+data+'  >现在可以行动？垃圾，就扔掉;酝酿，可能今后去做，指明特定日期;</h1><br><br><br>'+
+    '<h1><  '+data+'  >下一步如何行动？如果2分钟内能够完成，立马去做</h1><br><br><br>'+
+    '<h1><  '+data+'  >检查预先定义的工作：项目相关材料/我在特定日期要做的事/我需要尽快去做的事/保持联系，并且需要别人，委托给别人的事</h1><br><br><br>'+
+    '<h1><  '+data+'  >场合：我能做什么？挑选出当前环境下我能够做的事</h1><br><br><br>'+
+    '<h1><  '+data+'  >时间：我在有限的时间内能做什么？挑选出在我时间块内能够做的事情？</h1><br><br><br>'+
+    '<h1><  '+data+'  >资源：我在有限的时间精力下能做什么？选出我当前精力和注意力能够完成的事</h1><br><br><br>'+
+    '<h1><  '+data+'  >未计划的工作：未计划的工作随时出现，也许需要立刻行动，也许并不需要，必须与所有要做的事，以及当前关注范围中的事情一起权衡</h1><br><br><br>'+
+    '<h1><  '+data+'  >预定义的工作：所有未完成的行动与项目，随着进度的推移及时间的临近，综合思考，把控协商，履行承诺的能力会越来越强，用可行的方式记录可以将大脑从记忆与提醒的工作中解脱出来</h1><br><br><br>'+
+    '<h1><  '+data+'  >确定中的工作：处理已有事务或新的输入，回顾当前排出的任务列表，将"事务"转变为行动或者项目，脑力工作者的重要思考和决策</h1><br><br><br>'+
+    '<h1><  '+data+'  >关注里范围：能否完整全面的记录下可供选择的任务，以及能否关注好关注范围中的事务，决定了自己能否确信正在做的事就是最佳的选择，列表中的事只要一离开大脑就必须按其特有的周期去回顾</h1><br><br><br>'+
+    '<h1><  '+data+'  >回顾：日历，当我需要知道今天“必须做”哪些事时；行动列表：当我有空闲，需要看看还能做什么时；项目：当我要回顾自己短期承诺时；各方面的责任：当我需要保持平衡时；目标：当我需要确保自己能得到自己预期的结果时；愿景：当我需要动力与长期的方向时；人生意义/原则：当我要做非常重要的决策时</h1><br><br><br>'+
+    '<h1><  '+data+'  >希望自己是正确的：糟糕的实践：我被各种最新的或是最突出的事情所左右，我不知道自己在干什么。我意识不到手头之外还有什么事，我记录的行动列表不完整，或是已经过时，我很麻木</h1><br><br><br>'+
+    '<h1><  '+data+'  >确信自己是正确的：最佳实践：我相信自己的判断，因为我记录下的待办列表是完整的，及时更新的，我专注范围内的事都被关注着，并采取有效行动。我的直觉敏锐，视野清晰，决策明确，精神放松</h1><br><br><br>'+
+    '<h1><  '+data+'  >以上，还会带来更多的：活力，清晰，官渡，深度，表现</h1><br><br><br>'+
+    '<h1><  '+data+'  >做一个很好的管理者</h1><br><br><br>'
+    return showContent
+}
+
+function person_id(topic){
+    var data = getValueById(topic.name);
+    var showContent = '<h2>如何与<--'+data+'-->开展社交</h2><br><br><br>'+
+    '<h1>一，<  '+data+'  >与我的交集是什么？</h1><br><br><br>'+
+    '<h1>二，于<  '+data+'  >如何共事？</h1><br><br><br>'+
+    '<h1>三，于<  '+data+'  >是什么性格的人，应该注意些什么？</h1><br><br><br>'+
+    '<h1>四，于<  '+data+'  >什么才是有意义有价值的进行曲？</h1><br><br><br>'+
+    '<h1>于<  '+data+'  >共话？</h1><br><br><br>'
+    return showContent
+}
+
+function schema_id(topic){
+    var data = getValueById(topic.name);
+    var showContent = '<h2><--'+data+'-->项目架构设计</h2><br><br><br>'+
+    '<h1><  '+data+'  >设计概述</h1><br><br><br>'+
+    '<h1><  '+data+'  >功能概述</h1><br><br><br>'+
+    '<h1><  '+data+'  >非功能约束</h1><br><br><br>'+
+    '<h1><  '+data+'  >系统部署图与整体设计</h1><br><br><br>'+
+    '<h1><  '+data+'  >xxxx场景子系统序列图</h1><br><br><br>'+
+    '<h1><  '+data+'  >xxx子系统设计</h1><br><br><br>'+
+    '<h1><  '+data+'  >子系统组件图</h1><br><br><br>'+
+    '<h1><  '+data+'  >场景A组件序列图</h1><br><br><br>'+
+    '<h1><  '+data+'  >场景B组件活动图</h1><br><br><br>'+
+    '<h1><  '+data+'  >组件I设计</h1><br><br><br>'+
+    '<h1><  '+data+'  >组件I类图</h1><br><br><br>'+
+    '<h1><  '+data+'  >场景A类序列图</h1><br><br><br>'+
+    '<h1><  '+data+'  >场景I状态图</h1><br><br><br>'
+    return showContent
+}
+
+
+
+function judgeperson_id(topic){
+    var data = getValueById(topic.name);
+    var showContent = '<h2>该如何审视<--'+data+'--></h2><br><br><br>'+
+    '<h1>一，<  '+data+'  >拥有哪些资源？</h1><br><br><br>'+
+    '<h1>二，于<  '+data+'  >具备什么能力？</h1><br><br><br>'+
+    '<h1>三，于<  '+data+'  >对自己会造成什么威胁？</h1><br><br><br>'+
+    '<h1>四，于<  '+data+'  >彼此共赢的空间是什么？</h1><br><br><br>'+
+    '<h1>五，于<  '+data+'  >这个人之前做过什么事？</h1><br><br><br>'+
+    '<h1>六，于<  '+data+'  >这个人的经济来源是什么？</h1><br><br><br>'+
+    '<h1>七，于<  '+data+'  >这个人结交的圈子都是些什么人？</h1><br><br><br>'+
+    '<h1>八，于<  '+data+'  >这个人会说什么话，做什么事，如何利用？</h1><br><br><br>'+
+    '<h1>于<  '+data+'  >这个人的价值选择是什么？</h1><br><br><br>'
+    return showContent
+}
+function talk_id(topic){
+    var data = getValueById(topic.name);
+    var showContent = '<h2><--'+data+'-->此行的目的是为了达成一定的共识</h2><br><br><br>'+
+    '<h1>一，<  '+data+'  >这场对话利益相关方有哪些，是否都在场了？</h1><br><br><br>'+
+    '<h1>二，于<  '+data+'  >这场对话，事先需要做什么铺垫？</h1><br><br><br>'+
+    '<h1>三，于<  '+data+'  >这场对话，如何开展整个谈判的过程？</h1><br><br><br>'+
+    '<h1>四，于<  '+data+'  >这场对话，如何抢夺对话过程中的引导权？</h1><br><br><br>'+
+    '<h1>五，于<  '+data+'  >这场对话，如何通过谈话的过程表明申明自己的立场以及自己想要传达什么样的意志？</h1><br><br><br>'+
+    '<h1>六，于<  '+data+'  >这场对话，如何营造一个利于自己的氛围？</h1><br><br><br>'+
+    '<h1>七，于<  '+data+'  >这场对话，如何引导谈话者的情绪过程？</h1><br><br><br>'+
+    '<h1>八，于<  '+data+'  >这场对话，如何奠定新的关系？</h1><br><br><br>'+
+    '<h1>于<  '+data+'  >这场对话，原理是什么？</h1><br><br><br>'
+    return showContent
+}
 function bookread_id(topic){
     var data = getValueById(topic.name);
     var showContent = '<h2>藉由<--'+data+'-->之书，发展相关技能，树立正确态度</h2><br><br><br>'+
