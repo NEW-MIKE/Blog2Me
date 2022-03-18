@@ -48,7 +48,7 @@ class RequestHandler(BaseHTTPRequestHandler):
           try: 
               repo = Repo(pulldir)  
               repo.git.pull()
-          except OSError as e:
+          except OSError as e: 
               create__filea("/tmp/blog/blog/log.txt",e)
               print(e)
           else:
