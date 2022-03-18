@@ -44,9 +44,9 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write("ok".encode())
         eventlet.monkey_patch()#必须加这条代码
-        with eventlet.Timeout(60,False):#设置超时时间为2秒
+        with eventlet.Timeout(60,False):#设置超时时间为60秒
           try: 
-              repo = Repo(pulldir)
+              repo = Repo(pulldir)  
               repo.git.pull()
           except OSError as e:
               create__filea("/tmp/blog/blog/log.txt",e)
