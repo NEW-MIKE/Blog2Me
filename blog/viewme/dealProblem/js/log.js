@@ -5,6 +5,9 @@ var url = getUrl();
 
 function pullproject(){
     downloaddata("updatepull");
+}
+
+function showlog(){
     downloaddata('log')
 }
 function downloaddata(topic){
