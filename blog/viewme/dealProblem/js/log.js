@@ -2,6 +2,11 @@ window.onload = function () {
     downloaddata('log')
 }
 var url = getUrl();
+
+function pullproject(){
+    downloaddata("updatepull");
+    downloaddata('log')
+}
 function downloaddata(topic){
     console.log("ok")
     
