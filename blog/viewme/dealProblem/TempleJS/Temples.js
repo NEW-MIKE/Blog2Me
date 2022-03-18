@@ -13,7 +13,7 @@ function paythings(topic){
 function thingdeal_id(topic){
     var data = getValueById(topic.name);
     var showContent = '<h2>生而为人，必然于世界之上，完成必要的事业和成就，在此处开启你的事业之路,<--'+data+'-->将带给你新的力量</h2><br><br><br>'+
-    '<h1>一，你想要完成<  '+data+'  >这件事，你必须清楚，欲成一事，必须苦其心智，练起体肤，请填写你将如何面对各项挑战？</h1><br><br><br>'+
+    '<h3>一，你想要完成<  '+data+'  >这件事，你必须清楚，欲成一事，必须苦其心智，练起体肤，请填写你将如何面对各项挑战？</h3><br><br><br>'+
     '<h1>二，请回答关于<  '+data+'  >这件事，关于这件事，事件相关的SWOT属性分别是什么？</h1><br><br><br>'+
     '<h1>三，请回答关于<  '+data+'  >这件事，关于这件事，事件相关的5W2H1E属性分别是什么？</h1><br><br><br>'+
     '<h1>四，请回答关于<  '+data+'  >这件事，关于这件事，天时地利人和分别是什么？</h1><br><br><br>'+
@@ -26,7 +26,7 @@ function thingdeal_id(topic){
 function judgething_id(topic){
     var data = getValueById(topic.name);
     var showContent = '<h2>如何审视<--'+data+'-->这件事</h2><br><br><br>'+
-    '<h1>一，<  '+data+'  >影响力有多大？</h1><br><br><br>'+
+    '<h3>一，<  '+data+'  >影响力有多大？</h3><br><br><br>'+
     '<h1>二，于<  '+data+'  >对于以后会产生什么样的影响？</h1><br><br><br>'+
     '<h1>三，于<  '+data+'  >得与失之间是如何的？</h1><br><br><br>'+
     '<h1>四，于<  '+data+'  >会对什么人产生什么影响？</h1><br><br><br>'+
@@ -40,7 +40,7 @@ function judgething_id(topic){
 function gtd_id(topic){
     var data = getValueById(topic.name);
     var showContent = '<h2>关于<--'+data+'-->的GTD审视</h2><br><br><br>'+
-    '<h1><  '+data+'  >是什么样的事（人生意义/目标/愿景/各方面的责任）</h1><br><br><br>'+
+    '<h3><  '+data+'  >是什么样的事（人生意义/目标/愿景/各方面的责任）</h3><br><br><br>'+
     '<h1><  '+data+'  >现在可以行动？垃圾，就扔掉;酝酿，可能今后去做，指明特定日期;</h1><br><br><br>'+
     '<h1><  '+data+'  >下一步如何行动？如果2分钟内能够完成，立马去做</h1><br><br><br>'+
     '<h1><  '+data+'  >检查预先定义的工作：项目相关材料/我在特定日期要做的事/我需要尽快去做的事/保持联系，并且需要别人，委托给别人的事</h1><br><br><br>'+
@@ -62,7 +62,7 @@ function gtd_id(topic){
 function person_id(topic){
     var data = getValueById(topic.name);
     var showContent = '<h2>如何与<--'+data+'-->开展社交</h2><br><br><br>'+
-    '<h1>一，<  '+data+'  >与我的交集是什么？</h1><br><br><br>'+
+    '<h3>一，<  '+data+'  >与我的交集是什么？</h3><br><br><br>'+
     '<h1>二，于<  '+data+'  >如何共事？</h1><br><br><br>'+
     '<h1>三，于<  '+data+'  >是什么性格的人，应该注意些什么？</h1><br><br><br>'+
     '<h1>四，于<  '+data+'  >什么才是有意义有价值的进行曲？</h1><br><br><br>'+
@@ -73,7 +73,7 @@ function person_id(topic){
 function schema_id(topic){
     var data = getValueById(topic.name);
     var showContent = '<h2><--'+data+'-->项目架构设计</h2><br><br><br>'+
-    '<h1><  '+data+'  >设计概述</h1><br><br><br>'+
+    '<h3><  '+data+'  >设计概述</h3><br><br><br>'+
     '<h1><  '+data+'  >功能概述</h1><br><br><br>'+
     '<h1><  '+data+'  >非功能约束</h1><br><br><br>'+
     '<h1><  '+data+'  >系统部署图与整体设计</h1><br><br><br>'+
@@ -94,7 +94,7 @@ function schema_id(topic){
 function judgeperson_id(topic){
     var data = getValueById(topic.name);
     var showContent = '<h2>该如何审视<--'+data+'--></h2><br><br><br>'+
-    '<h1>一，<  '+data+'  >拥有哪些资源？</h1><br><br><br>'+
+    '<h3>一，<  '+data+'  >拥有哪些资源？</h3><br><br><br>'+
     '<h1>二，于<  '+data+'  >具备什么能力？</h1><br><br><br>'+
     '<h1>三，于<  '+data+'  >对自己会造成什么威胁？</h1><br><br><br>'+
     '<h1>四，于<  '+data+'  >彼此共赢的空间是什么？</h1><br><br><br>'+
@@ -108,7 +108,7 @@ function judgeperson_id(topic){
 function talk_id(topic){
     var data = getValueById(topic.name);
     var showContent = '<h2><--'+data+'-->此行的目的是为了达成一定的共识</h2><br><br><br>'+
-    '<h1>一，<  '+data+'  >这场对话利益相关方有哪些，是否都在场了？</h1><br><br><br>'+
+    '<h3>一，<  '+data+'  >这场对话利益相关方有哪些，是否都在场了？</h3><br><br><br>'+
     '<h1>二，于<  '+data+'  >这场对话，事先需要做什么铺垫？</h1><br><br><br>'+
     '<h1>三，于<  '+data+'  >这场对话，如何开展整个谈判的过程？</h1><br><br><br>'+
     '<h1>四，于<  '+data+'  >这场对话，如何抢夺对话过程中的引导权？</h1><br><br><br>'+
@@ -122,7 +122,7 @@ function talk_id(topic){
 function bookread_id(topic){
     var data = getValueById(topic.name);
     var showContent = '<h2>藉由<--'+data+'-->之书，发展相关技能，树立正确态度</h2><br><br><br>'+
-    '<h1>一，<  '+data+'  >是在什么样的背景下提出来的，解决了什么样的问题？</h1><br><br><br>'+
+    '<h3>一，<  '+data+'  >是在什么样的背景下提出来的，解决了什么样的问题？</h3><br><br><br>'+
     '<h1>二，关于<  '+data+'  >提出来的问题，你自己的想象力空间是什么？</h1><br><br><br>'+
     '<h1>三，<  '+data+'  >此书塑造的是什么样的领域空间？</h1><br><br><br>'+
     '<h1>四，<  '+data+'  >能解决当下的什么问题，以及如何解决，最好先问一问“关我什么事”？</h1><br><br><br>'+
