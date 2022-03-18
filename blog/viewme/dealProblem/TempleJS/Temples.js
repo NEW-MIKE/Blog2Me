@@ -11,7 +11,7 @@ function paythings(topic){
 }
 
 function thingdeal_id(topic){
-    var data = getValueById(topic.name);
+    var data = getValueById(topic.name);  
     var showContent = getFontSizeBefore()+'生而为人，必然于世界之上，完成必要的事业和成就，在此处开启你的事业之路,<--'+data+'-->将带给你新的力量'+getFontSizeAfter()+getNextLine()+
     getFontSizeBefore()+'一，你想要完成<  '+data+'  >这件事，你必须清楚，欲成一事，必须苦其心智，练起体肤，请填写你将如何面对各项挑战？'+getFontSizeAfter()+getNextLine()+
     getFontSizeBefore()+'二，请回答关于<  '+data+'  >这件事，关于这件事，事件相关的SWOT属性分别是什么？'+getFontSizeAfter()+getNextLine()+
