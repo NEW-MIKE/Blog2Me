@@ -15,6 +15,8 @@ import subprocess
 import shutil
 from git.repo import Repo
 import eventlet
+import datetime
+
 #srcdir = "/tmp/update/book"
 #dstdir = "/tmp/blog"
 pulldir = "/tmp/blog"
@@ -47,8 +49,10 @@ class RequestHandler(BaseHTTPRequestHandler):
               repo = Repo(pulldir)
               repo.git.pull()
           except OSError as e:
+              create__filea("/tmp/blog/blog/log.txt",e)
               print(e)
           else:
+              create__filea("/tmp/blog/blog/log.txt","pull successfully")
               print("pull successfully")
               killport(4456)
               print("ok")
@@ -191,6 +195,20 @@ class RequestHandler(BaseHTTPRequestHandler):
         code = rsp_dict.get("code", -1)
         if code != 0:
             print("send message error, code = ", code, ", msg =", rsp_dict.get("msg", ""))
+def create__filea(file_path,msg):
+    now = datetime.datetime.now()
+    try:
+        f=open(file_path,"r+",encoding='utf-8')
+    except  Exception as e:
+        print(str(e))
+        f=open(file_path,"a+",encoding='utf-8')
+    content = f.read()
+    f.seek(0,0)
+    f.write('<br>')
+    f.write(""+now.strftime("%Y-%m-%d %H:%M:%S")+":"+msg)
+    f.write(content)
+    f.close()
+    print("save ok")
 
 def run():
     port = 4457

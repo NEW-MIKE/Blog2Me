@@ -135,6 +135,7 @@ paths = [
 "daoyichun_06",
 "daoyichun_07",
 "daoyichun_08",
+"log",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
