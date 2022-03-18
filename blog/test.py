@@ -53,7 +53,7 @@ class RequestHandler(BaseHTTPRequestHandler):
               print(e)
           else:
               create__filea("/tmp/blog/blog/log.txt","pull successfully")
-              print("pull successfully")
+              print("pull successfully") 
               killport(4456)
               print("ok")
           # try:
