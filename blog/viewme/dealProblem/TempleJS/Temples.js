@@ -1,14 +1,3 @@
-function keydown(topic){
-    if(event.keyCode == 13){ 
-        paythings(topic);
-     }
-}
-
-function paythings(topic){
-    var functionname = '';
-    functionname+=topic+'('+topic+')';
-    showif(eval(functionname))
-}
 
 function thingdeal_id(topic){
     var data = getValueById(topic.name);  
@@ -157,6 +146,10 @@ function bookread_id(topic){
 }
 
 
+
+
+
+
 function getNextLine(N){
     return ''
 }
@@ -176,4 +169,17 @@ function getValueById(topic){
     var data = document.getElementById(topic).value;
     document.getElementById(topic).value = '';
     return data;
+}
+
+
+function keydown(topic){
+    if(event.keyCode == 13){ 
+        paythings(topic);
+     }
+}
+
+function paythings(topic){
+    var functionname = '';
+    functionname+=topic+'('+topic+')';
+    showif(eval(functionname))
 }
