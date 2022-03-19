@@ -60,7 +60,18 @@ function gtd_id(topic){
     getFontSizeBefore()+'<  '+data+'  >做一个很好的管理者'+getFontSizeAfter()+getNextLine()
     return showContent
 }
+function dangerousthing_id(topic){
+    var data = getValueById(topic.name);
+    var showContent = getFontSizeBefore()+'对于紧急事情<--'+data+'-->应对策略'+getFontSizeAfter()+getNextLine()+
+    getFontSizeBefore()+'一，<  '+data+'  >为什么会显得如此的紧急?'+getFontSizeAfter()+getNextLine()+
+    getFontSizeBefore()+'二，于<  '+data+'  >这件事会对我产生什么‘真’的危害，如何制定补救措施？'+getFontSizeAfter()+getNextLine()+
+    getFontSizeBefore()+'三，于<  '+data+'  >是否影响了我的情绪，干扰了我的决策，我该如何冷静下来应对？'+getFontSizeAfter()+getNextLine()+
+    getFontSizeBefore()+'四，于<  '+data+'  >这件危急的事情，我应该找谁来帮助我处理这个危机，谁有这样的职责，能力？'+getFontSizeAfter()+getNextLine()+
+    getFontSizeBefore()+'五，于<  '+data+'  >这件事情，专业的人会怎么处理？'+getFontSizeAfter()+getNextLine()+
+    getFontSizeBefore()+'六，于<  '+data+'  >这件事情，如何让伤害保留在自己承受范围内，如果不是，我的下一步的准备措施是什么？'+getFontSizeAfter()+getNextLine()
+    return showContent
 
+}
 function person_id(topic){
     var data = getValueById(topic.name);
     var showContent = getFontSizeBefore()+'如何与<--'+data+'-->开展社交'+getFontSizeAfter()+getNextLine()+
