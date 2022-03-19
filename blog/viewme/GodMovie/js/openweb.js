@@ -48,7 +48,7 @@ const techsources = [
     ["niukewang", "https://www.nowcoder.com/exam/oj"],
     ["leetcode", "https://leetcode-cn.com/problemset/all/"],
     ["euler", "https://pe-cn.github.io/problems/"],
-    ["xxxx", "xxxx"],
+    ["allinandroid", "https://github.com/NEW-MIKE/AsomeCloudBlog/tree/master/AllInAndroid"],
     ["xxxx", "xxxx"],
     ["xxxx", "xxxx"],
 ];
