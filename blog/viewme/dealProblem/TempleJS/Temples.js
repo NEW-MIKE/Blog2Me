@@ -57,7 +57,8 @@ function dangerousthing_id(topic){
     getFontSizeBefore()+'三，于<  '+data+'  >是否影响了我的情绪，干扰了我的决策，我该如何冷静下来应对？'+getFontSizeAfter()+getNextLine()+
     getFontSizeBefore()+'四，于<  '+data+'  >这件危急的事情，我应该找谁来帮助我处理这个危机，谁有这样的职责，能力？'+getFontSizeAfter()+getNextLine()+
     getFontSizeBefore()+'五，于<  '+data+'  >这件事情，专业的人会怎么处理？'+getFontSizeAfter()+getNextLine()+
-    getFontSizeBefore()+'六，于<  '+data+'  >这件事情，如何让伤害保留在自己承受范围内，如果不是，我的下一步的准备措施是什么？'+getFontSizeAfter()+getNextLine()
+    getFontSizeBefore()+'六，于<  '+data+'  >这件事情，如何让伤害保留在自己承受范围内，如果不是，我的下一步的准备措施是什么？'+getFontSizeAfter()+getNextLine()+
+    getFontSizeBefore()+'七，于<  '+data+'  >这件事情，其中是否蕴藏了什么机会？'+getFontSizeAfter()+getNextLine()
     return showContent
 
 }
