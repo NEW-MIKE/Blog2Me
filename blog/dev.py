@@ -146,6 +146,8 @@ paths = [
 "thingcase_08",
 "thingcase_09",
 "thingcase_10",
+"thingcase_11",
+"thingcase_12",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
