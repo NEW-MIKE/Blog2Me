@@ -189,6 +189,8 @@ paths = [
 "debugtheworld_08",
 "debugtheworld_09",
 "debugtheworld_10",
+"cvtheworld_01",
+"cvtheworld_02",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
