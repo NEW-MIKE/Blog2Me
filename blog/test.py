@@ -193,7 +193,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         rsp_body = response.read().decode('utf-8')
         rsp_dict = json.loads(rsp_body)
         code = rsp_dict.get("code", -1)
-        if code != 0:
+        if code != 0:   
             print("send message error, code = ", code, ", msg =", rsp_dict.get("msg", ""))
 def create__filea(file_path,msg):
     now = datetime.datetime.now()
