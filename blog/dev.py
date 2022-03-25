@@ -150,6 +150,19 @@ paths = [
 "thingcase_12",
 "templething_01",
 "aroundview_01",
+"government_02",
+"government_03",
+"government_04",
+"government_05",
+"government_06",
+"government_07",
+"government_08",
+"government_09",
+"government_10",
+"government_11",
+"government_12",
+"government_13",
+"government_14",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
