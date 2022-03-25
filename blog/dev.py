@@ -179,6 +179,16 @@ paths = [
 "viewtoview_12",
 "viewtoview_13",
 "viewtoview_14",
+"debugtheworld_01",
+"debugtheworld_02",
+"debugtheworld_03",
+"debugtheworld_04",
+"debugtheworld_05",
+"debugtheworld_06",
+"debugtheworld_07",
+"debugtheworld_08",
+"debugtheworld_09",
+"debugtheworld_10",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
