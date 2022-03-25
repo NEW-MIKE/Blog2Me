@@ -163,6 +163,20 @@ paths = [
 "government_12",
 "government_13",
 "government_14",
+"viewtoview_01",
+"viewtoview_02",
+"viewtoview_03",
+"viewtoview_04",
+"viewtoview_05",
+"viewtoview_06",
+"viewtoview_07",
+"viewtoview_08",
+"viewtoview_09",
+"viewtoview_10",
+"viewtoview_11",
+"viewtoview_12",
+"viewtoview_13",
+"viewtoview_14",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
