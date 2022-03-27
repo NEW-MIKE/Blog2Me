@@ -191,6 +191,15 @@ paths = [
 "debugtheworld_10",
 "cvtheworld_01",
 "cvtheworld_02",
+"kelermodel_01",
+"kelermodel_02",
+"kelermodel_03",
+"kelermodel_04",
+"kelermodel_05",
+"kelermodel_06",
+"kelermodel_07",
+"kelermodel_08",
+"kelermodel_09",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
