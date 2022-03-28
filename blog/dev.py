@@ -200,6 +200,8 @@ paths = [
 "kelermodel_07",
 "kelermodel_08",
 "kelermodel_09",
+"techview_01",
+"worldview_01",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
