@@ -203,6 +203,11 @@ paths = [
 "techview_01",
 "worldview_01",
 "newtopics_01",
+"newtopics_02",
+"newtopics_03",
+"newtopics_04",
+"newtopics_05",
+"newtopics_06",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
