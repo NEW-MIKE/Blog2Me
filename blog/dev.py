@@ -208,6 +208,15 @@ paths = [
 "newtopics_04",
 "newtopics_05",
 "newtopics_06",
+"formulaCommunity_01",
+"formulaCommunity_02",
+"formulaCommunity_03",
+"formulaCommunity_04",
+"formulaCommunity_05",
+"formulaCommunity_06",
+"formulaCommunity_07",
+"formulaCommunity_08",
+"formulaCommunity_09",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
