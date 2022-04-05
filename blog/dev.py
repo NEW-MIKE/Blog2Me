@@ -217,6 +217,10 @@ paths = [
 "formulaCommunity_07",
 "formulaCommunity_08",
 "formulaCommunity_09",
+"RevolutionaryArmy_01",
+"RevolutionaryArmy_02",
+"RevolutionaryArmy_03",
+"RevolutionaryArmy_04",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
