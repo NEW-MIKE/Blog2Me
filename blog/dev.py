@@ -221,6 +221,18 @@ paths = [
 "RevolutionaryArmy_02",
 "RevolutionaryArmy_03",
 "RevolutionaryArmy_04",
+"XueFuTang_01",
+"XueFuTang_02",
+"XueFuTang_03",
+"XueFuTang_04",
+"XueFuTang_05",
+"XueFuTang_06",
+"XueFuTang_07",
+"XueFuTang_08",
+"XueFuTang_09",
+"XueFuTang_10",
+"XueFuTang_11",
+"XueFuTang_12",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
