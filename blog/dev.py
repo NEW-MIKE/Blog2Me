@@ -233,6 +233,18 @@ paths = [
 "XueFuTang_10",
 "XueFuTang_11",
 "XueFuTang_12",
+"BalanceStatus_01",
+"BalanceStatus_02",
+"BalanceStatus_03",
+"BalanceStatus_04",
+"BalanceStatus_05",
+"BalanceStatus_06",
+"BalanceStatus_07",
+"BalanceStatus_08",
+"BalanceStatus_09",
+"BalanceStatus_10",
+"BalanceStatus_11",
+"BalanceStatus_12",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
