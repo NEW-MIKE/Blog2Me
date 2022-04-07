@@ -245,6 +245,16 @@ paths = [
 "BalanceStatus_10",
 "BalanceStatus_11",
 "BalanceStatus_12",
+"ReadTheModel_01",
+"ReadTheModel_02",
+"ReadTheModel_03",
+"ReadTheModel_04",
+"ReadTheModel_05",
+"ReadTheModel_06",
+"ReadTheModel_07",
+"ReadTheModel_08",
+"ReadTheModel_09",
+"ReadTheModel_10",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
