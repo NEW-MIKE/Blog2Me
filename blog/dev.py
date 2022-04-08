@@ -255,6 +255,12 @@ paths = [
 "ReadTheModel_08",
 "ReadTheModel_09",
 "ReadTheModel_10",
+"MakeItDie_01",
+"MakeItDie_02",
+"MakeItDie_03",
+"MakeItDie_04",
+"MakeItDie_05",
+"MakeItDie_06",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
