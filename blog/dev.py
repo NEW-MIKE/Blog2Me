@@ -349,6 +349,20 @@ paths = [
 "TwoWorldRun_08_06",
 "TwoWorldRun_08_07",
 "TwoWorldRun_08_08",
+"BadCaseYou_01",
+"BadCaseYou_02",
+"BadCaseYou_03",
+"BadCaseYou_04",
+"BadCaseYou_05",
+"BadCaseYou_06",
+"RecoveryWorld_01",
+"RecoveryWorld_02",
+"RecoveryWorld_03",
+"RecoveryWorld_04",
+"RecoveryWorld_05",
+"RecoveryWorld_06",
+"RecoveryWorld_07",
+"RecoveryWorld_08",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
