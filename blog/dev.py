@@ -409,6 +409,12 @@ paths = [
 "MonitoringStatus_02",
 "MonitoringStatus_03",
 "MonitoringStatus_04",
+"FluidThinking_01",
+"FluidThinking_02",
+"FluidThinking_03",
+"FluidThinking_04",
+"SandTower_01",
+"SandTower_02",
 "xxxxxxxxxxxxxxxxxx",
 "xxxxxxxxxxxxxxxxxx",
 ]
