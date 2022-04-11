@@ -49,7 +49,7 @@ const techsources = [
     ["leetcode", "https://leetcode-cn.com/problemset/all/"],
     ["euler", "https://pe-cn.github.io/problems/"],
     ["allinandroid", "https://github.com/NEW-MIKE/AsomeCloudBlog/tree/master/AllInAndroid"],
-    ["xxxx", "xxxx"],
+    ["tech_articles", "https://github.com/NEW-MIKE/AsomeCloudBlog/tree/master/ITBlog"],
     ["xxxx", "xxxx"],
 ];
 function openwebclick(url){
