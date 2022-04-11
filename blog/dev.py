@@ -389,6 +389,11 @@ paths = [
 "CompanyOperation_02_01",
 "CompanyOperation_03_01",
 "CompanyOperation_04_01",
+"DigitalTribe_01_01",
+"DigitalTribe_01_02",
+"DigitalTribe_02_01",
+"DigitalTribe_03_01",
+"DigitalTribe_04_01",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
