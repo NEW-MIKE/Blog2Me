@@ -415,6 +415,8 @@ paths = [
 "FluidThinking_04",
 "SandTower_01",
 "SandTower_02",
+"accelerator_01",
+"accelerator_02",
 "xxxxxxxxxxxxxxxxxx",
 "xxxxxxxxxxxxxxxxxx",
 ]
