@@ -398,6 +398,8 @@ paths = [
 "WindChaser_02",
 "WindChaser_03",
 "WindChaser_04",
+"WindChaser_05",
+"WindChaser_06",
 "FromHere_01",
 "FromHere_02_01",
 "FromHere_02_02",
