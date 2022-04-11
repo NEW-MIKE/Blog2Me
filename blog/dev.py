@@ -417,6 +417,8 @@ paths = [
 "SandTower_02",
 "accelerator_01",
 "accelerator_02",
+"OutAndIn_01",
+"OutAndIn_02",
 "xxxxxxxxxxxxxxxxxx",
 "xxxxxxxxxxxxxxxxxx",
 ]
