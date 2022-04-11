@@ -398,6 +398,12 @@ paths = [
 "WindChaser_02",
 "WindChaser_03",
 "WindChaser_04",
+"FromHere_01",
+"FromHere_02_01",
+"FromHere_02_02",
+"FromHere_02_03",
+"FromHere_02_04",
+"FromHere_04",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
