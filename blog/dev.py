@@ -394,6 +394,10 @@ paths = [
 "DigitalTribe_02_01",
 "DigitalTribe_03_01",
 "DigitalTribe_04_01",
+"WindChaser_01",
+"WindChaser_02",
+"WindChaser_03",
+"WindChaser_04",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
