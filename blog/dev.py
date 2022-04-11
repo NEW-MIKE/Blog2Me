@@ -403,7 +403,14 @@ paths = [
 "FromHere_02_02",
 "FromHere_02_03",
 "FromHere_02_04",
+"FromHere_03",
 "FromHere_04",
+"MonitoringStatus_01",
+"MonitoringStatus_02",
+"MonitoringStatus_03",
+"MonitoringStatus_04",
+"xxxxxxxxxxxxxxxxxx",
+"xxxxxxxxxxxxxxxxxx",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
