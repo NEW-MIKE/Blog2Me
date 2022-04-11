@@ -381,6 +381,12 @@ paths = [
 "PersonalStyle_04",
 "PersonalStyle_05",
 "PersonalStyle_06",
+"AnatomyRoom_01_01",
+"AnatomyRoom_02_01",
+"CompanyOperation_01_01",
+"CompanyOperation_02_01",
+"CompanyOperation_03_01",
+"CompanyOperation_04_01",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
