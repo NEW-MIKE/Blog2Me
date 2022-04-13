@@ -451,7 +451,11 @@ paths = [
 "CycleDay_09",
 "CycleDay_10",
 "Talk2Outside_01",
-"xxxxxxxxxxxxxxxxxx",
+"When2How_01",
+"深入内心的沟通",
+"深入内心的沟通",
+"深入内心的沟通",
+"深入内心的沟通",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
