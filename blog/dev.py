@@ -483,7 +483,10 @@ paths = [
 "SoulAsks_04",
 "SoulAsks_05",
 "SoulAsks_06",
-"深入内心的沟通",
+"ConsFight_01",
+"ConsFight_02",
+"ConsFight_03",
+"ConsFight_04",
 "深入内心的沟通",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
