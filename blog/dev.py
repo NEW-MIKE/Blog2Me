@@ -477,7 +477,12 @@ paths = [
 "ExpKnowledgeContainer_06",
 "ExpKnowledgeContainer_07",
 "ExpKnowledgeContainer_08",
-"深入内心的沟通",
+"SoulAsks_01",
+"SoulAsks_02",
+"SoulAsks_03",
+"SoulAsks_04",
+"SoulAsks_05",
+"SoulAsks_06",
 "深入内心的沟通",
 "深入内心的沟通",
 ]
