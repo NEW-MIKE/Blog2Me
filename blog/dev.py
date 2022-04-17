@@ -498,7 +498,12 @@ paths = [
 "DictionaryPhrase_04",
 "DictionaryPhrase_05",
 "DictionaryPhrase_06",
-"水水水水水",
+"techsource_01",
+"水水水水水水水",
+"水水水水水水水",
+"水水水水水水水",
+"水水水水水水水",
+"水水水水水水水",
 "水水水水水水水",
 ]
 class RequestHandler(BaseHTTPRequestHandler):

@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../../shui.css">
   <link rel="stylesheet" href="movie.css">
   <script src="./js/openweb.js"></script>
+  <script src="../../data.js" type="text/javascript"></script>
+  <script src="../dealProblem/js/ModelJs.js" type="text/javascript" ></script>
  </head>
  <body>
  	<div class="main-wrapper">
@@ -97,6 +99,8 @@
 				</div>
 				<div class="card">
 					<h3 onclick="opentechclick('Cloudancer')">Cloudancer</h3>
+					<input type="text" height="300px" id="techsource_01" onkeydown="keydown('techsource_01')">
+					<button onclick="downloaddata('techsource_01')">日常随手已收集</button>
 					<p>.</p>
 					<details>
 						<summary>阅读笔记</summary>
