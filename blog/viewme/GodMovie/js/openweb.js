@@ -62,12 +62,23 @@ function openwebclick(url){
     }
 }
 
-function opentechclick(url){
+function opentechclick1(url){
     var list = techsources;
     for(var i=0;i<list.length;i++)
     {
         if(url == list[i][0]){
             window.open(list[i][1]);
+            return;  
+        }
+    }
+}
+function opentechclick(url){
+    var list = techsources;
+    for(var i=0;i<techsources.length;i++)
+    {
+        console.log(url+techsources[i][0])
+        if(url == techsources[i][0]){
+            window.open(techsources[i][1]);
             return;  
         }
     }
