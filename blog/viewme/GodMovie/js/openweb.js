@@ -50,7 +50,7 @@ const techsources = [
     ["euler", "https://pe-cn.github.io/problems/"],
     ["allinandroid", "https://github.com/NEW-MIKE/AsomeCloudBlog/tree/master/AllInAndroid"],
     ["tech_articles", "https://github.com/NEW-MIKE/AsomeCloudBlog/tree/master/ITBlog"],
-    ["xxxx", "xxxx"],
+    ["Cloudancer", "https://github.com/NEW-MIKE/Cloudancer/tree/main/%E4%BA%91%E9%9A%8F%E7%AC%94/%E5%8D%9A%E5%AE%A2"],
 ];
 function openwebclick(url){
     for(var i=0;i<sourceProjects.length;i++)
