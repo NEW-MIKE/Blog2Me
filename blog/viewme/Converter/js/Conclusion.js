@@ -14,7 +14,7 @@ function uploadClue(topicname,inputdata){
        }};
     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");  
     console.log(time2)
-    var data = time2+":"+inputdata;
+    var data = time2+":<br>"+inputdata;
     xhr.send(data);    
 }
 Date.prototype.Format = function (fmt) {
