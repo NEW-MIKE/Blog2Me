@@ -525,7 +525,7 @@ paths = [
 "EcoNatureTicle_04",
 "EcoNatureTicle_05",
 "EcoNatureTicle_06",
-"水水水水水水水",
+"SixHats",
 "水水水水水水水",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
