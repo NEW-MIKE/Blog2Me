@@ -56,6 +56,7 @@ function makeConclusion(titlename,inputname,inputnumber,savetype){
     uploadClue(savetype,output);
 }
 
+var cachebeifen ="123";
 function downloadClue(topicname){
     console.log("ok")
     
