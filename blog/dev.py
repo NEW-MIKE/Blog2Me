@@ -534,6 +534,8 @@ paths = [
 "NewAndDif_04",
 "NewAndDif_05",
 "NewAndDif_06",
+"NewAndDif_07",
+"NewAndDif_08",
 "水水水水水水水",
 "水水水水水水水",
 "水水水水水水水",
