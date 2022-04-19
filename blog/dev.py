@@ -519,7 +519,12 @@ paths = [
 "RankLearner_14",
 "LawTough_01",
 "LawTough_02",
-"水水水水水水水",
+"EcoNatureTicle_01",
+"EcoNatureTicle_02",
+"EcoNatureTicle_03",
+"EcoNatureTicle_04",
+"EcoNatureTicle_05",
+"EcoNatureTicle_06",
 "水水水水水水水",
 "水水水水水水水",
 ]
