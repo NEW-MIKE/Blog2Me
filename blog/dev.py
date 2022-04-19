@@ -527,7 +527,7 @@ paths = [
 "EcoNatureTicle_06",
 "SixHats",
 "FishBone",
-"水水水水水水水",
+"SWOT",
 "水水水水水水水",
 "水水水水水水水",
 "水水水水水水水",
