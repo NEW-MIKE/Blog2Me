@@ -564,6 +564,8 @@ paths = [
 "PhicalSchools_26",
 "PhicalSchools_27",
 "PhicalSchools_28",
+"PhicalSchools_29",
+"PhicalSchools_30",
 "水水水水水水水",
 "水水水水水水水",
 "水水水水水水水",
