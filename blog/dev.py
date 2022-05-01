@@ -662,6 +662,13 @@ paths = [
 "DecisionMakeNew_06",
 "DecisionMakeNew_07",
 "DecisionMakeNew_08",
+"androidopenpro_01",
+"androidopenpro_02",
+"androidopenpro_03",
+"androidopenpro_04",
+"水水水水水水水",
+"水水水水水水水",
+"水水水水水水水",
 "水水水水水水水",
 "水水水水水水水",
 ]
