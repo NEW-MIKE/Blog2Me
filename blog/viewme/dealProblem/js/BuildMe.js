@@ -19,7 +19,7 @@ function uploaddata(id,topicname){
     console.log("ok")
     if(upcnt < 3){
         upcnt++;
-        return;
+        //return;
     }
     else{
         upcnt = 0;
