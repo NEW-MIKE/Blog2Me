@@ -724,7 +724,10 @@ paths = [
 "StructuralSite_06",
 "StructuralSite_07",
 "StructuralSite_08",
-"水水水水水水水",
+"GodSeesTheFuture_01",
+"GodSeesTheFuture_02",
+"GodSeesTheFuture_03",
+"GodSeesTheFuture_04",
 "水水水水水水水",
 "水水水水水水水",
 ]
