@@ -789,7 +789,10 @@ paths = [
 "QualityFight_08",
 "QualityFight_09",
 "QualityFight_10",
-"水水水水水水水",
+"DieSkyEarthPeo_01",
+"DieSkyEarthPeo_02",
+"DieSkyEarthPeo_03",
+"DieSkyEarthPeo_04",
 "水水水水水水水",
 "水水水水水水水",
 ]
