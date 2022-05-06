@@ -778,6 +778,7 @@ paths = [
 "MustAnswer_01",
 "MustAnswer_02",
 "OneBody_01",
+"OneBody_02",
 "QualityFight_01",
 "QualityFight_02",
 "QualityFight_03",
