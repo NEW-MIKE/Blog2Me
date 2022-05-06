@@ -770,7 +770,7 @@ paths = [
 "ConstructionAction_06",
 "ConstructionAction_07",
 "ConstructionAction_08",
-"水水水水水水水",
+"BuildEmpire_01",
 "水水水水水水水",
 "水水水水水水水",
 "水水水水水水水",
