@@ -901,6 +901,7 @@ paths = [
 "FullStackSystem_07",
 "FullStackSystem_08",
 "MeTalkToMe_01",
+"MeTalkToMe_02",
 "ChangeOutsideUpInside_01",
 "ChangeOutsideUpInside_02",
 "ChangeOutsideUpInside_03",
