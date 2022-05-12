@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>铿锵前行，站直的男儿</title>
+  <link rel="stylesheet" href="../viewTheWorld/view.css">
+  <script src="../../data.js" type="text/javascript"></script>
+  <script src="../dealProblem/js/ModelJs.js" type="text/javascript" ></script>
+ </head>
+ <body>
+	<header>
+	</header>
+		<section class="purple-section">
+		<div class="wrapper">
+			<div class="card-group clearfix">
+				<div class="card">
+					<h3>世界铿锵行走天涯</h3>
+					<input type="text" height="300px" id="SonorousMove_01" onkeydown="keydown('SonorousMove_01')">
+					<button onclick="downloaddata('SonorousMove_01')">世界铿锵行走天涯</button>
+					<details>
+						<summary>具体细节：</summary>
+						<p>坦坦荡荡，作为人类钢铁之人之气质</p> 
+					</details>
+				</div>
+				<div class="card">
+					<h3>我之铿锵天涯行走</h3>
+					<input type="text" height="300px" id="SonorousMove_02" onkeydown="keydown('SonorousMove_02')">
+					<button onclick="downloaddata('SonorousMove_02')">我之铿锵天涯行走</button>
+					<details>
+						<summary>具体细节：</summary>
+						<p>柔情似水</p> 
+					</details>
+				</div>
+			</div>
+			
+			<div class="info"></div>
+		</div>
+		</section>
+	</div><!--内容结束-->
+
+	<footer><!--页脚开始-->	
+		<ul class="share-group">
+		</ul>
+		<div class="copy" >
+			<p onclick="music()">勇闯这一个狭隘之空间，柔情锻造钢铁男儿</p>
+		</div>
+	</footer><!--页脚结束-->
+	</div>
+	<script language="JavaScript">
+		const bgsound = new Audio("./OnePiece.mp3");
+		function music(){
+			bgsound.play();
+			bgsound.loop = true;
+		}
+
+		window.onload = function(){
+			music();
+		}
+		function stop(){
+			bgsound.pause();
+		}
+	</script>
+	</body>
+</html>
+
