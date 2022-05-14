@@ -963,7 +963,11 @@ paths = [
 "CutTheWorld_02",
 "CutTheWorld_03",
 "CutTheWorld_04",
-"水水水水水水水",
+"UpPowerLevel_01",
+"UpPowerLevel_02",
+"UpPowerLevel_03",
+"UpPowerLevel_04",
+"ssssssssssssss",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
 
