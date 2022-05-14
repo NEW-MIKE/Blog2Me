@@ -955,7 +955,10 @@ paths = [
 "Tathagata_02",
 "Tathagata_03",
 "Tathagata_04",
-"水水水水水水水",
+"EveryDay3Things_01",
+"EveryDay3Things_02",
+"EveryDay3Things_03",
+"EveryDay3Things_04",
 "水水水水水水水",
 "水水水水水水水",
 ]
