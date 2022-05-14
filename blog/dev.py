@@ -972,6 +972,7 @@ paths = [
 "SomebodyWay_03",
 "SomebodyWay_04",
 "SomebodyWay_05",
+"SomebodyWay_06",
 "Ark_01",
 "Ark_02",
 "Ark_03",
