@@ -979,6 +979,8 @@ paths = [
 "Ark_04",
 "Ark_05",
 "Ark_06",
+"Ark_07",
+"Ark_08",
 "ssssssssssssss",
 "ssssssssssssss",
 "ssssssssssssss",
