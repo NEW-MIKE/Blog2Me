@@ -12,7 +12,7 @@ function showlog(){
 }
 function downloaddata(topic){
     console.log("ok")
-    
+    console("url is "+url);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
