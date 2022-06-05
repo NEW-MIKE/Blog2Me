@@ -1104,7 +1104,12 @@ paths = [
 "ProductMan_04",
 "ProductMan_05",
 "ProductMan_06",
-"ssssssssssssss",
+"KnowledgeGetBook_01",
+"KnowledgeGetBook_02",
+"KnowledgeGetBook_03",
+"KnowledgeGetBook_04",
+"KnowledgeGetBook_05",
+"KnowledgeGetBook_06",
 "ssssssssssssss",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
