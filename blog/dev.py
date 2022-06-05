@@ -1098,7 +1098,12 @@ paths = [
 "Short2Target_07",
 "Short2Target_08",
 "FarmHistory_01",
-"ssssssssssssss",
+"ProductMan_01",
+"ProductMan_02",
+"ProductMan_03",
+"ProductMan_04",
+"ProductMan_05",
+"ProductMan_06",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
