@@ -1159,6 +1159,8 @@ paths = [
 "Reflect2TheWorld_08",
 "Reflect2TheWorld_09",
 "Reflect2TheWorld_10",
+"Reflect2TheWorld_11",
+"Reflect2TheWorld_12",
 "GoodVSBad_01",
 "GoodVSBad_02",
 "GoodVSBad_03",
