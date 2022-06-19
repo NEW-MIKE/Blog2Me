@@ -1381,7 +1381,10 @@ paths = [
 "THeUndoWorld_06",
 "THeUndoWorld_07",
 "THeUndoWorld_08",
-"ssssssssssssss",
+"CentralControl_01",
+"CentralControl_02",
+"CentralControl_03",
+"CentralControl_04",
 "ssssssssssssss",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
