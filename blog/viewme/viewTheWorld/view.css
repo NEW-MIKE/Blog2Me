@@ -346,8 +346,24 @@ summary
 
 .jobbtn{
 
+	font-size: large;
+
+	padding: 0px,0px;
 	width:350px;
   
+	border-radius: 25px;
+	height:40px;
+  
+  }
+  .inputstyle{
+	border: 1px solid #139be1;
+	border-radius: 25px;
+	color: rgba(10, 6, 10, 0.719);
+	font-size: 18px;
+	font-weight: normal;
+	background-color: #ddbe67;
+	text-indent: 10px;
+	width:350px;
 	height:40px;
   
   }
