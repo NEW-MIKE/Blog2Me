@@ -1,0 +1,13 @@
+.normalbtn{
+
+	font-size: large;
+	padding: 0px,0px;
+	width:450px;
+  
+	border-radius: 25px;
+	height:140px;
+    align-items: center;
+    text-align: center;
+  
+    background-color: rgb(187, 216, 25);
+  }
