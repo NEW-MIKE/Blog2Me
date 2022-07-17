@@ -6,7 +6,7 @@ function keydown(topic){
 var url = getUrl();
 function uploaddata(topic){
     console.log("ok")
-    var data = "线程名："+document.getElementById("Name_"+topic).value+"<br>" + "线程进度：";
+    var data = "<br>线程名:"+document.getElementById("Name_"+topic).value+"<br>" + "线程进度:";
     data = data + document.getElementById(topic).value;
     console.log(data)
     var xhr = new XMLHttpRequest();
