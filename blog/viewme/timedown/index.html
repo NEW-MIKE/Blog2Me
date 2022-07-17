@@ -10,7 +10,7 @@ canvas {
 }
 body{
   overflow: auto;
-  background-color: rgb(239, 247, 244);
+  background-color: rgb(22, 189, 127);
   margin: 0;
 }
 h1{
@@ -40,6 +40,7 @@ margin-top:30px;
 </style>
 </head>
 <body>
+  <h1 id="p1">22</h1>
 <h1 id="h1">22</h1>
 <h1 id="h2">22</h1>
 <h1 id="h3">22</h1>
@@ -48,19 +49,14 @@ margin-top:30px;
   
 var flag = 1;
 window.onload=function starttime(){
-        time("h1",'2023/01/01');     // 2022年春节时间
-        time("h2",'2024/01/01');     // 2022年春节时间
-        time("h3",'2025/01/01');     // 2022年春节时间
-        time("h4",'2093/01/01');     // 2022年春节时间     
-        if(flag > 0){
-          const sound1 = new Audio("https://s1.aigei.com/pvaud/aud/mp3/9a/9a4acc340e244c4aa7f031c1c0afa4bf.mp3?e=1645201020&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:8eysf7LAWVLYj8V-U5QxPAAn5dc=");
-          sound1.loop = true;
-          sound1.play();
-          flag = 0;
-        }   
+        promiss("p1",'2022/10/16',"找到一条在家里也能赚钱的路");   
+        time("h1",'2023/01/01');      
+        time("h2",'2024/01/01');      
+        time("h3",'2025/01/01');      
+        time("h4",'2093/01/01');          
         ptimer = setTimeout(starttime,1000); // 添加计时器
 }
-    function time(obj,futimg){
+function time(obj,futimg){
         var nowtime = new Date().getTime(); // 现在时间转换为时间戳
         var futruetime =  new Date(futimg).getTime(); // 未来时间转换为时间戳
         var msec = futruetime-nowtime; // 毫秒 未来时间-现在时间
@@ -71,6 +67,19 @@ window.onload=function starttime(){
         var second = parseInt(time%60);  // 以60秒为一整份 取余 剩下秒数
         
         document.getElementById(obj).innerHTML="<br>距离"+futimg.split("/")[0]+"年还有：<br>"+day+"天"+hour+"小时"+minute+"分"+second+"秒"+"<br><span>让时光流的其所</span>"
+}    
+
+function promiss(obj,futimg,message){
+        var nowtime = new Date().getTime(); // 现在时间转换为时间戳
+        var futruetime =  new Date(futimg).getTime(); // 未来时间转换为时间戳
+        var msec = futruetime-nowtime; // 毫秒 未来时间-现在时间
+        var time = (msec/1000);  // 毫秒/1000
+        var day = parseInt(time/86400); // 天  24*60*60*1000
+        var hour = parseInt(time/3600)-24*day;    // 小时 60*60 总小时数-过去的小时数=现在的小时数
+        var minute = parseInt(time%3600/60); // 分 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数
+        var second = parseInt(time%60);  // 以60秒为一整份 取余 剩下秒数
+        
+        document.getElementById(obj).innerHTML="<br>距离承诺<"+message+">还有:<br>"+day+"天"+hour+"小时"+minute+"分"+second+"秒"+"<br><span>承诺必达</span>"
 }
 </script>
 </audio>
