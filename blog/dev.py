@@ -2000,7 +2000,10 @@ paths = [
 "ThingLibrarys_04",
 "ThingLibrarys_05",
 "ThingLibrarys_06",
-"ssssssssssssss",
+"SolveTheLunLiProblem_01",
+"SolveTheLunLiProblem_02",
+"SolveTheLunLiProblem_03",
+"SolveTheLunLiProblem_04",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
