@@ -355,6 +355,20 @@ summary
 	height:40px;
   
   }
+  
+  .reportbtn{
+
+	font-size: large;
+	background-color: #1a1c1d;
+
+	color: #8431e4;
+	padding: 0px,0px;
+	width:350px;
+  
+	border-radius: 25px;
+	height:40px;
+  
+  }
   .inputstyle{
 	border: 1px solid #139be1;
 	border-radius: 25px;
