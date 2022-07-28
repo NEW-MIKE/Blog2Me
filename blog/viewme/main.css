@@ -350,8 +350,9 @@ ul.share-group
 
 
 .main-btn{
-	text-align: justify;
-	width:200px;
+	padding-left: 0px;
+	padding-right: 0px;
+	width:220px;
 	margin-top: 10px;
 	border-radius: 25px;
 	height:80px;
