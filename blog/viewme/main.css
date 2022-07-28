@@ -22,7 +22,7 @@ nav{
 }
 #banner{
 	background: transparent;
-	height: 6500px; 
+	height: 9500px; 
 }
 .banner1{
 	top: 60px;
@@ -339,10 +339,6 @@ ul.share-group
 }
 
 
-.main-btn:active{
-    background: #000000;   /* 黑色 */
-    opacity: 0.5;    /* 设置不透明度（可以不设置） */
-}
 .main-wrapper
 {
 	background: rgb(11, 109, 139) url(../mainsource/bg3.jpg);
@@ -350,4 +346,15 @@ ul.share-group
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
+}
+
+
+.main-btn{
+	text-align: justify;
+	width:200px;
+	margin-top: 10px;
+	border-radius: 25px;
+	height:80px;
+    background: #000000;   /* 黑色 */
+    opacity: 0.9;    /* 设置不透明度（可以不设置） */
 }
