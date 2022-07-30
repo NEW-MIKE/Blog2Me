@@ -405,3 +405,12 @@ summary
 	height:20px;
   
   }
+
+  .info{
+	font-style: italic;
+	font-weight: 100;
+	border-radius: 25px;
+	color: rgba(37, 6, 13, 0.719);
+	font-size: 150%;
+	font-family: "Lucida Calligraphy", cursive, serif, sans-serif;
+}
