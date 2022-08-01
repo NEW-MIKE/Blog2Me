@@ -357,6 +357,20 @@ summary
 	height:70px;
   
   }
+
+  .jobbtnallair{
+
+	font-size: 150%;
+
+	color: #0a090a;
+	padding: 0px,0px;
+	width:350px;
+  
+	font-weight: 100;
+	border-radius: 50%;
+	height:350px;
+  
+  }
   .rootruthbtn{
 
 	font-size: large;
