@@ -2811,7 +2811,10 @@ paths = [
 "NoDoorExercise_04",
 "NoDoorExercise_05",
 "NoDoorExercise_06",
-"ssssssssssssss",
+"MakeYourTimeWorth_01",
+"MakeYourTimeWorth_02",
+"MakeYourTimeWorth_03",
+"MakeYourTimeWorth_04",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
