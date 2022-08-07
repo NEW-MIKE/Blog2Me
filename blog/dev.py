@@ -2861,7 +2861,12 @@ paths = [
 "LifeIsATestA_02",
 "LifeIsATestA_03",
 "LifeIsATestA_04",
-"ssssssssssssss",
+"FaceToProblems_01",
+"FaceToProblems_02",
+"FaceToProblems_03",
+"FaceToProblems_04",
+"FaceToProblems_05",
+"FaceToProblems_06",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
