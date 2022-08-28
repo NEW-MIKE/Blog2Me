@@ -3071,7 +3071,10 @@ paths = [
 "ControlMyTimeNormal_04",
 "ControlMyTimeNormal_05",
 "ControlMyTimeNormal_06",
-"ssssssssssssss",
+"MakeTheCenterPlace_01",
+"MakeTheCenterPlace_02",
+"MakeTheCenterPlace_03",
+"MakeTheCenterPlace_04",
 "ssssssssssssss",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
