@@ -3065,7 +3065,12 @@ paths = [
 "SpeecPlaceAndTime_04",
 "SpeecPlaceAndTime_05",
 "SpeecPlaceAndTime_06",
-"ssssssssssssss",
+"ControlMyTimeNormal_01",
+"ControlMyTimeNormal_02",
+"ControlMyTimeNormal_03",
+"ControlMyTimeNormal_04",
+"ControlMyTimeNormal_05",
+"ControlMyTimeNormal_06",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
