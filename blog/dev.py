@@ -3201,6 +3201,17 @@ paths = [
 "MorePeopleDevelop_04",
 "MorePeopleDevelop_05",
 "MorePeopleDevelop_06",
+"ItIsMyValue_01",
+"ItIsMyValue_02",
+"ItIsMyValue_03",
+"ItIsMyValue_04",
+"ItIsMyValue_05",
+"ItIsMyValue_06",
+"ssssssssssssss",
+"ssssssssssssss",
+"ssssssssssssss",
+"ssssssssssssss",
+"ssssssssssssss",
 "ssssssssssssss",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
