@@ -3193,8 +3193,14 @@ paths = [
 "LifeIsNotJustLikeThis_04",
 "LifeIsNotJustLikeThis_05",
 "LifeIsNotJustLikeThis_06",
-"ssssssssssssss",
-"ssssssssssssss",
+"WhoopToTheWorld_01",
+"WhoopToTheWorld_02",
+"MorePeopleDevelop_01",
+"MorePeopleDevelop_02",
+"MorePeopleDevelop_03",
+"MorePeopleDevelop_04",
+"MorePeopleDevelop_05",
+"MorePeopleDevelop_06",
 "ssssssssssssss",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
