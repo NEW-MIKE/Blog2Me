@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>事业时间维度倒推</title>
+  <link rel="stylesheet" href="../viewTheWorld/view.css">
+  <script src="../../data.js" type="text/javascript"></script>
+  <script src="./js/ModelJs.js" type="text/javascript" ></script>
+ </head>
+ <body>
+	<header>
+	</header>
+		<section class="purple-section">
+		<div class="wrapper">
+			<div class="card-group clearfix">
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_05" onkeydown="keydown('ToBuideTheThingYouMustDo_05')">
+					<button class="jobbtnallair" onclick="downloaddata('ToBuideTheThingYouMustDo_05')">倒推到早上需要完成什么事</button>
+					<details>
+						<summary></summary>
+						<p> 不枉费这一上午走一遭</p>
+					</details>
+				</div>
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_06" onkeydown="keydown('ToBuideTheThingYouMustDo_06')">
+					<button  class="jobbtnallair"onclick="downloaddata('ToBuideTheThingYouMustDo_06')">倒推到下午需要完成什么事</button>
+					<details>
+						<summary></summary>
+						<p> 不枉费这一下午走一遭</p>
+					</details>
+				</div>
+			</div>
+			<div class="card-group clearfix">
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_07" onkeydown="keydown('ToBuideTheThingYouMustDo_07')">
+					<button class="jobbtnallair" onclick="downloaddata('ToBuideTheThingYouMustDo_07')">倒推到这一天需要完成什么事</button>
+					<details>
+						<summary></summary>
+						<p>不枉费这一天走一遭 </p>
+					</details>
+				</div>
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_08" onkeydown="keydown('ToBuideTheThingYouMustDo_08')">
+					<button  class="jobbtnallair"onclick="downloaddata('ToBuideTheThingYouMustDo_08')">倒推到每个星期需要完成什么</button>
+					<details>
+						<summary></summary>
+						<p> 不枉费这一星期走一遭</p>
+					</details>
+				</div>
+			</div>
+			<div class="card-group clearfix">
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_01" onkeydown="keydown('ToBuideTheThingYouMustDo_01')">
+					<button class="jobbtnallair" onclick="downloaddata('ToBuideTheThingYouMustDo_01')">倒推到每个月需要完成什么</button>
+					<details>
+						<summary></summary>
+						<p>不枉费这一月走一遭 </p>
+					</details>
+				</div>
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_02" onkeydown="keydown('ToBuideTheThingYouMustDo_02')">
+					<button  class="jobbtnallair"onclick="downloaddata('ToBuideTheThingYouMustDo_02')">倒推到这一个季度需要完成什么事</button>
+					<details>
+						<summary></summary>
+						<p>不枉费这一季度走一遭 </p>
+					</details>
+				</div>
+			</div>
+			<div class="card-group clearfix">
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_03" onkeydown="keydown('ToBuideTheThingYouMustDo_03')">
+					<button class="jobbtnallair" onclick="downloaddata('ToBuideTheThingYouMustDo_03')">倒推到这一年需要</button>
+					<details>
+						<summary></summary>
+						<p> 不枉费这一年走一遭 </p>
+					</details>
+				</div>
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_04" onkeydown="keydown('ToBuideTheThingYouMustDo_04')">
+					<button  class="jobbtnallair"onclick="downloaddata('ToBuideTheThingYouMustDo_04')">形势所逼需要完成的事情</button>
+					<details>
+						<summary></summary>
+						<p> </p>
+					</details>
+				</div>
+			</div>
+			<div class="card-group clearfix">
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_09" onkeydown="keydown('ToBuideTheThingYouMustDo_09')">
+					<button class="jobbtnallair" onclick="downloaddata('ToBuideTheThingYouMustDo_09')">自己期望去做的事</button>
+					<details>
+						<summary></summary>
+						<p>  </p>
+					</details>
+				</div>
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="ToBuideTheThingYouMustDo_10" onkeydown="keydown('ToBuideTheThingYouMustDo_10')">
+					<button  class="jobbtnallair"onclick="downloaddata('ToBuideTheThingYouMustDo_10')">不悔的一生需要去做的事</button>
+					<details>
+						<summary></summary>
+						<p>不枉费来人间走一遭的业绩 </p>
+					</details>
+				</div>
+			</div>
+			
+			<div class="info"></div>
+		</div>
+		</section>
+	</div><!--内容结束-->
+
+	<footer><!--页脚开始-->	
+		<ul class="share-group">
+		</ul>
+		<div class="copy" >
+			<p>不枉费走一遭</p>
+			<p> 这里是底线，是必须做成做好的事情</p>
+		</div>
+	</footer><!--页脚结束-->
+	</div>
+	</body>
+</html>
+
