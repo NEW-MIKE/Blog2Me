@@ -3351,7 +3351,12 @@ paths = [
 "TechnologyHappy_04",
 "TechnologyHappy_05",
 "TechnologyHappy_06",
-"ssssssssssssss",
+"JucheThought_01",
+"JucheThought_02",
+"JucheThought_03",
+"JucheThought_04",
+"JucheThought_05",
+"JucheThought_06",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
