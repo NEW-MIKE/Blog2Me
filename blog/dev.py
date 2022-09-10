@@ -3603,7 +3603,10 @@ paths = [
 "GoToReadTheWorldBook_02",
 "GoToReadTheWorldBook_03",
 "GoToReadTheWorldBook_04",
-"ssssssssssssss",
+"HappyManagement_01",
+"HappyManagement_02",
+"HappyManagement_03",
+"HappyManagement_04",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
