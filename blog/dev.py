@@ -3625,7 +3625,12 @@ paths = [
 "DestinyIsSet_02",
 "DestinyIsSet_03",
 "DestinyIsSet_04",
-"ssssssssssssss",
+"TaskTowerLevel_01",
+"TaskTowerLevel_02",
+"TaskTowerLevel_03",
+"TaskTowerLevel_04",
+"TaskTowerLevel_05",
+"TaskTowerLevel_06",
 "ssssssssssssss",
 "ssssssssssssss",
 ]

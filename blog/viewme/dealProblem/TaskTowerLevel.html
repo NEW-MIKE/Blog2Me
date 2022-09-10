@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>任务金字塔</title>
+  <link rel="stylesheet" href="../viewTheWorld/view.css">
+  <script src="../../data.js" type="text/javascript"></script>
+  <script src="./js/ModelJs.js" type="text/javascript" ></script>
+ </head>
+ <body>
+	<header>
+	</header>
+		<section class="purple-section">
+		<div class="wrapper">
+			<div class="card-group clearfix">
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="TaskTowerLevel_01" onkeydown="keydown('TaskTowerLevel_01')">
+					<button class="jobbtnallair" onclick="downloaddata('TaskTowerLevel_01')">顶级任务表</button>
+					<details>
+						<summary></summary>
+						<p> 重要不紧急，人生的任务</p>
+					</details>
+				</div>
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="TaskTowerLevel_02" onkeydown="keydown('TaskTowerLevel_02')">
+					<button  class="jobbtnallair"onclick="downloaddata('TaskTowerLevel_02')">社会任务表</button>
+					<details>
+						<summary></summary>
+						<p> </p>
+					</details>
+				</div>
+			</div>
+			<div class="card-group clearfix">
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="TaskTowerLevel_03" onkeydown="keydown('TaskTowerLevel_03')">
+					<button class="jobbtnallair" onclick="downloaddata('TaskTowerLevel_03')">生活任务列表</button>
+					<details>
+						<summary></summary>
+						<p> 自己的动物性 </p>
+					</details>
+				</div>
+				<div class="card">
+					<input type="text"  class="inputstyle"  id="TaskTowerLevel_04" onkeydown="keydown('TaskTowerLevel_04')">
+					<button  class="jobbtnallair"onclick="downloaddata('TaskTowerLevel_04')">个人放纵的任务列表</button>
+					<details>
+						<summary></summary>
+						<p> </p>
+					</details>
+				</div>
+			</div>
+			
+			<div class="info"></div>
+		</div>
+		</section>
+	</div><!--内容结束-->
+
+	<footer><!--页脚开始-->	
+		<ul class="share-group">
+		</ul>
+		<div class="copy" >
+			<p>此处的功能，是用来安排自己的任务的优先顺序的，比方说，分为金字塔的模型，先扫完一层，才能到下一层，娱乐的放在最下面一层，</p>
+			<p>从顶级到底极的操作原则 </p>
+		</div>
+	</footer><!--页脚结束-->
+	</div>
+	</body>
+</html>
+
