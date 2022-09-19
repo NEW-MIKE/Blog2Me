@@ -4030,7 +4030,12 @@ paths = [
 "ThePartOfTheWorld_04",
 "ThePartOfTheWorld_05",
 "ThePartOfTheWorld_06",
-"ssssssssssssss"
+"TheSpiritOfTheWorld_01",
+"TheSpiritOfTheWorld_02",
+"TheSpiritOfTheWorld_03",
+"TheSpiritOfTheWorld_04",
+"TheSpiritOfTheWorld_05",
+"TheSpiritOfTheWorld_06",
 "ssssssssssssss",
 "ssssssssssssss",
 "ssssssssssssss",
