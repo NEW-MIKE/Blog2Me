@@ -4310,7 +4310,10 @@ paths = [
 "ToRealizeTheFinalMeaning_02",
 "ToRealizeTheFinalMeaning_03",
 "ToRealizeTheFinalMeaning_04",
-"ssssssssssssss",
+"PoliticalLifeTalk_01",
+"PoliticalLifeTalk_02",
+"PoliticalLifeTalk_03",
+"PoliticalLifeTalk_04",
 "ssssssssssssss",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
