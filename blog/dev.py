@@ -4338,7 +4338,10 @@ paths = [
 "TheChoiceOfLife_02",
 "TheChoiceOfLife_03",
 "TheChoiceOfLife_04",
-"ssssssssssssss",
+"TalkToTheCurrentMe_01",
+"TalkToTheCurrentMe_02",
+"TalkToTheCurrentMe_03",
+"TalkToTheCurrentMe_04",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
