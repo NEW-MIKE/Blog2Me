@@ -4314,6 +4314,13 @@ paths = [
 "PoliticalLifeTalk_02",
 "PoliticalLifeTalk_03",
 "PoliticalLifeTalk_04",
+"MyArtLifeOtTheWorld_01",
+"MyArtLifeOtTheWorld_02",
+"MyArtLifeOtTheWorld_03",
+"MyArtLifeOtTheWorld_04",
+"ssssssssssssss",
+"ssssssssssssss",
+"ssssssssssssss",
 "ssssssssssssss",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
