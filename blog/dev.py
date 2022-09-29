@@ -4378,6 +4378,8 @@ paths = [
 "UseTheWordToSolveTheProblem_06",
 "UseTheWordToSolveTheProblem_07",
 "UseTheWordToSolveTheProblem_08",
+"UseTheWordToSolveTheProblem_09",
+"UseTheWordToSolveTheProblem_10",
 "ssssssssssssss",
 "ssssssssssssss",
 "ssssssssssssss",
