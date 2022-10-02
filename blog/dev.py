@@ -4533,7 +4533,7 @@ paths = [
 "HowToDealDifferentThing_03",
 "HowToDealDifferentThing_04",
 "HowToDealDifferentThing_05",
-"HowToDealDifferentThing_06
+"HowToDealDifferentThing_06",
 "ABoyVSAMan_01",
 "ABoyVSAMan_02",
 "ABoyVSAMan_03",
