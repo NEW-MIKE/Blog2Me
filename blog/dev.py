@@ -4628,7 +4628,12 @@ paths = [
 "AllInOneIWantToDo_06",
 "AllInOneIWantToDo_07",
 "AllInOneIWantToDo_08",
-"ssssssssssssss",
+"WhatISurviveForTheworld_01",
+"WhatISurviveForTheworld_02",
+"WhatISurviveForTheworld_03",
+"WhatISurviveForTheworld_04",
+"WhatISurviveForTheworld_05",
+"WhatISurviveForTheworld_06",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
