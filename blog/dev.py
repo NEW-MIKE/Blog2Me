@@ -4686,7 +4686,10 @@ paths = [
 "SlowlySpecialRoad_02",
 "SlowlySpecialRoad_03",
 "SlowlySpecialRoad_04",
-"ssssssssssssss",
+"AlwaysWorkHard_01",
+"AlwaysWorkHard_02",
+"AlwaysWorkHard_03",
+"AlwaysWorkHard_04",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
