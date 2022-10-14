@@ -4942,7 +4942,12 @@ paths = [
 "FindTheProteryOfTheWorld_04",
 "FindTheProteryOfTheWorld_05",
 "FindTheProteryOfTheWorld_06",
-"ssssssssssssss",
+"TheReasonThatWorkHard_01",
+"TheReasonThatWorkHard_02",
+"TheReasonThatWorkHard_03",
+"TheReasonThatWorkHard_04",
+"TheReasonThatWorkHard_05",
+"TheReasonThatWorkHard_06",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
