@@ -64,3 +64,4 @@ function downloaddata(topic){
     };
     xhr.send(null);  
 }
+
