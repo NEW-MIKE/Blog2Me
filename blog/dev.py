@@ -5252,7 +5252,12 @@ paths = [
 "FeelingReasonLaw_04",
 "FeelingReasonLaw_05",
 "FeelingReasonLaw_06",
-"ssssssssssssss",
+"ToControlAndFeelRule_01",
+"ToControlAndFeelRule_02",
+"ToControlAndFeelRule_03",
+"ToControlAndFeelRule_04",
+"ToControlAndFeelRule_05",
+"ToControlAndFeelRule_06",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
