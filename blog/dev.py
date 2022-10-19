@@ -5258,7 +5258,10 @@ paths = [
 "ToControlAndFeelRule_04",
 "ToControlAndFeelRule_05",
 "ToControlAndFeelRule_06",
-"ssssssssssssss",
+"ToFaceTheEndEveryday_01",
+"ToFaceTheEndEveryday_02",
+"ToFaceTheEndEveryday_03",
+"ToFaceTheEndEveryday_04",
 "ssssssssssssss",
 ]
 class RequestHandler(BaseHTTPRequestHandler):
