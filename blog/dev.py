@@ -5338,7 +5338,12 @@ paths = [
 "TimeBaseChangeStatus_02",
 "TimeBaseChangeStatus_03",
 "TimeBaseChangeStatus_04",
-"ssssssssssssss",
+"ToFightForGradeup_01",
+"ToFightForGradeup_02",
+"ToFightForGradeup_03",
+"ToFightForGradeup_04",
+"ToFightForGradeup_05",
+"ToFightForGradeup_06",
 "ssssssssssssss",
 "ssssssssssssss",
 ]
