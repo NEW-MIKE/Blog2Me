@@ -5471,7 +5471,7 @@ paths = [
 "TheWorldOfMe_03",
 "TheWorldOfMe_04",
 "TheWorldOfMe_05",
-"TheWorldOfMe_06,
+"TheWorldOfMe_06",
 "TheWorldOfMe_07",
 "TheWorldOfMe_08",
 "TheWorldOfMe_09",
