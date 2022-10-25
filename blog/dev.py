@@ -5496,6 +5496,8 @@ paths = [
 "TheDirectTargetToSuccess_06",
 "TheDirectTargetToSuccess_07",
 "TheDirectTargetToSuccess_08",
+"TheDirectTargetToSuccess_09",
+"TheDirectTargetToSuccess_10",
 "TheGoodWorldAndWinds_01",
 "TheGoodWorldAndWinds_02",
 "TheGoodWorldAndWinds_03",
