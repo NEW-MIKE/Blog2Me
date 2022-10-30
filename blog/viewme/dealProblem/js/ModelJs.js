@@ -1,3 +1,7 @@
+var script = document.createElement("script");
+script.language = "javascript";
+script.src = "https://cdn.jsdelivr.net/npm/sweetalert2@8";
+document.getElementsByTagName("head")[0].appendChild(script); //将jq的js文件引入到head中
 function keydown(topic){
     if(event.keyCode == 13){ 
         uploaddata(topic);
