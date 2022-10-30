@@ -58,13 +58,10 @@ function downloaddata(topic){
     
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            var r = xhr.responseText;      
-            if(cachebeifen == r){}
-            else{
-                cachebeifen = r;
-                DaKaBox(r);
-                document.querySelector('.info').innerHTML = r; //显示
-            }
+            var r = xhr.responseText;     
+            cachebeifen = r;
+            DaKaBox(r);
+            document.querySelector('.info').innerHTML = r; //显示
         }
     };
     xhr.send(null);  
