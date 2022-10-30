@@ -78,7 +78,7 @@ function DaKaBox(msg){
     html:
     '' +msg,
     showConfirmButton: false,
-    timer: 20000,
+    timer: 200000,
     }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
