@@ -74,7 +74,6 @@ function downloaddata(topic){
 function DaKaBox(msg){
     let date = new Date();
     Swal.fire({
-    position: 'top-center',
     background:'#bdba1f',
     type: 'success',
     title: date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日",
