@@ -58,10 +58,37 @@ function downloaddata(topic){
             if(cachebeifen == r){}
             else{
                 cachebeifen = r;
+                DaKaBox(r);
                 document.querySelector('.info').innerHTML = r; //显示
             }
         }
     };
     xhr.send(null);  
+}
+
+
+function DaKaBox(msg){
+    let date = new Date();
+    Swal.fire({
+    position: 'top-center',
+    background:'#bdba1f',
+    type: 'success',
+    title: date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日",
+      footer: '<p>要想做点事，别把自己太当人，别把别人不当人.</p>',
+    html:
+    '' +msg,
+    showConfirmButton: false,
+    timer: 10000,
+    }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+    } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info')
+    }
+    else{
+    }
+    })
+
 }
 
