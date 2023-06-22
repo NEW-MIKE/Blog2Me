@@ -78,7 +78,7 @@ function getRandomColor() {
 function DaKaBox(msg){
     let date = new Date();
     Swal.fire({
-   // background:getRandomColor(),//'#bdba1f',
+    background:getRandomColor(),//'#bdba1f',
     type: 'success',
     title: date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日",
       footer: '<p>要想做点事，别把自己太当人，别把别人不当人.</p>',
@@ -86,26 +86,6 @@ function DaKaBox(msg){
     '' +msg,
     showConfirmButton: false,
     timer: 200000,
-    background: 'transparent',
-    customClass: {
-        popup: 'animated-popup'
-    },
-    onOpen: () => {
-        const popup = document.querySelector('.animated-popup');
-        const bg = document.querySelector('.animated-bg');
-        const randomColor = getRandomColor();
-        bg.style.backgroundColor = randomColor;
-        setTimeout(() => {
-        popup.classList.add('zoomIn');
-        bg.classList.add('fadeIn');
-        }, 100);
-    },
-    onClose: () => {
-        const popup = document.querySelector('.animated-popup');
-        const bg = document.querySelector('.animated-bg');
-        popup.classList.remove('zoomIn');
-        bg.classList.remove('fadeIn');
-    }
     }).then((result) => {
     /* Read more about isConfirmed, isDenied below */
     if (result.isConfirmed) {
