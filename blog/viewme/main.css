@@ -63,6 +63,9 @@ nav ul li.logo{
 
 .inner
 {
+	display: grid;
+	grid-template-rows: 100px 200px; /* 定义两行，第一行高度为100px，第二行高度为200px */
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 定义两列，第一列宽度为1份，第二列宽度为2份 */
 	max-width: 1200px;
 	text-align: center;
 	margin: 0 auto;
