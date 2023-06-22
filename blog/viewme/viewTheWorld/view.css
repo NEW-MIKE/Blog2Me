@@ -375,7 +375,7 @@ summary
 	color: #0a090a;
 	padding: 0px,0px;
 	width:350px;
-	animation: randomColor 60s infinite;
+	animation: randomColor 15s infinite;
 	background-color: #991e74;
 	font-weight: 100;
 	border-radius: 50%;
