@@ -66,12 +66,19 @@ function downloaddata(topic){
     };
     xhr.send(null);  
 }
-
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
 function DaKaBox(msg){
     let date = new Date();
     Swal.fire({
-    background:'#bdba1f',
+    background:getRandomColor(),//'#bdba1f',
     type: 'success',
     title: date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日",
       footer: '<p>要想做点事，别把自己太当人，别把别人不当人.</p>',
