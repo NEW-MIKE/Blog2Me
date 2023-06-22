@@ -187,7 +187,10 @@ p
 
 .wrapper
 {
-	max-width: 1080px;
+	display: flex;
+	justify-content: center; /* 水平居中对齐 */
+	align-items: center; /* 垂直居中对齐 */
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
