@@ -1,3 +1,13 @@
+
+@keyframes randomColor {
+  0% { background-color: #699a41; }
+  25% { background-color: #00ff00; }
+  50% { background-color: #0f5062; }
+  75% { background-color: #ffff00; }
+  100% { background-color: #31144f; }
+}
+
+
 .clearfix:after
 {
 	content: '';
@@ -365,7 +375,7 @@ summary
 	color: #0a090a;
 	padding: 0px,0px;
 	width:350px;
-  
+	animation: randomColor 5s infinite;
 	background-color: #991e74;
 	font-weight: 100;
 	border-radius: 50%;
