@@ -15,6 +15,15 @@
 	100% { background-color: #250448; }
   }
 
+
+  @keyframes randomColorInput {
+	  0% { background-color: #48533f; }
+	  25% { background-color: #115589; }
+	  50% { background-color: #51e10f; }
+	  75% { background-color: #232305; }
+	  100% { background-color: #7704f3; }
+	}
+
 .clearfix:after
 {
 	content: '';
@@ -422,6 +431,7 @@ summary
 	color: rgba(10, 6, 10, 0.719);
 	font-size: 18px;
 	font-weight: normal;
+	animation: randomColorInput 15s infinite;
 	background-color: #ddbe67;
 	text-indent: 10px;
 	width:350px;
