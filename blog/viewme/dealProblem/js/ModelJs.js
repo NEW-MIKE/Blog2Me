@@ -8,9 +8,26 @@ function keydown(topic){
      }
 }
 var url = getUrl();
+function copyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+  
+    // 将textarea元素添加到文档中
+    document.body.appendChild(textArea);
+  
+    // 选中并复制文本
+    textArea.select();
+    document.execCommand("copy");
+  
+    // 移除textarea元素
+    document.body.removeChild(textArea);
+  
+    console.log("文本已复制到剪贴板");
+  }
 function uploaddata(topic){
     console.log("ok")
     var data = document.getElementById(topic).value;
+    copyTextToClipboard(data);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
     
