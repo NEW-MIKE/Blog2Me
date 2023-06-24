@@ -98,7 +98,7 @@ function DaKaBox(msg){
     background:getRandomColor(),//'#bdba1f',
     type: 'success',
     title: date.getFullYear() + "年" + (date.getMonth() + 1) + "月" + date.getDate() + "日",
-      footer: '<p>要想做点事，别把自己太当人，别把别人不当人.</p>',
+      footer: '<p>物必先腐，而后虫生，念念不忘，必有回响，水流不息，长贯古今</p><p>要想做点事，别把自己太当人，别把别人不当人.</p>',
     html:
     '' +msg,
     showConfirmButton: false,
