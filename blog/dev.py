@@ -12,6 +12,7 @@ import subprocess
 from pip._internal import main
 import datetime
 
+SAVE_ROOT_PATH = "/home/data/blog/blog/"
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
 APP_VERIFICATION_TOKEN = "hxaTTQZc9re73RE4bsKaEcCvLxLr1NIY"
@@ -11165,7 +11166,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 print(obj)
                 try:
                     #create__filea(os.getcwd()+"/blog/cv.txt",obj)
-                    create__filea("/tmp/blog/blog/cv.txt",obj)
+                    create__filea(SAVE_ROOT_PATH+"cv.txt",obj)
                 except:
                     print("ok")
                 #create__filea("/tmp/blog/blog/cv.txt",obj)
@@ -11178,7 +11179,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 print(obj)
                 try:
                     #create__filea(os.getcwd()+"/blog/cv.txt",obj)
-                    create__filea("/tmp/blog/blog/talk.txt",obj)
+                    create__filea(SAVE_ROOT_PATH+"talk.txt",obj)
                 except:
                     print("ok")
                 #create__filea("/tmp/blog/blog/cv.txt",obj)
@@ -11186,7 +11187,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 return
             elif ctype == 'gettalk':
                 print("gettalk")
-                f = open("/tmp/blog/blog/talk.txt","rb")
+                f = open(SAVE_ROOT_PATH+"talk.txt","rb")
                 #self.wfile.write(f.read())
                 self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 print("javascript")
@@ -11200,14 +11201,14 @@ class RequestHandler(BaseHTTPRequestHandler):
                 print(obj)
                 try:
                     #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt",obj)
-                    create__filea("/tmp/blog/blog/save.txt",obj)
+                    create__filea(SAVE_ROOT_PATH+"save.txt",obj)
                 except Exception as e:
                     print(str(e))
                 return
             elif ctype == 'getbeifen':
                 print("getbeifen")
                 #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\beifen.txt","rb")
-                f = open("/tmp/blog/blog/save.txt","rb")
+                f = open(SAVE_ROOT_PATH+"save.txt","rb")
                 self.wfile.write(f.read())
                 #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 f.close()
@@ -11220,14 +11221,14 @@ class RequestHandler(BaseHTTPRequestHandler):
                 print(obj)
                 try:
                     #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt",obj)
-                    create__filea("/tmp/blog/blog/buildthisman.txt",obj)
+                    create__filea(SAVE_ROOT_PATH+"buildthisman.txt",obj)
                 except Exception as e:
                     print(str(e))
                 return
             elif ctype == 'getbuildme':
                 print("getbuildme")
                 #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
-                f = open("/tmp/blog/blog/buildthisman.txt","rb")
+                f = open(SAVE_ROOT_PATH+"buildthisman.txt","rb")
                 self.wfile.write(f.read())
                 #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
                 f.close()
@@ -11364,14 +11365,14 @@ def dealPost(self,ctype):
             print(obj)
             try:
                 #create__filea("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt",obj)
-                create__filea("/tmp/blog/blog/"+path+".txt",obj)
+                create__filea(SAVE_ROOT_PATH+path+".txt",obj)
             except Exception as e:
                 print(str(e))
             return True
         elif(ctype == 'get'+path):
             print(ctype)
             #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
-            f = open("/tmp/blog/blog/"+path+".txt","rb")
+            f = open(SAVE_ROOT_PATH+path+".txt","rb")
             self.wfile.write(f.read())
             #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
             f.close()
