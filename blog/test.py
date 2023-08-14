@@ -16,11 +16,12 @@ import shutil
 from git.repo import Repo
 import eventlet
 import datetime
-import logging
+
 #srcdir = "/tmp/update/book"
 #dstdir = "/tmp/blog"
-pulldir = "/tmp/blog"
-
+pulldir = "/home/pi/blog/blog/"
+SAVE_CMD_PATH = "/home/pi/blog/blog/blog/"
+SAVE_ROOT_PATH = "/home/pi/blogdata/blog/"
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
 APP_VERIFICATION_TOKEN = "hxaTTQZc9re73RE4bsKaEcCvLxLr1NIY"
@@ -44,16 +45,16 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write("ok".encode())
         eventlet.monkey_patch()#必须加这条代码
-        with eventlet.Timeout(60,False):#设置超时时间为60秒
+        with eventlet.Timeout(60,False):#设置超时时间为2秒
           try: 
-              repo = Repo(pulldir)  
+              repo = Repo(pulldir)
               repo.git.pull()
-          except: 
-              create__filea("/tmp/blog/blog/log.txt",e)
-              print(e) 
+          except OSError as e:
+              create__filea(SAVE_ROOT_PATH+"log.txt",e)
+              print(e)
           else:
-              create__filea("/tmp/blog/blog/log.txt","pull successfully")
-              print("pull successfully") 
+              create__filea(SAVE_ROOT_PATH+"log.txt","pull successfully")
+              print("pull successfully")
               killport(4456)
               print("ok")
           # try:
@@ -67,8 +68,8 @@ class RequestHandler(BaseHTTPRequestHandler):
           print("启动新的进程")
           print('没有跳过这条输出')
         print('跳过了输出')
-        os.chdir("/tmp/blog/blog")
-        subprocess.Popen(['python3', '/tmp/blog/blog/dev.py'])
+        os.chdir(SAVE_CMD_PATH)
+        subprocess.Popen(['python3', SAVE_CMD_PATH+'dev.py'])
         return
 
 
@@ -193,7 +194,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         rsp_body = response.read().decode('utf-8')
         rsp_dict = json.loads(rsp_body)
         code = rsp_dict.get("code", -1)
-        if code != 0:   
+        if code != 0:
             print("send message error, code = ", code, ", msg =", rsp_dict.get("msg", ""))
 def create__filea(file_path,msg):
     now = datetime.datetime.now()
