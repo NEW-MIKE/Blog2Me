@@ -12,7 +12,7 @@ import subprocess
 from pip._internal import main
 import datetime
 
-SAVE_ROOT_PATH = "/home/pi/blogdata/"
+SAVE_ROOT_PATH = "/home/pi/blogdata/blog/"
 APP_ID = "cli_a15bebebc5b8d00b"
 APP_SECRET = "pMJXu20Pn2L2fmFIvwSrZcPmZbRnmotd"
 APP_VERIFICATION_TOKEN = "hxaTTQZc9re73RE4bsKaEcCvLxLr1NIY"
