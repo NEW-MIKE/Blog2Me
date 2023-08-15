@@ -11419,6 +11419,12 @@ def dealPost(self,ctype):
             #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
             f.close()
             return True
+        elif(ctype == 'newApi'):
+            print(ctype)
+            self.wfile.write("I am ok")
+            #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
+            f.close()
+            return True
     return False
 def getNumStr(strcontent,flag,number):
     strs = strcontent.split(flag,number)
