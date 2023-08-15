@@ -33,6 +33,7 @@ function uploaddata(topic){
     
     xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("ngrok-skip-browser-warning", "application/x-www-form-urlencoded");
     xhr.setRequestHeader("update", topic);
     
     xhr.onreadystatechange = function () {
@@ -71,6 +72,7 @@ function downloaddata(topic){
     
     xhr.setRequestHeader("Accept", "application/json");
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("ngrok-skip-browser-warning", "application/x-www-form-urlencoded");
     xhr.setRequestHeader("update", "get"+topic);
     
     xhr.onreadystatechange = function () {
