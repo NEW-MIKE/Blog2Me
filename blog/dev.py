@@ -11470,7 +11470,7 @@ def bytes2str(filebytes):
 def dealPost(self,ctype):
     if(ctype == 'newApi'):
         print(ctype)
-        self.wfile.write("I am ok")
+        self.wfile.write("I am ok".encode())
         f.close()
         return True
     for path in paths:
