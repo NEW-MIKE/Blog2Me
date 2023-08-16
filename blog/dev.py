@@ -11468,6 +11468,11 @@ def bytes2str(filebytes):
     return str
 
 def dealPost(self,ctype):
+    if(ctype == 'newApi'):
+        print(ctype)
+        self.wfile.write("I am ok")
+        f.close()
+        return True
     for path in paths:
         if(ctype == path):
             self.wfile.write(path.encode())
@@ -11486,12 +11491,6 @@ def dealPost(self,ctype):
             #f = open("E:\AmesomeCloud\Blog2Me"+"\\blog\\buildme.txt","rb")
             f = open(SAVE_ROOT_PATH+path+".txt","rb")
             self.wfile.write(f.read())
-            #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
-            f.close()
-            return True
-        elif(ctype == 'newApi'):
-            print(ctype)
-            self.wfile.write("I am ok")
             #self.wfile.write(getNumStr(bytes2str(f),"<br>",40).encode())
             f.close()
             return True
